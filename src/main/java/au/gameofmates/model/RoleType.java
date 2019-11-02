@@ -1,0 +1,22 @@
+package au.gameofmates.model;
+
+public enum RoleType {
+
+  OFFICIAL,
+  CORPORATION,
+  CORPORATE_OFFICER,
+  POLICE_OFFICER,
+  DIPLOMAT,
+  CANDIDATE,
+  LEGAL_OFFICIAL,
+  LAWYER,
+  ACCOUNTANT,
+  DOCTOR,
+  UNION,
+  CONSULTANCY,
+  JOURNALIST,
+  CITIZEN,
+  CELEBRITY,
+  PRIEST
+
+}

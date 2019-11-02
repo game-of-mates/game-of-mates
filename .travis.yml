@@ -1,0 +1,18 @@
+language: java
+
+jdk: oraclejdk8
+
+branches:
+  except:
+    - /^[0-9]/
+
+before_script:
+- git config --global user.name "${GIT_USER_NAME}"
+- git config --global user.email "${GIT_USER_EMAIL}"
+- cp .travis.settings.xml $HOME/.m2/settings.xml
+
+script:
+- mvn clean install -Drevision=${TRAVIS_BUILD_NUMBER}.$(git rev-parse --short HEAD)
+
+after_success:
+- test $TRAVIS_BRANCH = "master" && test $TRAVIS_PULL_REQUEST = "false" && mvn site deploy scm:tag -Drevision=${TRAVIS_BUILD_NUMBER}.$(git rev-parse --short HEAD) -Dusername="${GIT_USER_NAME}" -Dpassword="${GITPW}"

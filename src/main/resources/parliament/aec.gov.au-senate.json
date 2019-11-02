@@ -1,0 +1,854 @@
+//https://en.wikipedia.org/wiki/Members_of_the_Australian_Senate,_2016%E2%80%932019
+
+// Ordinarily, only half of the senators terms end at each election
+// Double dissolution:  double dissolution in which both houses of parliament were dissolved, all 76 senators elected
+
+
+// CHANGES -- woah!!
+// Bob Day disqualificaiton - Day's seat was filled by a recount, and Lucy Gichuhi was declared elected on 19 April 2017.
+// Victorian Labor Senator Stephen Conroy resigned on 30 September 2016. Kimberley Kitching was appointed as his replacement on 25 October 2016.
+// independent senator is Tim Storer (South Australia) who was expelled from the Nick Xenophon Team before he was declared elected by the High Court in place of Skye Kakoschke-Moore.
+// Culleton resigned from the One Nation party on 18 December 2016
+// Western Australian Rod Culleton was declared bankrupt by the Federal Court of Australia on 11 January 2017, and as such was disqualified from being a Senator
+// Culleton's seat was filled by a recount, and on 10 March 2017 the High Court declared Peter Georgiou to be elected to the vacancy
+// On 7 February 2017, Senator for South Australia Cory Bernardi resigned from the Liberal Party and founded the Australian Conservatives
+// On 26 April 2017, Family First merged with the Australian Conservatives—with Lucy Gichuhi declining to join the new party, she became an independen
+// Scott Ludlam resigned on 14 July 2017 after realising he held New Zealand citizenship, due to legal advice that he was ineligible to be a senator under Section 44 of the Constitution of Australia.
+// Larissa Waters resigned on 18 July 2017 after realising she held Canadian citizenship, due to legal advice that she was ineligible to be a senator under Section 44 of the Constitution of Australia.
+// Western Australian Liberal Senator Chris Back resigned on 31 July 2017. Slade Brockman was appointed as his replacement on 16 August 2017.
+// On 27 October 2017, the High Court of Australia ruled that Greens Senator Scott Ludlam, One Nation Senator Malcolm Roberts, Nationals Senator Fiona Nash and Greens Senator Larissa Waters were held to be "incapable of being chosen" as Senators because they held foreign citizenship
+// Their seats have been filled by a recount, which elected Jordon Steele-John, Fraser Anning and Andrew Bartlett, replacing Ludlam, Roberts and Waters respectively. Nash's replacement, Hollie Hughes, was referred to the full bench of the High Court, and was deemed ineligible under Section 44(iv). Jim Molan was elected on recount
+// South Australian Senator and Nick Xenophon Team leader Nick Xenophon resigned from the Senate on 31 October 2017. Rex Patrick was appointed as his replacement on 14 November 2017.
+// Tasmanian Liberal Senator and President of the Senate Stephen Parry resigned on 2 November 2017 from both positions after discovering he was a citizen of the United Kingdom,
+// Fraser Anning was declared elected at a recount to replace Malcolm Roberts as a Senator for One Nation, but left the party within an hour of being sworn in on 13 November 2017.
+// Tasmanian JLN Senator Jacqui Lambie resigned on 14 November 2017 after discovering she was a citizen of the United Kingdom, due to the recent High Court ruling that foreign citizens could not serve in parliament. Steve Martin, a JLN candidate in 2016, was declared duly elected by the High Court on 9 February 2018, following a special count. Lambie had expelled Martin from the party on 7 February, so he initially sat as an independent.
+// outh Australian NXT Senator Skye Kakoschke-Moore resigned on 22 November 2017 after discovering she was a citizen of the United Kingdom, due to the recent High Court ruling that foreign citizens could not serve in parliament. Tim Storer, an NXT candidate in 2016, was declared duly elected by the High Court on 9 February 2018. Storer was expelled from the party in November 2017, and sits as an independent.
+// Labor Senator Sam Dastyari resigned on 25 January 2018. Kristina Keneally was appointed as his replacement on 14 February 2018.
+// On 2 February 2018 Lucy Gichuhi joined the Liberal Party.[23]
+ // Queensland LNP Senator George Brandis resigned on 8 February 2018. Amanda Stoker was appointed as his replacement on 21 March 2018.
+ // On 9 May 2018, ACT Labor Senator Katy Gallagher was found by the High Court to be ineligible to be a senator. David Smith was elected in a special count as her replacement on 23 May 2018.
+ // Steve Martin, formerly an independent Senator for Tasmania, joined the Nationals on 28 May 2018
+ // On 18 June 2018, Brian Burston joined Clive Palmer's United Australia Party.
+ // Lee Rhiannon resigned from the Senate on 15 August 2018. Her seat was filled by former New South Wales Legislative Council member Mehreen Faruqi.
+ // On 27 August 2018, Queensland Greens Senator Andrew Bartlett resigned from the Senate to contest the lower house Division of Brisbane. Larissa Waters was appointed as his replacement on 6 September 2018
+ // n 21 January 2019, Tasmanian Liberal Senator David Bushby resigned from the Senate to take up the role of Australia's consul-general in Chicago. His sister Wendy Askew was appointed as his replacement on 6 March 2019.
+ // On 15 February 2019, Victorian Labor Senator Jacinta Collins resigned from the Senate. Raff Ciccone was appointed as her replacement on 6 March 2019.
+ // On 1 March 2019, New South Wales Liberal Democrats Senator David Leyonhjelm resigned from the Senate to contest the New South Wales state election. Duncan Spender was appointed as his replacement on 20 March 2019.
+ // David Smith resigned on 11 April 2019 to contest the lower house Division of Bean.
+ 
+
+
+// Allocations by Party, State/Territory
+{
+    subject: urn:aec.gov.au:person,
+    predicate: senator-for-state,
+    object: iso-3166-region,
+    start-of-term: urn:aph.gov.au:parliament:45,
+    end-of-term: urn:aph.gov.au:parliament:46,
+    // Covers replacement / Retirement - null if not relevant
+    // Expand any transition events on the Person to find out if they ceased
+    // being in the senate, (who replaced) & if they changed party affiliation	
+}
+,
+// When a senator changes parties the dates should not overlap
+// Effective to date should be created
+{
+    subject: urn:aec.gov.au:person
+    predicate: senator-for-party
+    object: https://www.aec.gov.au/parties/id (null == independent)
+    effective-from: urn:aph.gov.au:parliament:45.start_date
+    effective-to:
+},
+// Transition event - Disqualification, Retirement, Resignation
+// Who succeeded, Why, and if their term was changed
+{
+   subject: urn:aec.gov.au:person,
+   predicate: senate-succession,
+   object: urn:aec.gov.au:person,
+   event-title:	
+   event-id: 
+   transition-date-start:
+   transition-date-end:
+   // The term of some senators originally ended in 2019, 
+   // but was extended to 2022 after resignations and recounts
+   term-change: urn:aph.gov.au:parliament:46
+}
+
+
+// HTML Representation
+
+<table class="wikitable sortable">
+
+<tbody><tr>
+<th>Senator
+</th>
+<th colspan="2"><b>Party</b>
+</th>
+<th>State
+</th>
+<th>End term
+</th>
+<th>Years in office
+</th></tr>
+<tr>
+<td><span data-sort-value="Abetz, Eric&#160;!">Hon. <a href="/wiki/Eric_Abetz" title="Eric Abetz">Eric Abetz</a></span></td>
+<td style="background-color:#080CAB;">&#160;</td>
+<td><a href="/wiki/Liberal_Party_of_Australia" title="Liberal Party of Australia">Liberal</a></td>
+<td><a href="/wiki/Tasmania" title="Tasmania">Tasmania</a></td>
+<td>2022</td>
+<td>1994–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Anning, Fraser"><span class="vcard"><span class="fn"><a href="/wiki/Fraser_Anning" title="Fraser Anning">Fraser Anning</a></span></span></span> <sup id="cite_ref-citizens_16-1" class="reference"><a href="#cite_note-citizens-16">&#91;o&#93;</a></sup></td>
+<td style="background-color: #4169E1">&#160;</td>
+<td><a href="/wiki/Pauline_Hanson%27s_One_Nation" title="Pauline Hanson&#39;s One Nation">One Nation</a>/<a href="/wiki/Katter%27s_Australian_Party" title="Katter&#39;s Australian Party">Katter's Australian Party</a>/<br /><a href="/wiki/Independent_politician" title="Independent politician">Independent</a>/<a href="/wiki/Fraser_Anning%27s_Conservative_National_Party" title="Fraser Anning&#39;s Conservative National Party">Conservative National</a>&#160;<sup id="cite_ref-Anning_19-1" class="reference"><a href="#cite_note-Anning-19">&#91;r&#93;</a></sup></td>
+<td><a href="/wiki/Queensland" title="Queensland">Queensland</a></td>
+<td>2019</td>
+<td>2017–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Askew, Wendy"><span class="vcard"><span class="fn"><a href="/wiki/Wendy_Askew" title="Wendy Askew">Wendy Askew</a></span></span></span> <sup id="cite_ref-Bushby_30-1" class="reference"><a href="#cite_note-Bushby-30">&#91;ac&#93;</a></sup></td>
+<td style="background-color:#080CAB;">&#160;</td>
+<td><a href="/wiki/Liberal_Party_of_Australia" title="Liberal Party of Australia">Liberal</a></td>
+<td><a href="/wiki/Tasmania" title="Tasmania">Tasmania</a></td>
+<td>2022&#160;<sup id="cite_ref-extendedterm_4-1" class="reference"><a href="#cite_note-extendedterm-4">&#91;d&#93;</a></sup></td>
+<td>2019–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Back, Chris"><span class="vcard"><span class="fn"><a href="/wiki/Chris_Back" title="Chris Back">Chris Back</a></span></span></span> <sup id="cite_ref-Back_15-1" class="reference"><a href="#cite_note-Back-15">&#91;n&#93;</a></sup></td>
+<td style="background-color:#080CAB;">&#160;</td>
+<td><a href="/wiki/Liberal_Party_of_Australia" title="Liberal Party of Australia">Liberal</a></td>
+<td><a href="/wiki/Western_Australia" title="Western Australia">Western Australia</a></td>
+<td>2019</td>
+<td>2009–2017
+</td></tr>
+<tr>
+<td><span data-sort-value="Bartlett, Andrew"><span class="vcard"><span class="fn"><a href="/wiki/Andrew_Bartlett" title="Andrew Bartlett">Andrew Bartlett</a></span></span></span> <sup id="cite_ref-citizens_16-2" class="reference"><a href="#cite_note-citizens-16">&#91;o&#93;</a></sup><sup id="cite_ref-Bartlett_29-1" class="reference"><a href="#cite_note-Bartlett-29">&#91;ab&#93;</a></sup></td>
+<td style="background-color:#10C25B;">&#160;</td>
+<td><a href="/wiki/Australian_Greens" title="Australian Greens">Greens</a></td>
+<td><a href="/wiki/Queensland" title="Queensland">Queensland</a></td>
+<td>2019</td>
+<td>1997–2008, 2017–2018
+</td></tr>
+<tr>
+<td><span data-sort-value="Bernardi, Cory"><span class="vcard"><span class="fn"><a href="/wiki/Cory_Bernardi" title="Cory Bernardi">Cory Bernardi</a></span></span></span>
+</td>
+<th style="background-color:#00B9FB;">&#160;
+</th>
+<td><a href="/wiki/Liberal_Party_of_Australia" title="Liberal Party of Australia">Liberal</a>/<a href="/wiki/Australian_Conservatives" title="Australian Conservatives">Conservatives</a> <sup id="cite_ref-Bernardi_11-1" class="reference"><a href="#cite_note-Bernardi-11">&#91;j&#93;</a></sup></td>
+<td><a href="/wiki/South_Australia" title="South Australia">South Australia</a></td>
+<td>2022</td>
+<td>2006–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Bilyk, Catryna"><span class="vcard"><span class="fn"><a href="/wiki/Catryna_Bilyk" title="Catryna Bilyk">Catryna Bilyk</a></span></span></span></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/Tasmania" title="Tasmania">Tasmania</a></td>
+<td>2019</td>
+<td>2008–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Birmingham, Simon&#160;!">Hon. <a href="/wiki/Simon_Birmingham" title="Simon Birmingham">Simon Birmingham</a></span></td>
+<td style="background-color:#080CAB;">&#160;</td>
+<td><a href="/wiki/Liberal_Party_of_Australia" title="Liberal Party of Australia">Liberal</a></td>
+<td><a href="/wiki/South_Australia" title="South Australia">South Australia</a></td>
+<td>2022</td>
+<td>2007–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Brandis, George&#160;!">Hon. <a href="/wiki/George_Brandis" title="George Brandis">George Brandis</a></span> <sup id="cite_ref-Brandis_24-1" class="reference"><a href="#cite_note-Brandis-24">&#91;w&#93;</a></sup></td>
+<td style="background-color:#1456F1;">&#160;</td>
+<td><a href="/wiki/Liberal_National_Party_of_Queensland" title="Liberal National Party of Queensland">Liberal National</a> <sup id="cite_ref-lnpl_1-1" class="reference"><a href="#cite_note-lnpl-1">&#91;a&#93;</a></sup></td>
+<td><a href="/wiki/Queensland" title="Queensland">Queensland</a></td>
+<td>2022</td>
+<td>2000–2018
+</td></tr>
+<tr>
+<td><span data-sort-value="Brockman, Slade"><span class="vcard"><span class="fn"><a href="/wiki/Slade_Brockman" title="Slade Brockman">Slade Brockman</a></span></span></span> <sup id="cite_ref-Back_15-2" class="reference"><a href="#cite_note-Back-15">&#91;n&#93;</a></sup></td>
+<td style="background-color:#080CAB;">&#160;</td>
+<td><a href="/wiki/Liberal_Party_of_Australia" title="Liberal Party of Australia">Liberal</a></td>
+<td><a href="/wiki/Western_Australia" title="Western Australia">Western Australia</a></td>
+<td>2019</td>
+<td>2017–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Brown, Carol"><span class="vcard"><span class="fn"><a href="/wiki/Carol_Brown_(politician)" title="Carol Brown (politician)">Carol Brown</a></span></span></span></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/Tasmania" title="Tasmania">Tasmania</a></td>
+<td>2019</td>
+<td>2005–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Burston, Brian"><span class="vcard"><span class="fn"><a href="/wiki/Brian_Burston" title="Brian Burston">Brian Burston</a></span></span></span></td>
+<td style="background-color:#FFED00;">&#160;</td>
+<td><a href="/wiki/Pauline_Hanson%27s_One_Nation" title="Pauline Hanson&#39;s One Nation">One Nation</a>/<a href="/wiki/Palmer_United_Party" class="mw-redirect" title="Palmer United Party">United Australia Party</a>&#160;<sup id="cite_ref-Burston_27-1" class="reference"><a href="#cite_note-Burston-27">&#91;z&#93;</a></sup></td>
+<td><a href="/wiki/New_South_Wales" title="New South Wales">New South Wales</a></td>
+<td>2019</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Bushby, David"><span class="vcard"><span class="fn"><a href="/wiki/David_Bushby" title="David Bushby">David Bushby</a></span></span></span> <sup id="cite_ref-Bushby_30-2" class="reference"><a href="#cite_note-Bushby-30">&#91;ac&#93;</a></sup></td>
+<td style="background-color:#080CAB;">&#160;</td>
+<td><a href="/wiki/Liberal_Party_of_Australia" title="Liberal Party of Australia">Liberal</a></td>
+<td><a href="/wiki/Tasmania" title="Tasmania">Tasmania</a></td>
+<td>2022&#160;<sup id="cite_ref-extendedterm_4-2" class="reference"><a href="#cite_note-extendedterm-4">&#91;d&#93;</a></sup></td>
+<td>2007–2019
+</td></tr>
+<tr>
+<td><span data-sort-value="Cameron, Doug&#160;!">Hon. <a href="/wiki/Doug_Cameron_(politician)" title="Doug Cameron (politician)">Doug Cameron</a></span></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/New_South_Wales" title="New South Wales">New South Wales</a></td>
+<td>2019</td>
+<td>2008–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Canavan, Matt&#160;!">Hon. <a href="/wiki/Matt_Canavan" title="Matt Canavan">Matt Canavan</a></span></td>
+<td style="background-color:#1456F1;">&#160;</td>
+<td><a href="/wiki/Liberal_National_Party_of_Queensland" title="Liberal National Party of Queensland">Liberal National</a> <sup id="cite_ref-lnpn_2-1" class="reference"><a href="#cite_note-lnpn-2">&#91;b&#93;</a></sup></td>
+<td><a href="/wiki/Queensland" title="Queensland">Queensland</a></td>
+<td>2022</td>
+<td>2014–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Carr, Kim&#160;!">Hon. <a href="/wiki/Kim_Carr" title="Kim Carr">Kim Carr</a></span></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/Victoria_(Australia)" title="Victoria (Australia)">Victoria</a></td>
+<td>2022</td>
+<td>1993–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Cash, Michaelia&#160;!">Hon. <a href="/wiki/Michaelia_Cash" title="Michaelia Cash">Michaelia Cash</a></span></td>
+<td style="background-color:#080CAB;">&#160;</td>
+<td><a href="/wiki/Liberal_Party_of_Australia" title="Liberal Party of Australia">Liberal</a></td>
+<td><a href="/wiki/Western_Australia" title="Western Australia">Western Australia</a></td>
+<td>2022</td>
+<td>2008–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Chisholm, Anthony"><span class="vcard"><span class="fn"><a href="/wiki/Anthony_Chisholm_(politician)" title="Anthony Chisholm (politician)">Anthony Chisholm</a></span></span></span></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/Queensland" title="Queensland">Queensland</a></td>
+<td>2022</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Ciccone, Raff"><span class="vcard"><span class="fn"><a href="/wiki/Raff_Ciccone" title="Raff Ciccone">Raff Ciccone</a></span></span></span> <sup id="cite_ref-Collins_31-1" class="reference"><a href="#cite_note-Collins-31">&#91;ad&#93;</a></sup></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/Victoria_(Australia)" title="Victoria (Australia)">Victoria</a></td>
+<td>2019</td>
+<td>2019–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Colbeck, Richard&#160;!">Hon. <a href="/wiki/Richard_Colbeck" title="Richard Colbeck">Richard Colbeck</a></span> <sup id="cite_ref-Parry_18-1" class="reference"><a href="#cite_note-Parry-18">&#91;q&#93;</a></sup></td>
+<td style="background-color:#080CAB;">&#160;</td>
+<td><a href="/wiki/Liberal_Party_of_Australia" title="Liberal Party of Australia">Liberal</a></td>
+<td><a href="/wiki/Tasmania" title="Tasmania">Tasmania</a></td>
+<td>2019</td>
+<td>2002–2016, 2018–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Collins, Jacinta&#160;!">Hon. <a href="/wiki/Jacinta_Collins" title="Jacinta Collins">Jacinta Collins</a></span> <sup id="cite_ref-Collins_31-2" class="reference"><a href="#cite_note-Collins-31">&#91;ad&#93;</a></sup></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/Victoria_(Australia)" title="Victoria (Australia)">Victoria</a></td>
+<td>2019</td>
+<td>1995–2005, 2008–2019
+</td></tr>
+<tr>
+<td><span data-sort-value="Conroy, Stephen&#160;!">Hon. <a href="/wiki/Stephen_Conroy" title="Stephen Conroy">Stephen Conroy</a></span> <sup id="cite_ref-Conroy_7-1" class="reference"><a href="#cite_note-Conroy-7">&#91;f&#93;</a></sup></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/Victoria_(Australia)" title="Victoria (Australia)">Victoria</a></td>
+<td>2022</td>
+<td>1996–2016
+</td></tr>
+<tr>
+<td><span data-sort-value="Corman, Mathias&#160;!">Hon. <a href="/wiki/Mathias_Cormann" title="Mathias Cormann">Mathias Cormann</a></span></td>
+<td style="background-color:#080CAB;">&#160;</td>
+<td><a href="/wiki/Liberal_Party_of_Australia" title="Liberal Party of Australia">Liberal</a></td>
+<td><a href="/wiki/Western_Australia" title="Western Australia">Western Australia</a></td>
+<td>2022</td>
+<td>2007–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Culleton, Rod"><span class="vcard"><span class="fn"><a href="/wiki/Rod_Culleton" title="Rod Culleton">Rod Culleton</a></span></span></span> <sup id="cite_ref-Culleton_10-1" class="reference"><a href="#cite_note-Culleton-10">&#91;i&#93;</a></sup></td>
+<td style="background-color:#888888;">&#160;</td>
+<td><a href="/wiki/Pauline_Hanson%27s_One_Nation" title="Pauline Hanson&#39;s One Nation">One Nation</a>/<a href="/wiki/Independent_politician" title="Independent politician">Independent</a> <sup id="cite_ref-Culleton_Ind_9-1" class="reference"><a href="#cite_note-Culleton_Ind-9">&#91;h&#93;</a></sup></td>
+<td><a href="/wiki/Western_Australia" title="Western Australia">Western Australia</a></td>
+<td>2019</td>
+<td>2016–2017
+</td></tr>
+<tr>
+<td><span data-sort-value="Dastyari, Sam"><span class="vcard"><span class="fn"><a href="/wiki/Sam_Dastyari" title="Sam Dastyari">Sam Dastyari</a></span></span></span> <sup id="cite_ref-Dastyari_22-1" class="reference"><a href="#cite_note-Dastyari-22">&#91;u&#93;</a></sup></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/New_South_Wales" title="New South Wales">New South Wales</a></td>
+<td>2022</td>
+<td>2013–2018
+</td></tr>
+<tr>
+<td><span data-sort-value="Day, Bob"><span class="vcard"><span class="fn"><a href="/wiki/Bob_Day" title="Bob Day">Bob Day</a></span></span></span> <sup id="cite_ref-Day_8-1" class="reference"><a href="#cite_note-Day-8">&#91;g&#93;</a></sup></td>
+<td style="background-color:#00CCFF;">&#160;</td>
+<td><a href="/wiki/Family_First_Party" title="Family First Party">Family First</a></td>
+<td><a href="/wiki/South_Australia" title="South Australia">South Australia</a></td>
+<td>2019</td>
+<td>2014–2016
+</td></tr>
+<tr>
+<td><span data-sort-value="Di Natale, Richard"><span class="vcard"><span class="fn"><a href="/wiki/Richard_Di_Natale" title="Richard Di Natale">Richard Di Natale</a></span></span></span></td>
+<td style="background-color:#10C25B;">&#160;</td>
+<td><a href="/wiki/Australian_Greens" title="Australian Greens">Greens</a></td>
+<td><a href="/wiki/Victoria_(Australia)" title="Victoria (Australia)">Victoria</a></td>
+<td>2022</td>
+<td>2011–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Dodson, Pat"><span class="vcard"><span class="fn"><a href="/wiki/Pat_Dodson" title="Pat Dodson">Pat Dodson</a></span></span></span></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/Western_Australia" title="Western Australia">Western Australia</a></td>
+<td>2019</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Duniam, Jonathon"><span class="vcard"><span class="fn"><a href="/wiki/Jonathon_Duniam" title="Jonathon Duniam">Jonathon Duniam</a></span></span></span></td>
+<td style="background-color:#080CAB;">&#160;</td>
+<td><a href="/wiki/Liberal_Party_of_Australia" title="Liberal Party of Australia">Liberal</a></td>
+<td><a href="/wiki/Tasmania" title="Tasmania">Tasmania</a></td>
+<td>2022&#160;<sup id="cite_ref-extendedterm_4-3" class="reference"><a href="#cite_note-extendedterm-4">&#91;d&#93;</a></sup></td>
+<td>2016–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Farrell, Don&#160;!">Hon. <a href="/wiki/Don_Farrell" title="Don Farrell">Don Farrell</a></span></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/South_Australia" title="South Australia">South Australia</a></td>
+<td>2022</td>
+<td>2008–2014, 2016–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Faruqi, Mehreen"><span class="vcard"><span class="fn"><a href="/wiki/Mehreen_Faruqi" title="Mehreen Faruqi">Mehreen Faruqi</a></span></span></span> <sup id="cite_ref-Rhiannon101_28-1" class="reference"><a href="#cite_note-Rhiannon101-28">&#91;aa&#93;</a></sup></td>
+<td style="background-color:#10C25B;">&#160;</td>
+<td><a href="/wiki/Australian_Greens" title="Australian Greens">Greens</a></td>
+<td><a href="/wiki/New_South_Wales" title="New South Wales">New South Wales</a></td>
+<td>2019</td>
+<td>2018–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Fawcett, David"><span class="vcard"><span class="fn"><a href="/wiki/David_Fawcett" title="David Fawcett">David Fawcett</a></span></span></span></td>
+<td style="background-color:#080CAB;">&#160;</td>
+<td><a href="/wiki/Liberal_Party_of_Australia" title="Liberal Party of Australia">Liberal</a></td>
+<td><a href="/wiki/South_Australia" title="South Australia">South Australia</a></td>
+<td>2019</td>
+<td>2011–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Fierravanti-Wells, Concetta&#160;!">Hon. <a href="/wiki/Concetta_Fierravanti-Wells" title="Concetta Fierravanti-Wells">Concetta Fierravanti-Wells</a></span></td>
+<td style="background-color:#080CAB;">&#160;</td>
+<td><a href="/wiki/Liberal_Party_of_Australia" title="Liberal Party of Australia">Liberal</a></td>
+<td><a href="/wiki/New_South_Wales" title="New South Wales">New South Wales</a></td>
+<td>2022&#160;<sup id="cite_ref-extendedterm_4-4" class="reference"><a href="#cite_note-extendedterm-4">&#91;d&#93;</a></sup></td>
+<td>2005–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Fifield, Mitch&#160;!">Hon. <a href="/wiki/Mitch_Fifield" title="Mitch Fifield">Mitch Fifield</a></span></td>
+<td style="background-color:#080CAB;">&#160;</td>
+<td><a href="/wiki/Liberal_Party_of_Australia" title="Liberal Party of Australia">Liberal</a></td>
+<td><a href="/wiki/Victoria_(Australia)" title="Victoria (Australia)">Victoria</a></td>
+<td>2022</td>
+<td>2004–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Gallacher, Alex"><span class="vcard"><span class="fn"><a href="/wiki/Alex_Gallacher" title="Alex Gallacher">Alex Gallacher</a></span></span></span></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/South_Australia" title="South Australia">South Australia</a></td>
+<td>2019</td>
+<td>2011–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Gallagher, Katy"><span class="vcard"><span class="fn"><a href="/wiki/Katy_Gallagher" title="Katy Gallagher">Katy Gallagher</a></span></span></span> <sup id="cite_ref-Gallagher_25-1" class="reference"><a href="#cite_note-Gallagher-25">&#91;x&#93;</a></sup></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/Australian_Capital_Territory" title="Australian Capital Territory">Australian Capital Territory</a></td>
+<td>2019&#160;<sup id="cite_ref-Territory_6-1" class="reference"><a href="#cite_note-Territory-6">&#91;e&#93;</a></sup></td>
+<td>2015–2018
+</td></tr>
+<tr>
+<td><span data-sort-value="Georgiou, Peter"><span class="vcard"><span class="fn"><a href="/wiki/Peter_Georgiou" title="Peter Georgiou">Peter Georgiou</a></span></span></span> <sup id="cite_ref-Culleton_10-2" class="reference"><a href="#cite_note-Culleton-10">&#91;i&#93;</a></sup></td>
+<td style="background-color:#CE4716;">&#160;</td>
+<td><a href="/wiki/Pauline_Hanson%27s_One_Nation" title="Pauline Hanson&#39;s One Nation">One Nation</a></td>
+<td><a href="/wiki/Western_Australia" title="Western Australia">Western Australia</a></td>
+<td>2019</td>
+<td>2017–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Gichuhi, Lucy"><span class="vcard"><span class="fn"><a href="/wiki/Lucy_Gichuhi" title="Lucy Gichuhi">Lucy Gichuhi</a></span></span></span> <sup id="cite_ref-Day_8-2" class="reference"><a href="#cite_note-Day-8">&#91;g&#93;</a></sup></td>
+<td style="background-color:#080CAB;">&#160;</td>
+<td><a href="/wiki/Family_First_Party" title="Family First Party">Family First</a>/<a href="/wiki/Independent_politician" title="Independent politician">Independent</a>/<a href="/wiki/Liberal_Party_of_Australia" title="Liberal Party of Australia">Liberal</a> <sup id="cite_ref-Gichuhi_12-1" class="reference"><a href="#cite_note-Gichuhi-12">&#91;k&#93;</a></sup><sup id="cite_ref-Gichuhi2_23-1" class="reference"><a href="#cite_note-Gichuhi2-23">&#91;v&#93;</a></sup></td>
+<td><a href="/wiki/South_Australia" title="South Australia">South Australia</a></td>
+<td>2019</td>
+<td>2017–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Griff, Stirling"><span class="vcard"><span class="fn"><a href="/wiki/Stirling_Griff" title="Stirling Griff">Stirling Griff</a></span></span></span></td>
+<td style="background-color:#ff6300;">&#160;</td>
+<td><a href="/wiki/Nick_Xenophon_Team" class="mw-redirect" title="Nick Xenophon Team">Xenophon/Centre Alliance</a></td>
+<td><a href="/wiki/South_Australia" title="South Australia">South Australia</a></td>
+<td>2022</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Hanson, Pauline"><span class="vcard"><span class="fn"><a href="/wiki/Pauline_Hanson" title="Pauline Hanson">Pauline Hanson</a></span></span></span></td>
+<td style="background-color:#CE4716;">&#160;</td>
+<td><a href="/wiki/Pauline_Hanson%27s_One_Nation" title="Pauline Hanson&#39;s One Nation">One Nation</a></td>
+<td><a href="/wiki/Queensland" title="Queensland">Queensland</a></td>
+<td>2022</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Hanson-Young, Sarah"><span class="vcard"><span class="fn"><a href="/wiki/Sarah_Hanson-Young" title="Sarah Hanson-Young">Sarah Hanson-Young</a></span></span></span></td>
+<td style="background-color:#10C25B;">&#160;</td>
+<td><a href="/wiki/Australian_Greens" title="Australian Greens">Greens</a></td>
+<td><a href="/wiki/South_Australia" title="South Australia">South Australia</a></td>
+<td>2019</td>
+<td>2008–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Hinch, Derryn"><span class="vcard"><span class="fn"><a href="/wiki/Derryn_Hinch" title="Derryn Hinch">Derryn Hinch</a></span></span></span></td>
+<td style="background-color:#002F5D;">&#160;</td>
+<td><a href="/wiki/Derryn_Hinch%27s_Justice_Party" title="Derryn Hinch&#39;s Justice Party">Justice</a></td>
+<td><a href="/wiki/Victoria_(Australia)" title="Victoria (Australia)">Victoria</a></td>
+<td>2019</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Hume, Jane"><span class="vcard"><span class="fn"><a href="/wiki/Jane_Hume" title="Jane Hume">Jane Hume</a></span></span></span></td>
+<td style="background-color:#080CAB;">&#160;</td>
+<td><a href="/wiki/Liberal_Party_of_Australia" title="Liberal Party of Australia">Liberal</a></td>
+<td><a href="/wiki/Victoria_(Australia)" title="Victoria (Australia)">Victoria</a></td>
+<td>2019</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Kakoschke-Moore, Skye"><span class="vcard"><span class="fn"><a href="/wiki/Skye_Kakoschke-Moore" title="Skye Kakoschke-Moore">Skye Kakoschke-Moore</a></span></span></span> <sup id="cite_ref-Kakoschke_21-1" class="reference"><a href="#cite_note-Kakoschke-21">&#91;t&#93;</a></sup></td>
+<td style="background-color:#ff6300;">&#160;</td>
+<td><a href="/wiki/Nick_Xenophon_Team" class="mw-redirect" title="Nick Xenophon Team">Xenophon</a></td>
+<td><a href="/wiki/South_Australia" title="South Australia">South Australia</a></td>
+<td>2019</td>
+<td>2016–2017
+</td></tr>
+<tr>
+<td><span data-sort-value="Keneally, Kristina"><span class="vcard"><span class="fn"><a href="/wiki/Kristina_Keneally" title="Kristina Keneally">Kristina Keneally</a></span></span></span> <sup id="cite_ref-Dastyari_22-2" class="reference"><a href="#cite_note-Dastyari-22">&#91;u&#93;</a></sup></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/New_South_Wales" title="New South Wales">New South Wales</a></td>
+<td>2022</td>
+<td>2018–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Ketter, Chris"><span class="vcard"><span class="fn"><a href="/wiki/Chris_Ketter" title="Chris Ketter">Chris Ketter</a></span></span></span></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/Queensland" title="Queensland">Queensland</a></td>
+<td>2019</td>
+<td>2014–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Kitching, Kimberley"><span class="vcard"><span class="fn"><a href="/wiki/Kimberley_Kitching" title="Kimberley Kitching">Kimberley Kitching</a></span></span></span> <sup id="cite_ref-Conroy_7-2" class="reference"><a href="#cite_note-Conroy-7">&#91;f&#93;</a></sup></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/Victoria_(Australia)" title="Victoria (Australia)">Victoria</a></td>
+<td>2022</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Lambie, Jacqui"><span class="vcard"><span class="fn"><a href="/wiki/Jacqui_Lambie" title="Jacqui Lambie">Jacqui Lambie</a></span></span></span><sup id="cite_ref-Lambie_20-1" class="reference"><a href="#cite_note-Lambie-20">&#91;s&#93;</a></sup></td>
+<td style="background-color:#FFFF00;">&#160;</td>
+<td><a href="/wiki/Jacqui_Lambie_Network" title="Jacqui Lambie Network">Lambie</a></td>
+<td><a href="/wiki/Tasmania" title="Tasmania">Tasmania</a></td>
+<td>2022</td>
+<td>2014–2017
+</td></tr>
+<tr>
+<td><span data-sort-value="Leyonhjelm, David"><span class="vcard"><span class="fn"><a href="/wiki/David_Leyonhjelm" title="David Leyonhjelm">David Leyonhjelm</a></span></span></span> <sup id="cite_ref-Leyonhjelm_32-1" class="reference"><a href="#cite_note-Leyonhjelm-32">&#91;ae&#93;</a></sup></td>
+<td style="background-color:#FFC528;">&#160;</td>
+<td><a href="/wiki/Liberal_Democratic_Party_(Australia)" title="Liberal Democratic Party (Australia)">Liberal Democrats</a></td>
+<td><a href="/wiki/New_South_Wales" title="New South Wales">New South Wales</a></td>
+<td>2019</td>
+<td>2014–2019
+</td></tr>
+<tr>
+<td><span data-sort-value="Lines, Sue"><span class="vcard"><span class="fn"><a href="/wiki/Sue_Lines" title="Sue Lines">Sue Lines</a></span></span></span></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/Western_Australia" title="Western Australia">Western Australia</a></td>
+<td>2022</td>
+<td>2013–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Ludlam, Scott"><span class="vcard"><span class="fn"><a href="/wiki/Scott_Ludlam" title="Scott Ludlam">Scott Ludlam</a></span></span></span> <sup id="cite_ref-Ludlam_13-1" class="reference"><a href="#cite_note-Ludlam-13">&#91;l&#93;</a></sup><sup id="cite_ref-citizens_16-3" class="reference"><a href="#cite_note-citizens-16">&#91;o&#93;</a></sup></td>
+<td style="background-color:#10C25B;">&#160;</td>
+<td><a href="/wiki/Australian_Greens" title="Australian Greens">Greens</a></td>
+<td><a href="/wiki/Western_Australia" title="Western Australia">Western Australia</a></td>
+<td>2022</td>
+<td>2008–2017
+</td></tr>
+<tr>
+<td><span data-sort-value="Macdonald, Ian&#160;!">Hon. <a href="/wiki/Ian_Macdonald_(Australian_politician)" title="Ian Macdonald (Australian politician)">Ian Macdonald</a></span></td>
+<td style="background-color:#1456F1;">&#160;</td>
+<td><a href="/wiki/Liberal_National_Party_of_Queensland" title="Liberal National Party of Queensland">Liberal National</a> <sup id="cite_ref-lnpl_1-2" class="reference"><a href="#cite_note-lnpl-1">&#91;a&#93;</a></sup></td>
+<td><a href="/wiki/Queensland" title="Queensland">Queensland</a></td>
+<td>2019</td>
+<td>1990–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Marshall, Gavin"><span class="vcard"><span class="fn"><a href="/wiki/Gavin_Marshall" title="Gavin Marshall">Gavin Marshall</a></span></span></span></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/Victoria_(Australia)" title="Victoria (Australia)">Victoria</a></td>
+<td>2019</td>
+<td>2002–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Martin, Steve&#160;!"><a href="/wiki/Steve_Martin_(Australian_politician)" title="Steve Martin (Australian politician)">Steve Martin</a></span> <sup id="cite_ref-Lambie_20-2" class="reference"><a href="#cite_note-Lambie-20">&#91;s&#93;</a></sup>,<sup id="cite_ref-Martin_26-1" class="reference"><a href="#cite_note-Martin-26">&#91;y&#93;</a></sup></td>
+<td style="background-color:green;">&#160;</td>
+<td><a href="/wiki/Independent_politician" title="Independent politician">Independent</a> / <a href="/wiki/National_Party_of_Australia" title="National Party of Australia">National</a></td>
+<td><a href="/wiki/Tasmania" title="Tasmania">Tasmania</a></td>
+<td>2019</td>
+<td>2018–present
+</td></tr>
+<tr>
+<td><span data-sort-value="McAllister, Jenny"><span class="vcard"><span class="fn"><a href="/wiki/Jenny_McAllister" title="Jenny McAllister">Jenny McAllister</a></span></span></span></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/New_South_Wales" title="New South Wales">New South Wales</a></td>
+<td>2022</td>
+<td>2015–present
+</td></tr>
+<tr>
+<td><span data-sort-value="McCarthy, Malarndirri"><span class="vcard"><span class="fn"><a href="/wiki/Malarndirri_McCarthy" title="Malarndirri McCarthy">Malarndirri McCarthy</a></span></span></span></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/Northern_Territory" title="Northern Territory">Northern Territory</a></td>
+<td>2019&#160;<sup id="cite_ref-Territory_6-2" class="reference"><a href="#cite_note-Territory-6">&#91;e&#93;</a></sup></td>
+<td>2016–present
+</td></tr>
+<tr>
+<td><span data-sort-value="McGrath, James&#160;!"><a href="/wiki/James_McGrath_(Australian_politician)" title="James McGrath (Australian politician)">James McGrath</a></span></td>
+<td style="background-color:#1456F1;">&#160;</td>
+<td><a href="/wiki/Liberal_National_Party_of_Queensland" title="Liberal National Party of Queensland">Liberal National</a> <sup id="cite_ref-lnpl_1-3" class="reference"><a href="#cite_note-lnpl-1">&#91;a&#93;</a></sup></td>
+<td><a href="/wiki/Queensland" title="Queensland">Queensland</a></td>
+<td>2022</td>
+<td>2014–present
+</td></tr>
+<tr>
+<td><span data-sort-value="McKenzie, Bridget"><span class="vcard"><span class="fn"><a href="/wiki/Bridget_McKenzie" title="Bridget McKenzie">Bridget McKenzie</a></span></span></span></td>
+<td style="background-color:green;">&#160;</td>
+<td><a href="/wiki/National_Party_of_Australia" title="National Party of Australia">National</a></td>
+<td><a href="/wiki/Victoria_(Australia)" title="Victoria (Australia)">Victoria</a></td>
+<td>2022</td>
+<td>2011–present
+</td></tr>
+<tr>
+<td><span data-sort-value="McKim, Nick"><span class="vcard"><span class="fn"><a href="/wiki/Nick_McKim" title="Nick McKim">Nick McKim</a></span></span></span></td>
+<td style="background-color:#10C25B;">&#160;</td>
+<td><a href="/wiki/Australian_Greens" title="Australian Greens">Greens</a></td>
+<td><a href="/wiki/Tasmania" title="Tasmania">Tasmania</a></td>
+<td>2019</td>
+<td>2015–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Molan, Jim"><span class="vcard"><span class="fn"><a href="/wiki/Jim_Molan" title="Jim Molan">Jim Molan</a></span></span></span> <sup id="cite_ref-citizens_16-4" class="reference"><a href="#cite_note-citizens-16">&#91;o&#93;</a></sup></td>
+<td style="background-color:#080CAB;">&#160;</td>
+<td><a href="/wiki/Liberal_Party_of_Australia" title="Liberal Party of Australia">Liberal</a></td>
+<td><a href="/wiki/New_South_Wales" title="New South Wales">New South Wales</a></td>
+<td>2019</td>
+<td>2017–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Moore, Claire"><span class="vcard"><span class="fn"><a href="/wiki/Claire_Moore" title="Claire Moore">Claire Moore</a></span></span></span></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/Queensland" title="Queensland">Queensland</a></td>
+<td>2019</td>
+<td>2002–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Nash, Fiona&#160;!">Hon. <a href="/wiki/Fiona_Nash" title="Fiona Nash">Fiona Nash</a></span> <sup id="cite_ref-citizens_16-5" class="reference"><a href="#cite_note-citizens-16">&#91;o&#93;</a></sup></td>
+<td style="background-color:green;">&#160;</td>
+<td><a href="/wiki/National_Party_of_Australia" title="National Party of Australia">National</a></td>
+<td><a href="/wiki/New_South_Wales" title="New South Wales">New South Wales</a></td>
+<td>2022</td>
+<td>2005–2017
+</td></tr>
+<tr>
+<td><span data-sort-value="O&#39;Neill, Deborah"><span class="vcard"><span class="fn"><a href="/wiki/Deborah_O%27Neill" title="Deborah O&#39;Neill">Deborah O'Neill</a></span></span></span></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/New_South_Wales" title="New South Wales">New South Wales</a></td>
+<td>2022</td>
+<td>2013–present
+</td></tr>
+<tr>
+<td><span data-sort-value="O&#39;Sullivan, Barry"><span class="vcard"><span class="fn"><a href="/wiki/Barry_O%27Sullivan" title="Barry O&#39;Sullivan">Barry O'Sullivan</a></span></span></span></td>
+<td style="background-color:#1456F1;">&#160;</td>
+<td><a href="/wiki/Liberal_National_Party_of_Queensland" title="Liberal National Party of Queensland">Liberal National</a> <sup id="cite_ref-lnpn_2-2" class="reference"><a href="#cite_note-lnpn-2">&#91;b&#93;</a></sup></td>
+<td><a href="/wiki/Queensland" title="Queensland">Queensland</a></td>
+<td>2019</td>
+<td>2014–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Parry, Stephen&#160;!">Hon. <a href="/wiki/Stephen_Parry_(Australian_politician)" title="Stephen Parry (Australian politician)">Stephen Parry</a></span> <sup id="cite_ref-Parry_18-2" class="reference"><a href="#cite_note-Parry-18">&#91;q&#93;</a></sup></td>
+<td style="background-color:#080CAB;">&#160;</td>
+<td><a href="/wiki/Liberal_Party_of_Australia" title="Liberal Party of Australia">Liberal</a></td>
+<td><a href="/wiki/Tasmania" title="Tasmania">Tasmania</a></td>
+<td>2022</td>
+<td>2005–2017
+</td></tr>
+<tr>
+<td><span data-sort-value="Paterson, James"><span class="vcard"><span class="fn"><a href="/wiki/James_Paterson_(Australian_politician)" title="James Paterson (Australian politician)">James Paterson</a></span></span></span></td>
+<td style="background-color:#080CAB;">&#160;</td>
+<td><a href="/wiki/Liberal_Party_of_Australia" title="Liberal Party of Australia">Liberal</a></td>
+<td><a href="/wiki/Victoria_(Australia)" title="Victoria (Australia)">Victoria</a></td>
+<td>2019</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Patrick, Rex"><span class="vcard"><span class="fn"><a href="/wiki/Rex_Patrick" title="Rex Patrick">Rex Patrick</a></span></span></span> <sup id="cite_ref-Xeno_17-1" class="reference"><a href="#cite_note-Xeno-17">&#91;p&#93;</a></sup></td>
+<td style="background-color:#ff6300;">&#160;</td>
+<td><a href="/wiki/Nick_Xenophon_Team" class="mw-redirect" title="Nick Xenophon Team">Xenophon/Centre Alliance</a></td>
+<td><a href="/wiki/South_Australia" title="South Australia">South Australia</a></td>
+<td>2022</td>
+<td>2017–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Payne, Marise&#160;!">Hon. <a href="/wiki/Marise_Payne" title="Marise Payne">Marise Payne</a></span></td>
+<td style="background-color:#080CAB;">&#160;</td>
+<td><a href="/wiki/Liberal_Party_of_Australia" title="Liberal Party of Australia">Liberal</a></td>
+<td><a href="/wiki/New_South_Wales" title="New South Wales">New South Wales</a></td>
+<td>2022</td>
+<td>1997–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Polley, Helen"><span class="vcard"><span class="fn"><a href="/wiki/Helen_Polley" title="Helen Polley">Helen Polley</a></span></span></span></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/Tasmania" title="Tasmania">Tasmania</a></td>
+<td>2022</td>
+<td>2005–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Pratt, Louise"><span class="vcard"><span class="fn"><a href="/wiki/Louise_Pratt" title="Louise Pratt">Louise Pratt</a></span></span></span></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/Western_Australia" title="Western Australia">Western Australia</a></td>
+<td>2019</td>
+<td>2008–2014, 2016–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Reynolds, Linda"><span class="vcard"><span class="fn"><a href="/wiki/Linda_Reynolds" title="Linda Reynolds">Linda Reynolds</a></span></span></span></td>
+<td style="background-color:#080CAB;">&#160;</td>
+<td><a href="/wiki/Liberal_Party_of_Australia" title="Liberal Party of Australia">Liberal</a></td>
+<td><a href="/wiki/Western_Australia" title="Western Australia">Western Australia</a></td>
+<td>2019</td>
+<td>2014–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Rhiannon, Lee"><span class="vcard"><span class="fn"><a href="/wiki/Lee_Rhiannon" title="Lee Rhiannon">Lee Rhiannon</a></span></span></span> <sup id="cite_ref-Rhiannon101_28-2" class="reference"><a href="#cite_note-Rhiannon101-28">&#91;aa&#93;</a></sup></td>
+<td style="background-color:#10C25B;">&#160;</td>
+<td><a href="/wiki/Australian_Greens" title="Australian Greens">Greens</a></td>
+<td><a href="/wiki/New_South_Wales" title="New South Wales">New South Wales</a></td>
+<td>2019</td>
+<td>2011–2018
+</td></tr>
+<tr>
+<td><span data-sort-value="Rice, Janet"><span class="vcard"><span class="fn"><a href="/wiki/Janet_Rice" title="Janet Rice">Janet Rice</a></span></span></span></td>
+<td style="background-color:#10C25B;">&#160;</td>
+<td><a href="/wiki/Australian_Greens" title="Australian Greens">Greens</a></td>
+<td><a href="/wiki/Victoria_(Australia)" title="Victoria (Australia)">Victoria</a></td>
+<td>2019</td>
+<td>2014–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Roberts, Malcolm"><span class="vcard"><span class="fn"><a href="/wiki/Malcolm_Roberts_(politician)" title="Malcolm Roberts (politician)">Malcolm Roberts</a></span></span></span> <sup id="cite_ref-citizens_16-6" class="reference"><a href="#cite_note-citizens-16">&#91;o&#93;</a></sup></td>
+<td style="background-color:#CE4716;">&#160;</td>
+<td><a href="/wiki/Pauline_Hanson%27s_One_Nation" title="Pauline Hanson&#39;s One Nation">One Nation</a></td>
+<td><a href="/wiki/Queensland" title="Queensland">Queensland</a></td>
+<td>2019</td>
+<td>2016–2017
+</td></tr>
+<tr>
+<td><span data-sort-value="Ruston, Anne&#160;!">Hon. <a href="/wiki/Anne_Ruston" title="Anne Ruston">Anne Ruston</a></span></td>
+<td style="background-color:#080CAB;">&#160;</td>
+<td><a href="/wiki/Liberal_Party_of_Australia" title="Liberal Party of Australia">Liberal</a></td>
+<td><a href="/wiki/South_Australia" title="South Australia">South Australia</a></td>
+<td>2019</td>
+<td>2012–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Ryan, Scott&#160;!">Hon. <a href="/wiki/Scott_Ryan_(Australian_politician)" title="Scott Ryan (Australian politician)">Scott Ryan</a></span></td>
+<td style="background-color:#080CAB;">&#160;</td>
+<td><a href="/wiki/Liberal_Party_of_Australia" title="Liberal Party of Australia">Liberal</a></td>
+<td><a href="/wiki/Victoria_(Australia)" title="Victoria (Australia)">Victoria</a></td>
+<td>2022</td>
+<td>2008–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Scullion, Nigel&#160;!">Hon. <a href="/wiki/Nigel_Scullion" title="Nigel Scullion">Nigel Scullion</a></span></td>
+<td style="background-color:#FF7F00;">&#160;</td>
+<td><a href="/wiki/Country_Liberal_Party" title="Country Liberal Party">Country Liberal</a> <sup id="cite_ref-lnpn_2-3" class="reference"><a href="#cite_note-lnpn-2">&#91;b&#93;</a></sup></td>
+<td><a href="/wiki/Northern_Territory" title="Northern Territory">Northern Territory</a></td>
+<td>2019&#160;<sup id="cite_ref-Territory_6-3" class="reference"><a href="#cite_note-Territory-6">&#91;e&#93;</a></sup></td>
+<td>2001–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Seselja, Zed"><span class="vcard"><span class="fn"><a href="/wiki/Zed_Seselja" title="Zed Seselja">Zed Seselja</a></span></span></span></td>
+<td style="background-color:#080CAB;">&#160;</td>
+<td><a href="/wiki/Liberal_Party_of_Australia" title="Liberal Party of Australia">Liberal</a></td>
+<td><a href="/wiki/Australian_Capital_Territory" title="Australian Capital Territory">Australian Capital Territory</a></td>
+<td>2019&#160;<sup id="cite_ref-Territory_6-4" class="reference"><a href="#cite_note-Territory-6">&#91;e&#93;</a></sup></td>
+<td>2013–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Siewert, Rachel"><span class="vcard"><span class="fn"><a href="/wiki/Rachel_Siewert" title="Rachel Siewert">Rachel Siewert</a></span></span></span></td>
+<td style="background-color:#10C25B;">&#160;</td>
+<td><a href="/wiki/Australian_Greens" title="Australian Greens">Greens</a></td>
+<td><a href="/wiki/Western_Australia" title="Western Australia">Western Australia</a></td>
+<td>2022&#160;<sup id="cite_ref-extendedterm_4-5" class="reference"><a href="#cite_note-extendedterm-4">&#91;d&#93;</a></sup></td>
+<td>2005–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Singh, Lisa&#160;!">Hon. <a href="/wiki/Lisa_Singh" title="Lisa Singh">Lisa Singh</a></span></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/Tasmania" title="Tasmania">Tasmania</a></td>
+<td>2019</td>
+<td>2011–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Sinodinos, Arthur&#160;!">Hon. <a href="/wiki/Arthur_Sinodinos" title="Arthur Sinodinos">Arthur Sinodinos</a></span></td>
+<td style="background-color:#080CAB;">&#160;</td>
+<td><a href="/wiki/Liberal_Party_of_Australia" title="Liberal Party of Australia">Liberal</a></td>
+<td><a href="/wiki/New_South_Wales" title="New South Wales">New South Wales</a></td>
+<td>2022</td>
+<td>2011–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Smith, David"><span class="vcard"><span class="fn"><a href="/wiki/David_Smith_(Australian_Capital_Territory_politician)" title="David Smith (Australian Capital Territory politician)">David Smith</a></span></span></span> <sup id="cite_ref-Gallagher_25-2" class="reference"><a href="#cite_note-Gallagher-25">&#91;x&#93;</a></sup>&#160;<sup id="cite_ref-Smith_33-1" class="reference"><a href="#cite_note-Smith-33">&#91;af&#93;</a></sup></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/Australian_Capital_Territory" title="Australian Capital Territory">Australian Capital Territory</a></td>
+<td>2019&#160;<sup id="cite_ref-Territory_6-5" class="reference"><a href="#cite_note-Territory-6">&#91;e&#93;</a></sup></td>
+<td>2018–2019
+</td></tr>
+<tr>
+<td><span data-sort-value="Smith, Dean"><span class="vcard"><span class="fn"><a href="/wiki/Dean_Smith_(Australian_politician)" title="Dean Smith (Australian politician)">Dean Smith</a></span></span></span></td>
+<td style="background-color:#080CAB;">&#160;</td>
+<td><a href="/wiki/Liberal_Party_of_Australia" title="Liberal Party of Australia">Liberal</a></td>
+<td><a href="/wiki/Western_Australia" title="Western Australia">Western Australia</a></td>
+<td>2022</td>
+<td>2012–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Spender, Duncan"><span class="vcard"><span class="fn"><a href="/wiki/Duncan_Spender" title="Duncan Spender">Duncan Spender</a></span></span></span> <sup id="cite_ref-Leyonhjelm_32-2" class="reference"><a href="#cite_note-Leyonhjelm-32">&#91;ae&#93;</a></sup></td>
+<td style="background-color:#FFC528;">&#160;</td>
+<td><a href="/wiki/Liberal_Democratic_Party_(Australia)" title="Liberal Democratic Party (Australia)">Liberal Democrats</a></td>
+<td><a href="/wiki/New_South_Wales" title="New South Wales">New South Wales</a></td>
+<td>2019</td>
+<td>2019–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Steele-John, Jordon"><span class="vcard"><span class="fn"><a href="/wiki/Jordon_Steele-John" title="Jordon Steele-John">Jordon Steele-John</a></span></span></span> <sup id="cite_ref-citizens_16-7" class="reference"><a href="#cite_note-citizens-16">&#91;o&#93;</a></sup></td>
+<td style="background-color:#10C25B;">&#160;</td>
+<td><a href="/wiki/Australian_Greens" title="Australian Greens">Greens</a></td>
+<td><a href="/wiki/Western_Australia" title="Western Australia">Western Australia</a></td>
+<td>2019</td>
+<td>2017–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Sterle, Glenn"><span class="vcard"><span class="fn"><a href="/wiki/Glenn_Sterle" title="Glenn Sterle">Glenn Sterle</a></span></span></span></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/Western_Australia" title="Western Australia">Western Australia</a></td>
+<td>2022</td>
+<td>2005–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Stoker, Amanda"><span class="vcard"><span class="fn"><a href="/wiki/Amanda_Stoker" title="Amanda Stoker">Amanda Stoker</a></span></span></span> <sup id="cite_ref-Brandis_24-2" class="reference"><a href="#cite_note-Brandis-24">&#91;w&#93;</a></sup></td>
+<td style="background-color:#1456F1;">&#160;</td>
+<td><a href="/wiki/Liberal_National_Party_of_Queensland" title="Liberal National Party of Queensland">Liberal National</a> <sup id="cite_ref-lnpl_1-4" class="reference"><a href="#cite_note-lnpl-1">&#91;a&#93;</a></sup></td>
+<td><a href="/wiki/Queensland" title="Queensland">Queensland</a></td>
+<td>2022</td>
+<td>2018–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Storer, Tim"><span class="vcard"><span class="fn"><a href="/wiki/Tim_Storer" title="Tim Storer">Tim Storer</a></span></span></span> <sup id="cite_ref-Kakoschke_21-2" class="reference"><a href="#cite_note-Kakoschke-21">&#91;t&#93;</a></sup></td>
+<td style="background-color:#888888;">&#160;</td>
+<td><a href="/wiki/Independent_politician" title="Independent politician">Independent</a></td>
+<td><a href="/wiki/South_Australia" title="South Australia">South Australia</a></td>
+<td>2019</td>
+<td>2018–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Urquhart, Anne"><span class="vcard"><span class="fn"><a href="/wiki/Anne_Urquhart" title="Anne Urquhart">Anne Urquhart</a></span></span></span></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/Tasmania" title="Tasmania">Tasmania</a></td>
+<td>2022</td>
+<td>2011–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Waters, Larissa"><span class="vcard"><span class="fn"><a href="/wiki/Larissa_Waters" title="Larissa Waters">Larissa Waters</a></span></span></span> <sup id="cite_ref-Waters_14-1" class="reference"><a href="#cite_note-Waters-14">&#91;m&#93;</a></sup><sup id="cite_ref-citizens_16-8" class="reference"><a href="#cite_note-citizens-16">&#91;o&#93;</a></sup><sup id="cite_ref-Bartlett_29-2" class="reference"><a href="#cite_note-Bartlett-29">&#91;ab&#93;</a></sup></td>
+<td style="background-color:#10C25B;">&#160;</td>
+<td><a href="/wiki/Australian_Greens" title="Australian Greens">Greens</a></td>
+<td><a href="/wiki/Queensland" title="Queensland">Queensland</a></td>
+<td>2019</td>
+<td>2011–2017, 2018–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Watt, Murray"><span class="vcard"><span class="fn"><a href="/wiki/Murray_Watt" title="Murray Watt">Murray Watt</a></span></span></span></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/Queensland" title="Queensland">Queensland</a></td>
+<td>2022</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Whish-Wilson, Peter"><span class="vcard"><span class="fn"><a href="/wiki/Peter_Whish-Wilson" title="Peter Whish-Wilson">Peter Whish-Wilson</a></span></span></span></td>
+<td style="background-color:#10C25B;">&#160;</td>
+<td><a href="/wiki/Australian_Greens" title="Australian Greens">Greens</a></td>
+<td><a href="/wiki/Tasmania" title="Tasmania">Tasmania</a></td>
+<td>2022</td>
+<td>2012–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Williams, John"><span class="vcard"><span class="fn"><a href="/wiki/John_Williams_(Australian_senator)" title="John Williams (Australian senator)">John Williams</a></span></span></span></td>
+<td style="background-color:green;">&#160;</td>
+<td><a href="/wiki/National_Party_of_Australia" title="National Party of Australia">National</a></td>
+<td><a href="/wiki/New_South_Wales" title="New South Wales">New South Wales</a></td>
+<td>2019</td>
+<td>2008–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Wong, Penny&#160;!">Hon. <a href="/wiki/Penny_Wong" title="Penny Wong">Penny Wong</a></span></td>
+<td style="background-color:#F00011;">&#160;</td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/South_Australia" title="South Australia">South Australia</a></td>
+<td>2022</td>
+<td>2002–present
+</td></tr>
+<tr>
+<td><span data-sort-value="Xenophon, Nick"><span class="vcard"><span class="fn"><a href="/wiki/Nick_Xenophon" title="Nick Xenophon">Nick Xenophon</a></span></span></span> <sup id="cite_ref-Xeno_17-2" class="reference"><a href="#cite_note-Xeno-17">&#91;p&#93;</a></sup></td>
+<td style="background-color:#ff6300;">&#160;</td>
+<td><a href="/wiki/Nick_Xenophon_Team" class="mw-redirect" title="Nick Xenophon Team">Xenophon</a></td>
+<td><a href="/wiki/South_Australia" title="South Australia">South Australia</a></td>
+<td>2022</td>
+<td>2008–2017
+</td></tr></tbody></table>

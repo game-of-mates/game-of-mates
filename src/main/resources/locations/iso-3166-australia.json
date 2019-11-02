@@ -1,0 +1,54 @@
+// ISO-3166-1
+// https://en.wikipedia.org/wiki/ISO_3166-2:AU
+
+// Country codes of Australian international territories
+//Australia	AU	AUS	036	ISO 3166-2:AU
+//Christmas Island	CX	CXR	162	ISO 3166-2:CX // Division of Lingiari NT, Senate NT
+//Cocos (Keeling) Islands	CC	CCK	166	ISO 3166-2:CC // // Division of Lingiari NT, Senate NT
+//Norfolk Island	NF	NFK	574	ISO 3166-2:NF	//(Self -governance - Division of Canberra since 2016, NSW State laws)
+
+
+urn:iso:std:iso:3166:AU,name,Australia
+urn:iso:std:iso:3166:AU,id,AU
+urn:iso:std:iso:3166:CX,name,Christmas Island
+urn:iso:std:iso:3166:CX,id,CX
+urn:iso:std:iso:3166:CC,name,Cocos (Keeling) Islands
+urn:iso:std:iso:3166:CC,id,CC
+urn:iso:std:iso:3166:NF,name,Norfolk Island
+urn:iso:std:iso:3166:NF,id,NF
+urn:iso:std:iso:3166:HM,name,Heard Island and McDonald Islands
+urn:iso:std:iso:3166:HM,id,HM
+
+// ISO-3166-2
+urn:iso:std:iso:3166:-2:AU-NSW,name,New South Wales
+urn:iso:std:iso:3166:-2:AU-NSW,id,AU-NSW
+urn:iso:std:iso:3166:-2:AU-NSW,category,state
+urn:iso:std:iso:3166:-2:AU-QLD,name,Queensland
+urn:iso:std:iso:3166:-2:AU-QLD,id,AU-QLD
+urn:iso:std:iso:3166:-2:AU-QLD,category,state
+urn:iso:std:iso:3166:-2:AU-SA,name,South Australia
+urn:iso:std:iso:3166:-2:AU-SA,id,AU-SA
+urn:iso:std:iso:3166:-2:AU-SA,category,state
+urn:iso:std:iso:3166:-2:AU-TAS,name,Tasmania
+urn:iso:std:iso:3166:-2:AU-TAS,id,AU-TAS
+urn:iso:std:iso:3166:-2:AU-TAS,category,state
+urn:iso:std:iso:3166:-2:AU-VIC,name,Victoria
+urn:iso:std:iso:3166:-2:AU-VIC,id,AU-VIC
+urn:iso:std:iso:3166:-2:AU-VIC,category,state
+urn:iso:std:iso:3166:-2:AU-WA,name,Western Australia
+urn:iso:std:iso:3166:-2:AU-WA,id,AU-WA
+urn:iso:std:iso:3166:-2:AU-WA,category,state
+urn:iso:std:iso:3166:-2:AU-ACT,name,Australian Capital Territory
+urn:iso:std:iso:3166:-2:AU-ACT,id,AU-ACT
+urn:iso:std:iso:3166:-2:AU-ACT,category,territory
+urn:iso:std:iso:3166:-2:AU-NT,name,Northern Territory
+urn:iso:std:iso:3166:-2:AU-NT,id,AU-NT
+urn:iso:std:iso:3166:-2:AU-NT,category,territory
+
+urn:iso:std:iso:3166:-2:AU-NSW,subdivision-of,urn:iso:std:iso:3166:AU
+urn:iso:std:iso:3166:-2:AU-QLD,subdivision-of,urn:iso:std:iso:3166:AU
+urn:iso:std:iso:3166:-2:AU-SA,subdivision-of,urn:iso:std:iso:3166:AU
+urn:iso:std:iso:3166:-2:AU-VIC,subdivision-of,urn:iso:std:iso:3166:AU
+urn:iso:std:iso:3166:-2:AU-WA,subdivision-of,urn:iso:std:iso:3166:AU
+urn:iso:std:iso:3166:-2:AU-ACT,subdivision-of,urn:iso:std:iso:3166:AU
+urn:iso:std:iso:3166:-2:AU-NT,subdivision-of,urn:iso:std:iso:3166:AU

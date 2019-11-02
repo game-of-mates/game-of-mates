@@ -1,0 +1,21 @@
+Principal Entities
+
+urn, description, source
+urn:iso:std:iso:3166,Part 1, Country Codes (2-letter and 3-letter, and numerical codes), https://www.hl7.org/fhir/iso3166.html
+urn:iso:std:iso:3166:-2,Part 2, Subdivision (State/Province) Codes,https://www.hl7.org/fhir/iso3166.html
+
+
+
+Relationships
+
+urn, from type(s), to type(s), source
+
+
+
+
+Common Properties
+
+name
+effectiveFrom
+effectiveTo
+id

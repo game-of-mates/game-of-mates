@@ -1,0 +1,1168 @@
+//https://en.wikipedia.org/wiki/Members_of_the_Australian_House_of_Representatives,_2016%E2%80%932019
+// People
+// Division Affiliations (Effective dates)
+// Party Affiliation (Effective dates)
+// MP-Change-Events ( Party Change, ByElection, Retirement,..Dates, Succeeded by)
+// Tony Abbott
+
+// Key dates, range of 45th Parliament
+{
+   "id" : "urn:aph.gov.au:parliament:45",
+   "elected" : "2016-07-02",
+   "sworn-in" : "2016-08-30",
+   "dissovled" : "2019-04-04"
+},
+{
+   "id" : "urn:aph.gov.au:parliament:46",
+   "elected" : "2019-05-18",
+   "sworn-in" : "null",
+   "dissovled" : "null"
+}
+
+// Governor General
+{
+  "id": "urn:aec.gov.au:person:peter.cosgrove.1947-07-28",
+  "http://schema.org/name": "Peter Cosgrove"
+},
+// Members
+{
+  "id": "urn:aec.gov.au:person:tony.abbott.1957-11-04",
+  "http://schema.org/name": "Tony Abbott"
+},
+// Anthony Albanese
+{
+  "id": "urn:aec.gov.au:person:anthony.albanese.1963-03-02",
+  "http://schema.org/name": "Anthony Albanese"
+}
+
+
+
+// Party affiliation - Subject = Party, Predicate = 'member-of', Object = Person
+// Party counts - count of members of party in group during effective dates
+ {
+ "subject" : { "type" : "urn" , "value" : "urn:aec.gov.au:person" } ,
+ "predicate" : { "type" : "uri" , "value" : "http://aec.gov.au/parties/member-of" } ,
+ "object" : { "type" : "urn" , "value" : "urn:aec.gov.au:party" },
+  // Can be null - only relevant on an MP exiting a Party
+ "effective-from" : "date",
+ "effective-to" : "date"
+ } 
+ 
+ // Grouping - Is the MP in Government, Opposition or X-Bench?
+ // Power numbers - count of Members in group during effective dates
+ {
+  "subject" : { "type" : "urn" , "value" : "urn:aec.gov.au:person" } ,
+ "predicate" : { "type" : "uri" , "value" : "http://aph.gov.au/parliament/groups" } ,
+ "object" : { "type" : "urn" , "value" : "urn:aph.gov.au:parliament" },
+  // Can be null - dates only relevant on an MP Quitting a Party/XBench/Opposition
+ "effective-from" : "date",
+ "effective-to" : "date"
+ }
+ 
+ 
+ // Key Roles
+  {
+ "subject" : { "type" : "urn" , "value" : "urn:aec.gov.au:person" } ,
+ "predicate" : { "type" : "uri" , "value" : "http://aec.gov.au/parties/has-role" } ,
+ "object" : { "type" : "urn" , "value" : "urn:aph.gov.au:parliament-role" },
+ "effective-from" : "date",
+ "effective-to" : "date"
+  } 
+  
+// Electorate representative
+{
+ "subject" : { "type" : "urn" , "value" : "urn:aec.gov.au:person" } ,
+ "predicate" : { "type" : "uri" , "value" : "http://aec.gov.au/parties/is-mp" } ,
+ "object" : { "type" : "urn" , "value" : "urn:aph.gov.au:electorate" },
+ "term" : { "type" : "urn" , "value" : "urn:aph.gov.au:parliament:45" },
+ // Can be null - only relevant on change / by-election
+ "effective-from" : "date",
+ "effective-to" : "date"
+  } 
+ 
+ // Wikipedia HTML Source
+ 
+ <table class="sortable wikitable">
+
+<tbody><tr style="background:#ccc;">
+<th>Member
+</th>
+<th>Party
+</th>
+<th>Electorate
+</th>
+<th>State
+</th>
+<th>In office
+</th></tr>
+<tr>
+<td>Hon <a href="/wiki/Tony_Abbott" title="Tony Abbott">Tony Abbott</a></td>
+<td><a href="/wiki/Liberal_Party_of_Australia" title="Liberal Party of Australia">Liberal</a></td>
+<td><a href="/wiki/Division_of_Warringah" title="Division of Warringah">Warringah</a></td>
+<td>NSW</td>
+<td>1994–2019
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Anthony_Albanese" title="Anthony Albanese">Anthony Albanese</a></td>
+<td><a href="/wiki/Australian_Labor_Party" title="Australian Labor Party">Labor</a></td>
+<td><a href="/wiki/Division_of_Grayndler" title="Division of Grayndler">Grayndler</a></td>
+<td>NSW</td>
+<td>1996–present
+</td></tr>
+<tr>
+<td><a href="/wiki/John_Alexander_(Australian_politician)" title="John Alexander (Australian politician)">John Alexander</a> <span class="noexcerpt" style="font-size:85%;"><a href="/wiki/Medal_of_the_Order_of_Australia" class="mw-redirect" title="Medal of the Order of Australia">OAM</a></span> <sup class="reference plainlinks nourlexpansion" id="ref_JA"><a href="#endnote_JA">f</a></sup></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Bennelong" title="Division of Bennelong">Bennelong</a></td>
+<td>NSW</td>
+<td><div class="plainlist"><ul><li>2010–2017;</li><li>2017–present</li></ul></div>
+</td></tr>
+<tr>
+<td><a href="/wiki/Anne_Aly" title="Anne Aly">Anne Aly</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Cowan" title="Division of Cowan">Cowan</a></td>
+<td>WA</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Karen_Andrews" title="Karen Andrews">Karen Andrews</a></td>
+<td><a href="/wiki/Liberal_National_Party_of_Queensland" title="Liberal National Party of Queensland">LNP</a><sup class="reference plainlinks nourlexpansion" id="ref_LIB"><a href="#endnote_LIB">c</a></sup></td>
+<td><a href="/wiki/Division_of_McPherson" title="Division of McPherson">McPherson</a></td>
+<td>Qld</td>
+<td>2010–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Kevin_Andrews_(politician)" title="Kevin Andrews (politician)">Kevin Andrews</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Menzies" title="Division of Menzies">Menzies</a></td>
+<td>Vic</td>
+<td>1991–present
+</td></tr>
+<tr>
+<td>Dr <a href="/wiki/Adam_Bandt" title="Adam Bandt">Adam Bandt</a></td>
+<td><a href="/wiki/Australian_Greens" title="Australian Greens">Greens</a></td>
+<td><a href="/wiki/Division_of_Melbourne" title="Division of Melbourne">Melbourne</a></td>
+<td>Vic</td>
+<td>2010–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Julia_Banks" title="Julia Banks">Julia Banks</a></td>
+<td>Liberal/Independent<sup class="reference plainlinks nourlexpansion" id="ref_JB"><a href="#endnote_JB">k</a></sup></td>
+<td><a href="/wiki/Division_of_Chisholm" title="Division of Chisholm">Chisholm</a></td>
+<td>Vic</td>
+<td>2016–2019
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Sharon_Bird" title="Sharon Bird">Sharon Bird</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Cunningham" title="Division of Cunningham">Cunningham</a></td>
+<td>NSW</td>
+<td>2004–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Julie_Bishop" title="Julie Bishop">Julie Bishop</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Curtin" title="Division of Curtin">Curtin</a></td>
+<td>WA</td>
+<td>1998–2019
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Chris_Bowen" title="Chris Bowen">Chris Bowen</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_McMahon" title="Division of McMahon">McMahon</a></td>
+<td>NSW</td>
+<td>2004–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Andrew_Broad" title="Andrew Broad">Andrew Broad</a></td>
+<td><a href="/wiki/National_Party_of_Australia" title="National Party of Australia">National</a></td>
+<td><a href="/wiki/Division_of_Mallee" title="Division of Mallee">Mallee</a></td>
+<td>Vic</td>
+<td>2013–2019
+</td></tr>
+<tr>
+<td><a href="/wiki/Russell_Broadbent" title="Russell Broadbent">Russell Broadbent</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_McMillan" title="Division of McMillan">McMillan</a></td>
+<td>Vic</td>
+<td><div class="plainlist"><ul><li>1990–1993;</li><li>1996–1998;</li><li>2004–present</li></ul></div>
+</td></tr>
+<tr>
+<td><a href="/wiki/Gai_Brodtmann" title="Gai Brodtmann">Gai Brodtmann</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Canberra" title="Division of Canberra">Canberra</a></td>
+<td>ACT</td>
+<td>2010–2019
+</td></tr>
+<tr>
+<td><a href="/wiki/Scott_Buchholz" title="Scott Buchholz">Scott Buchholz</a></td>
+<td>LNP<sup class="reference plainlinks nourlexpansion" id="ref_LIB"><a href="#endnote_LIB">c</a></sup></td>
+<td><a href="/wiki/Division_of_Wright" title="Division of Wright">Wright</a></td>
+<td>Qld</td>
+<td>2010–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Tony_Burke" title="Tony Burke">Tony Burke</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Watson" title="Division of Watson">Watson</a></td>
+<td>NSW</td>
+<td>2004–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Linda_Burney" title="Linda Burney">Linda Burney</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Barton" title="Division of Barton">Barton</a></td>
+<td>NSW</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Mark_Butler" title="Mark Butler">Mark Butler</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Port_Adelaide" title="Division of Port Adelaide">Port Adelaide</a></td>
+<td>SA</td>
+<td>2007–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Terri_Butler" title="Terri Butler">Terri Butler</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Griffith" title="Division of Griffith">Griffith</a></td>
+<td>Qld</td>
+<td>2014–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Anthony_Byrne_(politician)" title="Anthony Byrne (politician)">Anthony Byrne</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Holt" title="Division of Holt">Holt</a></td>
+<td>Vic</td>
+<td>1999–present
+</td></tr>
+<tr>
+<td>Dr <a href="/wiki/Jim_Chalmers_(Queensland_politician)" class="mw-redirect" title="Jim Chalmers (Queensland politician)">Jim Chalmers</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Rankin" title="Division of Rankin">Rankin</a></td>
+<td>Qld</td>
+<td>2013–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Nick_Champion" title="Nick Champion">Nick Champion</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Wakefield" title="Division of Wakefield">Wakefield</a></td>
+<td>SA</td>
+<td>2007–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Darren_Chester" title="Darren Chester">Darren Chester</a></td>
+<td>National</td>
+<td><a href="/wiki/Division_of_Gippsland" title="Division of Gippsland">Gippsland</a></td>
+<td>Vic</td>
+<td>2008–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Lisa_Chesters" title="Lisa Chesters">Lisa Chesters</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Bendigo" title="Division of Bendigo">Bendigo</a></td>
+<td>Vic</td>
+<td>2013–present
+</td></tr>
+<tr>
+<td><a href="/wiki/George_Christensen" title="George Christensen">George Christensen</a></td>
+<td>LNP<sup class="reference plainlinks nourlexpansion" id="ref_NAT"><a href="#endnote_NAT">d</a></sup></td>
+<td><a href="/wiki/Division_of_Dawson" title="Division of Dawson">Dawson</a></td>
+<td>Qld</td>
+<td>2010–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Steven_Ciobo" title="Steven Ciobo">Steven Ciobo</a></td>
+<td>LNP<sup class="reference plainlinks nourlexpansion" id="ref_LIB"><a href="#endnote_LIB">c</a></sup></td>
+<td><a href="/wiki/Division_of_Moncrieff" title="Division of Moncrieff">Moncrieff</a></td>
+<td>Qld</td>
+<td>2001–2019
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Jason_Clare" title="Jason Clare">Jason Clare</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Blaxland" title="Division of Blaxland">Blaxland</a></td>
+<td>NSW</td>
+<td>2007–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Sharon_Claydon" title="Sharon Claydon">Sharon Claydon</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Newcastle" title="Division of Newcastle">Newcastle</a></td>
+<td>NSW</td>
+<td>2013–present
+</td></tr>
+<tr>
+<td><a href="/wiki/David_Coleman_(Australian_politician)" title="David Coleman (Australian politician)">David Coleman</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Banks" title="Division of Banks">Banks</a></td>
+<td>NSW</td>
+<td>2013–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Julie_Collins" title="Julie Collins">Julie Collins</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Franklin" title="Division of Franklin">Franklin</a></td>
+<td>Tas</td>
+<td>2007–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Pat_Conroy_(politician)" title="Pat Conroy (politician)">Pat Conroy</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Shortland" title="Division of Shortland">Shortland</a></td>
+<td>NSW</td>
+<td>2013–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Mark_Coulton" title="Mark Coulton">Mark Coulton</a></td>
+<td>National</td>
+<td><a href="/wiki/Division_of_Parkes" title="Division of Parkes">Parkes</a></td>
+<td>NSW</td>
+<td>2007–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Chris_Crewther" title="Chris Crewther">Chris Crewther</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Dunkley" title="Division of Dunkley">Dunkley</a></td>
+<td>Vic</td>
+<td>2016–2019
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Michael_Danby" title="Michael Danby">Michael Danby</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Melbourne_Ports" title="Division of Melbourne Ports">Melbourne Ports</a></td>
+<td>Vic</td>
+<td>1998–2019
+</td></tr>
+<tr>
+<td><a href="/wiki/Milton_Dick" title="Milton Dick">Milton Dick</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Oxley" title="Division of Oxley">Oxley</a></td>
+<td>Qld</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Mark_Dreyfus" title="Mark Dreyfus">Mark Dreyfus</a> <span class="noexcerpt" style="font-size:85%;"><a href="/wiki/Queen%27s_Counsel" title="Queen&#39;s Counsel">QC</a></span></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Isaacs" title="Division of Isaacs">Isaacs</a></td>
+<td>Vic</td>
+<td>2007–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Damian_Drum" title="Damian Drum">Damian Drum</a></td>
+<td>National</td>
+<td><a href="/wiki/Division_of_Murray" title="Division of Murray">Murray</a></td>
+<td>Vic</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Peter_Dutton" title="Peter Dutton">Peter Dutton</a></td>
+<td>LNP<sup class="reference plainlinks nourlexpansion" id="ref_LIB"><a href="#endnote_LIB">c</a></sup></td>
+<td><a href="/wiki/Division_of_Dickson" title="Division of Dickson">Dickson</a></td>
+<td>Qld</td>
+<td>2001–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Justine_Elliot" title="Justine Elliot">Justine Elliot</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Richmond" title="Division of Richmond">Richmond</a></td>
+<td>NSW</td>
+<td>2004–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Kate_Ellis" title="Kate Ellis">Kate Ellis</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Adelaide" title="Division of Adelaide">Adelaide</a></td>
+<td>SA</td>
+<td>2004–2019
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Warren_Entsch" title="Warren Entsch">Warren Entsch</a></td>
+<td>LNP<sup class="reference plainlinks nourlexpansion" id="ref_LIB"><a href="#endnote_LIB">c</a></sup></td>
+<td><a href="/wiki/Division_of_Leichhardt" title="Division of Leichhardt">Leichhardt</a></td>
+<td>Qld</td>
+<td><div class="plainlist"><ul><li>1996–2007;</li><li>2010–present</li></ul></div>
+</td></tr>
+<tr>
+<td><a href="/wiki/Trevor_Evans_(politician)" title="Trevor Evans (politician)">Trevor Evans</a></td>
+<td>LNP<sup class="reference plainlinks nourlexpansion" id="ref_LIB"><a href="#endnote_LIB">c</a></sup></td>
+<td><a href="/wiki/Division_of_Brisbane" title="Division of Brisbane">Brisbane</a></td>
+<td>Qld</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Jason_Falinski" title="Jason Falinski">Jason Falinski</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Mackellar" title="Division of Mackellar">Mackellar</a></td>
+<td>NSW</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/David_Feeney" title="David Feeney">David Feeney</a> <sup class="reference plainlinks nourlexpansion" id="ref_DF"><a href="#endnote_DF">g</a></sup></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Batman" title="Division of Batman">Batman</a></td>
+<td>Vic</td>
+<td>2013–2018
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Joel_Fitzgibbon" title="Joel Fitzgibbon">Joel Fitzgibbon</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Hunter" title="Division of Hunter">Hunter</a></td>
+<td>NSW</td>
+<td>1996–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Paul_Fletcher_(politician)" title="Paul Fletcher (politician)">Paul Fletcher</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Bradfield" title="Division of Bradfield">Bradfield</a></td>
+<td>NSW</td>
+<td>2009–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Nicolle_Flint" title="Nicolle Flint">Nicolle Flint</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Boothby" title="Division of Boothby">Boothby</a></td>
+<td>SA</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Mike_Freelander" title="Mike Freelander">Mike Freelander</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Macarthur" title="Division of Macarthur">Macarthur</a></td>
+<td>NSW</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Josh_Frydenberg" title="Josh Frydenberg">Josh Frydenberg</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Kooyong" title="Division of Kooyong">Kooyong</a></td>
+<td>Vic</td>
+<td>2010–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Andrew_Gee_(politician)" title="Andrew Gee (politician)">Andrew Gee</a></td>
+<td>National</td>
+<td><a href="/wiki/Division_of_Calare" title="Division of Calare">Calare</a></td>
+<td>NSW</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Steve_Georganas" title="Steve Georganas">Steve Georganas</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Hindmarsh" title="Division of Hindmarsh">Hindmarsh</a></td>
+<td>SA</td>
+<td><div class="plainlist"><ul><li>2004–2013;</li><li>2016–present</li></ul></div>
+</td></tr>
+<tr>
+<td><a href="/wiki/Andrew_Giles" title="Andrew Giles">Andrew Giles</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Scullin" title="Division of Scullin">Scullin</a></td>
+<td>Vic</td>
+<td>2013–present
+</td></tr>
+<tr>
+<td>Dr <a href="/wiki/David_Gillespie_(politician)" title="David Gillespie (politician)">David Gillespie</a></td>
+<td>National</td>
+<td><a href="/wiki/Division_of_Lyne" title="Division of Lyne">Lyne</a></td>
+<td>NSW</td>
+<td>2013–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Ian_Goodenough" title="Ian Goodenough">Ian Goodenough</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Moore" title="Division of Moore">Moore</a></td>
+<td>WA</td>
+<td>2013–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Patrick_Gorman_(politician)" title="Patrick Gorman (politician)">Patrick Gorman</a> <sup class="reference plainlinks nourlexpansion" id="ref_TH"><a href="#endnote_TH">i</a></sup></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Perth" title="Division of Perth">Perth</a></td>
+<td>WA</td>
+<td>2018–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Luke_Gosling" title="Luke Gosling">Luke Gosling</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Solomon" title="Division of Solomon">Solomon</a></td>
+<td>NT</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Tim_Hammond" title="Tim Hammond">Tim Hammond</a> <sup class="reference plainlinks nourlexpansion" id="ref_TH"><a href="#endnote_TH">i</a></sup></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Perth" title="Division of Perth">Perth</a></td>
+<td>WA</td>
+<td>2016–2018
+</td></tr>
+<tr>
+<td><a href="/wiki/Ross_Hart_(politician)" title="Ross Hart (politician)">Ross Hart</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Bass" title="Division of Bass">Bass</a></td>
+<td>Tas</td>
+<td>2016–2019
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Luke_Hartsuyker" title="Luke Hartsuyker">Luke Hartsuyker</a></td>
+<td>National</td>
+<td><a href="/wiki/Division_of_Cowper" title="Division of Cowper">Cowper</a></td>
+<td>NSW</td>
+<td>2001–2019
+</td></tr>
+<tr>
+<td><a href="/wiki/Andrew_Hastie_(politician)" title="Andrew Hastie (politician)">Andrew Hastie</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Canning" title="Division of Canning">Canning</a></td>
+<td>WA</td>
+<td>2015–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Alex_Hawke" title="Alex Hawke">Alex Hawke</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Mitchell" title="Division of Mitchell">Mitchell</a></td>
+<td>NSW</td>
+<td>2007–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Chris_Hayes_(politician)" title="Chris Hayes (politician)">Chris Hayes</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Fowler" title="Division of Fowler">Fowler</a></td>
+<td>NSW</td>
+<td>2005–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Sarah_Henderson" title="Sarah Henderson">Sarah Henderson</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Corangamite" title="Division of Corangamite">Corangamite</a></td>
+<td>Vic</td>
+<td>2013–2019
+</td></tr>
+<tr>
+<td><a href="/wiki/Julian_Hill" title="Julian Hill">Julian Hill</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Bruce" title="Division of Bruce">Bruce</a></td>
+<td>Vic</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Kevin_Hogan_(politician)" title="Kevin Hogan (politician)">Kevin Hogan</a></td>
+<td>National</td>
+<td><a href="/wiki/Division_of_Page" title="Division of Page">Page</a></td>
+<td>NSW</td>
+<td>2013–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Luke_Howarth" title="Luke Howarth">Luke Howarth</a></td>
+<td>LNP<sup class="reference plainlinks nourlexpansion" id="ref_LIB"><a href="#endnote_LIB">c</a></sup></td>
+<td><a href="/wiki/Division_of_Petrie" title="Division of Petrie">Petrie</a></td>
+<td>Qld</td>
+<td>2013–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Greg_Hunt" title="Greg Hunt">Greg Hunt</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Flinders" title="Division of Flinders">Flinders</a></td>
+<td>Vic</td>
+<td>2001–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Emma_Husar" title="Emma Husar">Emma Husar</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Lindsay" title="Division of Lindsay">Lindsay</a></td>
+<td>NSW</td>
+<td>2016–2019
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Ed_Husic" title="Ed Husic">Ed Husic</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Chifley" title="Division of Chifley">Chifley</a></td>
+<td>NSW</td>
+<td>2010–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Steve_Irons" title="Steve Irons">Steve Irons</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Swan" title="Division of Swan">Swan</a></td>
+<td>WA</td>
+<td>2007–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Stephen_Jones_(Australian_politician)" title="Stephen Jones (Australian politician)">Stephen Jones</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Whitlam" title="Division of Whitlam">Whitlam</a></td>
+<td>NSW</td>
+<td>2010–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Barnaby_Joyce" title="Barnaby Joyce">Barnaby Joyce</a><sup class="reference plainlinks nourlexpansion" id="ref_HC"><a href="#endnote_HC">e</a></sup></td>
+<td>National</td>
+<td><a href="/wiki/Division_of_New_England" title="Division of New England">New England</a></td>
+<td>NSW</td>
+<td><div class="plainlist"><ul><li>2013–2017;</li><li>2017–present</li></ul></div>
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Bob_Katter" title="Bob Katter">Bob Katter</a></td>
+<td><a href="/wiki/Katter%27s_Australian_Party" title="Katter&#39;s Australian Party">Katter's Australian Party</a></td>
+<td><a href="/wiki/Division_of_Kennedy" title="Division of Kennedy">Kennedy</a></td>
+<td>Qld</td>
+<td>1993–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Ged_Kearney" title="Ged Kearney">Ged Kearney</a> <sup class="reference plainlinks nourlexpansion" id="ref_DF"><a href="#endnote_DF">g</a></sup></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Batman" title="Division of Batman">Batman</a></td>
+<td>Vic</td>
+<td>2018–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Justine_Keay" title="Justine Keay">Justine Keay</a> <sup class="reference plainlinks nourlexpansion" id="ref_KG"><a href="#endnote_KG">h</a></sup></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Braddon" title="Division of Braddon">Braddon</a></td>
+<td>Tas</td>
+<td><div class="plainlist"><ul><li>2016–2018;</li><li>2018–2019</li></ul></div>
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Michael_Keenan" title="Michael Keenan">Michael Keenan</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Stirling" title="Division of Stirling">Stirling</a></td>
+<td>WA</td>
+<td>2004–2019
+</td></tr>
+<tr>
+<td><a href="/wiki/Craig_Kelly_(politician)" title="Craig Kelly (politician)">Craig Kelly</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Hughes" title="Division of Hughes">Hughes</a></td>
+<td>NSW</td>
+<td>2010–present
+</td></tr>
+<tr>
+<td>Hon Dr <a href="/wiki/Mike_Kelly_(Australian_politician)" title="Mike Kelly (Australian politician)">Mike Kelly</a> <span class="noexcerpt" style="font-size:85%;"><a href="/wiki/Member_of_the_Order_of_Australia" class="mw-redirect" title="Member of the Order of Australia">AM</a></span></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Eden-Monaro" title="Division of Eden-Monaro">Eden-Monaro</a></td>
+<td>NSW</td>
+<td><div class="plainlist"><ul><li>2007–2013;</li><li>2016–present</li></ul></div>
+</td></tr>
+<tr>
+<td><a href="/wiki/Matt_Keogh" title="Matt Keogh">Matt Keogh</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Burt" title="Division of Burt">Burt</a></td>
+<td>WA</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Peter_Khalil" title="Peter Khalil">Peter Khalil</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Wills" title="Division of Wills">Wills</a></td>
+<td>Vic</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Catherine_King_(politician)" title="Catherine King (politician)">Catherine King</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Ballarat" title="Division of Ballarat">Ballarat</a></td>
+<td>Vic</td>
+<td>2001–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Madeleine_King" title="Madeleine King">Madeleine King</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Brand" title="Division of Brand">Brand</a></td>
+<td>WA</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Susan_Lamb" title="Susan Lamb">Susan Lamb</a> <sup class="reference plainlinks nourlexpansion" id="ref_KG"><a href="#endnote_KG">h</a></sup></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Longman" title="Division of Longman">Longman</a></td>
+<td>Qld</td>
+<td><div class="plainlist"><ul><li>2016–2018;</li><li>2018–2019</li></ul></div>
+</td></tr>
+<tr>
+<td><a href="/wiki/Andrew_Laming" title="Andrew Laming">Andrew Laming</a></td>
+<td>LNP<sup class="reference plainlinks nourlexpansion" id="ref_LIB"><a href="#endnote_LIB">c</a></sup></td>
+<td><a href="/wiki/Division_of_Bowman" title="Division of Bowman">Bowman</a></td>
+<td>Qld</td>
+<td>2004–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Michelle_Landry" title="Michelle Landry">Michelle Landry</a></td>
+<td>LNP<sup class="reference plainlinks nourlexpansion" id="ref_NAT"><a href="#endnote_NAT">d</a></sup></td>
+<td><a href="/wiki/Division_of_Capricornia" title="Division of Capricornia">Capricornia</a></td>
+<td>Qld</td>
+<td>2013–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Craig_Laundy" title="Craig Laundy">Craig Laundy</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Reid" title="Division of Reid">Reid</a></td>
+<td>NSW</td>
+<td>2013–2019
+</td></tr>
+<tr>
+<td><a href="/wiki/Julian_Leeser" title="Julian Leeser">Julian Leeser</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Berowra" title="Division of Berowra">Berowra</a></td>
+<td>NSW</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td>Hon Dr <a href="/wiki/Andrew_Leigh" title="Andrew Leigh">Andrew Leigh</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Fenner" title="Division of Fenner">Fenner</a></td>
+<td>ACT</td>
+<td>2010–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Sussan_Ley" title="Sussan Ley">Sussan Ley</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Farrer" title="Division of Farrer">Farrer</a></td>
+<td>NSW</td>
+<td>2001–present
+</td></tr>
+<tr>
+<td><a href="/wiki/David_Littleproud" title="David Littleproud">David Littleproud</a></td>
+<td>LNP<sup class="reference plainlinks nourlexpansion" id="ref_NAT"><a href="#endnote_NAT">d</a></sup></td>
+<td><a href="/wiki/Division_of_Maranoa" title="Division of Maranoa">Maranoa</a></td>
+<td>Qld</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Jenny_Macklin" title="Jenny Macklin">Jenny Macklin</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Jagajaga" title="Division of Jagajaga">Jagajaga</a></td>
+<td>Vic</td>
+<td>1996–2019
+</td></tr>
+<tr>
+<td><a href="/wiki/Nola_Marino" title="Nola Marino">Nola Marino</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Forrest" title="Division of Forrest">Forrest</a></td>
+<td>WA</td>
+<td>2007–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Richard_Marles" title="Richard Marles">Richard Marles</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Corio" title="Division of Corio">Corio</a></td>
+<td>Vic</td>
+<td>2007–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Emma_McBride" title="Emma McBride">Emma McBride</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Dobell" title="Division of Dobell">Dobell</a></td>
+<td>NSW</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Michael_McCormack_(Australian_politician)" title="Michael McCormack (Australian politician)">Michael McCormack</a></td>
+<td>National</td>
+<td><a href="/wiki/Division_of_Riverina" title="Division of Riverina">Riverina</a></td>
+<td>NSW</td>
+<td>2010–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Cathy_McGowan_(politician)" title="Cathy McGowan (politician)">Cathy McGowan</a> <span class="noexcerpt" style="font-size:85%;"><a href="/wiki/Officer_of_the_Order_of_Australia" class="mw-redirect" title="Officer of the Order of Australia">AO</a></span></td>
+<td>Independent</td>
+<td><a href="/wiki/Division_of_Indi" title="Division of Indi">Indi</a></td>
+<td>Vic</td>
+<td>2013–2019
+</td></tr>
+<tr>
+<td><a href="/wiki/John_McVeigh_(politician)" title="John McVeigh (politician)">John McVeigh</a></td>
+<td>LNP<sup class="reference plainlinks nourlexpansion" id="ref_LIB"><a href="#endnote_LIB">c</a></sup></td>
+<td><a href="/wiki/Division_of_Groom" title="Division of Groom">Groom</a></td>
+<td>Qld</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Brian_Mitchell_(politician)" title="Brian Mitchell (politician)">Brian Mitchell</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Lyons" title="Division of Lyons">Lyons</a></td>
+<td>Tas</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Rob_Mitchell_(Victorian_politician)" title="Rob Mitchell (Victorian politician)">Rob Mitchell</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_McEwen" title="Division of McEwen">McEwen</a></td>
+<td>Vic</td>
+<td>2010–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Scott_Morrison" title="Scott Morrison">Scott Morrison</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Cook" title="Division of Cook">Cook</a></td>
+<td>NSW</td>
+<td>2007–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Ben_Morton_(politician)" title="Ben Morton (politician)">Ben Morton</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Tangney" title="Division of Tangney">Tangney</a></td>
+<td>WA</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Shayne_Neumann" title="Shayne Neumann">Shayne Neumann</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Blair" title="Division of Blair">Blair</a></td>
+<td>Qld</td>
+<td>2007–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Llew_O%27Brien" title="Llew O&#39;Brien">Llew O'Brien</a></td>
+<td>LNP<sup class="reference plainlinks nourlexpansion" id="ref_NAT"><a href="#endnote_NAT">d</a></sup></td>
+<td><a href="/wiki/Division_of_Wide_Bay" title="Division of Wide Bay">Wide Bay</a></td>
+<td>Qld</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Ted_O%27Brien_(Australian_politician)" title="Ted O&#39;Brien (Australian politician)">Ted O'Brien</a></td>
+<td>LNP<sup class="reference plainlinks nourlexpansion" id="ref_LIB"><a href="#endnote_LIB">c</a></sup></td>
+<td><a href="/wiki/Division_of_Fairfax" title="Division of Fairfax">Fairfax</a></td>
+<td>Qld</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Brendan_O%27Connor_(politician)" title="Brendan O&#39;Connor (politician)">Brendan O'Connor</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Gorton" title="Division of Gorton">Gorton</a></td>
+<td>Vic</td>
+<td>2001–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Ken_O%27Dowd" title="Ken O&#39;Dowd">Ken O'Dowd</a></td>
+<td>LNP<sup class="reference plainlinks nourlexpansion" id="ref_NAT"><a href="#endnote_NAT">d</a></sup></td>
+<td><a href="/wiki/Division_of_Flynn" title="Division of Flynn">Flynn</a></td>
+<td>Qld</td>
+<td>2010–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Kelly_O%27Dwyer" title="Kelly O&#39;Dwyer">Kelly O'Dwyer</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Higgins" title="Division of Higgins">Higgins</a></td>
+<td>Vic</td>
+<td>2009–2019
+</td></tr>
+<tr>
+<td><a href="/wiki/Clare_O%27Neil" title="Clare O&#39;Neil">Clare O'Neil</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Hotham" title="Division of Hotham">Hotham</a></td>
+<td>Vic</td>
+<td>2013–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Cathy_O%27Toole" title="Cathy O&#39;Toole">Cathy O'Toole</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Herbert" title="Division of Herbert">Herbert</a></td>
+<td>Qld</td>
+<td>2016–2019
+</td></tr>
+<tr>
+<td><a href="/wiki/Julie_Owens" title="Julie Owens">Julie Owens</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Parramatta" title="Division of Parramatta">Parramatta</a></td>
+<td>NSW</td>
+<td>2004–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Tony_Pasin" title="Tony Pasin">Tony Pasin</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Barker" title="Division of Barker">Barker</a></td>
+<td>SA</td>
+<td>2013–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Graham_Perrett" title="Graham Perrett">Graham Perrett</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Moreton" title="Division of Moreton">Moreton</a></td>
+<td>Qld</td>
+<td>2007–present
+</td></tr>
+<tr>
+<td>Dr <a href="/wiki/Kerryn_Phelps" title="Kerryn Phelps">Kerryn Phelps</a> <span class="noexcerpt" style="font-size:85%;"><a href="/wiki/Member_of_the_Order_of_Australia" class="mw-redirect" title="Member of the Order of Australia">AM</a></span> <sup class="reference plainlinks nourlexpansion" id="ref_MT"><a href="#endnote_MT">j</a></sup></td>
+<td>Independent</td>
+<td><a href="/wiki/Division_of_Wentworth" title="Division of Wentworth">Wentworth</a></td>
+<td>NSW</td>
+<td>2018–2019
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Keith_Pitt" title="Keith Pitt">Keith Pitt</a></td>
+<td>LNP<sup class="reference plainlinks nourlexpansion" id="ref_NAT"><a href="#endnote_NAT">d</a></sup></td>
+<td><a href="/wiki/Division_of_Hinkler" title="Division of Hinkler">Hinkler</a></td>
+<td>Qld</td>
+<td>2013–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Tanya_Plibersek" title="Tanya Plibersek">Tanya Plibersek</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Sydney" title="Division of Sydney">Sydney</a></td>
+<td>NSW</td>
+<td>1998–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Christian_Porter" title="Christian Porter">Christian Porter</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Pearce" title="Division of Pearce">Pearce</a></td>
+<td>WA</td>
+<td>2013–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Jane_Prentice" title="Jane Prentice">Jane Prentice</a></td>
+<td>LNP<sup class="reference plainlinks nourlexpansion" id="ref_LIB"><a href="#endnote_LIB">c</a></sup></td>
+<td><a href="/wiki/Division_of_Ryan" title="Division of Ryan">Ryan</a></td>
+<td>Qld</td>
+<td>2010–2019
+</td></tr>
+<tr>
+<td><a href="/wiki/Melissa_Price_(politician)" title="Melissa Price (politician)">Melissa Price</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Durack" title="Division of Durack">Durack</a></td>
+<td>WA</td>
+<td>2013–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Christopher_Pyne" title="Christopher Pyne">Christopher Pyne</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Sturt" title="Division of Sturt">Sturt</a></td>
+<td>SA</td>
+<td>1993–2019
+</td></tr>
+<tr>
+<td><a href="/wiki/Rowan_Ramsey" title="Rowan Ramsey">Rowan Ramsey</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Grey" title="Division of Grey">Grey</a></td>
+<td>SA</td>
+<td>2007–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Amanda_Rishworth" title="Amanda Rishworth">Amanda Rishworth</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Kingston" title="Division of Kingston">Kingston</a></td>
+<td>SA</td>
+<td>2007–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Stuart_Robert" title="Stuart Robert">Stuart Robert</a></td>
+<td>LNP<sup class="reference plainlinks nourlexpansion" id="ref_LIB"><a href="#endnote_LIB">c</a></sup></td>
+<td><a href="/wiki/Division_of_Fadden" title="Division of Fadden">Fadden</a></td>
+<td>Qld</td>
+<td>2007–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Michelle_Rowland" title="Michelle Rowland">Michelle Rowland</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Greenway" title="Division of Greenway">Greenway</a></td>
+<td>NSW</td>
+<td>2010–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Joanne_Ryan_(politician)" title="Joanne Ryan (politician)">Joanne Ryan</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Lalor" title="Division of Lalor">Lalor</a></td>
+<td>Vic</td>
+<td>2013–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Rebekha_Sharkie" title="Rebekha Sharkie">Rebekha Sharkie</a> <sup class="reference plainlinks nourlexpansion" id="ref_KG"><a href="#endnote_KG">h</a></sup></td>
+<td><a href="/wiki/Nick_Xenophon_Team" class="mw-redirect" title="Nick Xenophon Team">Nick Xenophon Team</a>/<a href="/wiki/Centre_Alliance" title="Centre Alliance">Centre Alliance</a></td>
+<td><a href="/wiki/Division_of_Mayo" title="Division of Mayo">Mayo</a></td>
+<td>SA</td>
+<td><div class="plainlist"><ul><li>2016–2018;</li><li>2018–present</li></ul></div>
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Bill_Shorten" title="Bill Shorten">Bill Shorten</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Maribyrnong" title="Division of Maribyrnong">Maribyrnong</a></td>
+<td>Vic</td>
+<td>2007–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Tony_Smith_(Victorian_politician)" title="Tony Smith (Victorian politician)">Tony Smith</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Casey" title="Division of Casey">Casey</a></td>
+<td>Vic</td>
+<td>2001–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Warren_Snowdon" title="Warren Snowdon">Warren Snowdon</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Lingiari" title="Division of Lingiari">Lingiari</a></td>
+<td>NT</td>
+<td><div class="plainlist"><ul><li>1987–1996;</li><li>1998–present</li></ul></div>
+</td></tr>
+<tr>
+<td><a href="/wiki/Anne_Stanley_(politician)" title="Anne Stanley (politician)">Anne Stanley</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Werriwa" title="Division of Werriwa">Werriwa</a></td>
+<td>NSW</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Ann_Sudmalis" title="Ann Sudmalis">Ann Sudmalis</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Gilmore" title="Division of Gilmore">Gilmore</a></td>
+<td>NSW</td>
+<td>2013–2019
+</td></tr>
+<tr>
+<td><a href="/wiki/Michael_Sukkar" title="Michael Sukkar">Michael Sukkar</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Deakin" title="Division of Deakin">Deakin</a></td>
+<td>Vic</td>
+<td>2013–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Wayne_Swan" title="Wayne Swan">Wayne Swan</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Lilley" title="Division of Lilley">Lilley</a></td>
+<td>Qld</td>
+<td><div class="plainlist"><ul><li>1993–1996;</li><li>1998–2019</li></ul></div>
+</td></tr>
+<tr>
+<td><a href="/wiki/Meryl_Swanson" title="Meryl Swanson">Meryl Swanson</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Paterson" title="Division of Paterson">Paterson</a></td>
+<td>NSW</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Angus_Taylor_(politician)" title="Angus Taylor (politician)">Angus Taylor</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Hume" title="Division of Hume">Hume</a></td>
+<td>NSW</td>
+<td>2013–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Dan_Tehan" title="Dan Tehan">Dan Tehan</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Wannon" title="Division of Wannon">Wannon</a></td>
+<td>Vic</td>
+<td>2010–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Susan_Templeman" title="Susan Templeman">Susan Templeman</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Macquarie" title="Division of Macquarie">Macquarie</a></td>
+<td>NSW</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Matt_Thistlethwaite" title="Matt Thistlethwaite">Matt Thistlethwaite</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Kingsford_Smith" title="Division of Kingsford Smith">Kingsford Smith</a></td>
+<td>NSW</td>
+<td>2013–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Alan_Tudge" title="Alan Tudge">Alan Tudge</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Aston" title="Division of Aston">Aston</a></td>
+<td>Vic</td>
+<td>2010–present
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Malcolm_Turnbull" title="Malcolm Turnbull">Malcolm Turnbull</a> <sup class="reference plainlinks nourlexpansion" id="ref_MT"><a href="#endnote_MT">j</a></sup></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Wentworth" title="Division of Wentworth">Wentworth</a></td>
+<td>NSW</td>
+<td>2004–2018
+</td></tr>
+<tr>
+<td><a href="/wiki/Maria_Vamvakinou" title="Maria Vamvakinou">Maria Vamvakinou</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Calwell" title="Division of Calwell">Calwell</a></td>
+<td>Vic</td>
+<td>2001–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Bert_van_Manen" title="Bert van Manen">Bert van Manen</a></td>
+<td>LNP<sup class="reference plainlinks nourlexpansion" id="ref_LIB"><a href="#endnote_LIB">c</a></sup></td>
+<td><a href="/wiki/Division_of_Forde" title="Division of Forde">Forde</a></td>
+<td>Qld</td>
+<td>2010–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Ross_Vasta" title="Ross Vasta">Ross Vasta</a></td>
+<td>LNP<sup class="reference plainlinks nourlexpansion" id="ref_LIB"><a href="#endnote_LIB">c</a></sup></td>
+<td><a href="/wiki/Division_of_Bonner" title="Division of Bonner">Bonner</a></td>
+<td>Qld</td>
+<td><div class="plainlist"><ul><li>2004–2007;</li><li>2010–present</li></ul></div>
+</td></tr>
+<tr>
+<td><a href="/wiki/Andrew_Wallace" title="Andrew Wallace">Andrew Wallace</a></td>
+<td>LNP<sup class="reference plainlinks nourlexpansion" id="ref_LIB"><a href="#endnote_LIB">c</a></sup></td>
+<td><a href="/wiki/Division_of_Fisher" title="Division of Fisher">Fisher</a></td>
+<td>Qld</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Tim_Watts_(politician)" title="Tim Watts (politician)">Tim Watts</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Gellibrand" title="Division of Gellibrand">Gellibrand</a></td>
+<td>Vic</td>
+<td>2013–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Lucy_Wicks_(politician)" title="Lucy Wicks (politician)">Lucy Wicks</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Robertson" title="Division of Robertson">Robertson</a></td>
+<td>NSW</td>
+<td>2013–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Andrew_Wilkie" title="Andrew Wilkie">Andrew Wilkie</a></td>
+<td>Independent</td>
+<td><a href="/wiki/Division_of_Denison" title="Division of Denison">Denison</a></td>
+<td>Tas</td>
+<td>2010–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Josh_Wilson_(politician)" title="Josh Wilson (politician)">Josh Wilson</a> <sup class="reference plainlinks nourlexpansion" id="ref_KG"><a href="#endnote_KG">h</a></sup></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Fremantle" title="Division of Fremantle">Fremantle</a></td>
+<td>WA</td>
+<td><div class="plainlist"><ul><li>2016–2018;</li><li>2018–present</li></ul></div>
+</td></tr>
+<tr>
+<td><a href="/wiki/Rick_Wilson_(Australian_politician)" title="Rick Wilson (Australian politician)">Rick Wilson</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_O%27Connor" title="Division of O&#39;Connor">O'Connor</a></td>
+<td>WA</td>
+<td>2013–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Tim_Wilson_(Australian_politician)" title="Tim Wilson (Australian politician)">Tim Wilson</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Goldstein" title="Division of Goldstein">Goldstein</a></td>
+<td>Vic</td>
+<td>2016–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Jason_Wood_(politician)" title="Jason Wood (politician)">Jason Wood</a></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_La_Trobe" title="Division of La Trobe">La Trobe</a></td>
+<td>Vic</td>
+<td><div class="plainlist"><ul><li>2004–2010;</li><li>2013–present</li></ul></div>
+</td></tr>
+<tr>
+<td>Hon <a href="/wiki/Ken_Wyatt" title="Ken Wyatt">Ken Wyatt</a> <span class="noexcerpt" style="font-size:85%;"><a href="/wiki/Member_of_the_Order_of_Australia" class="mw-redirect" title="Member of the Order of Australia">AM</a></span></td>
+<td>Liberal</td>
+<td><a href="/wiki/Division_of_Hasluck" title="Division of Hasluck">Hasluck</a></td>
+<td>WA</td>
+<td>2010–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Tony_Zappia" title="Tony Zappia">Tony Zappia</a></td>
+<td>Labor</td>
+<td><a href="/wiki/Division_of_Makin" title="Division of Makin">Makin</a></td>
+<td>SA</td>
+<td>2007–present
+</td></tr>
+<tr>
+<td><a href="/wiki/Trent_Zimmerman" title="Trent Zimmerman">Trent Zimmerman</a></td>
+<td><a href="/wiki/Liberal_Party_of_Australia" title="Liberal Party of Australia">Liberal</a></td>
+<td><a href="/wiki/Division_of_North_Sydney" title="Division of North Sydney">North Sydney</a></td>
+<td>NSW</td>
+<td>2015–present
+</td></tr></tbody></table>

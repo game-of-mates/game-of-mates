@@ -1,0 +1,63 @@
+// Parliament Types
+// Helps categories MP's in a Parliament to an Executive, Oppostion, Senate
+// https://www.aph.gov.au/
+
+
+// Key Individual roles in Parliament
+{
+   "id": "urn:aph.gov.au:parliament-role:governer-general",
+   "name" :"Governor General"
+},
+{
+   "id": "urn:aph.gov.au:parliament-role:speaker",
+   "name" :"Speaker (HOR)",
+   "url" : "https://www.aph.gov.au/Senators_and_Members/Members/The_Speaker"
+},
+{
+   "id": "urn:aph.gov.au:parliament-role:senate-president",
+   "name" :"President of the Senate",
+   "url" : "https://www.aph.gov.au/Senators_and_Members/Senators/The_President/The_role_of_the_President"
+},
+{
+   "id": "urn:aph.gov.au:parliament-role:primeminister",
+   "name" :"Prime Minister"
+},
+{
+   "id": "urn:aph.gov.au:parliament-role:oppositionleader",
+   "name" :"Opposition Leader"
+}
+
+// House / Senate Groups - who is in executive, cabinets, opposition, X-bench
+,
+{
+   "id": "urn:aph.gov.au:parliament:house-government",
+   "name" :"Government"
+},
+{
+   "id": "urn:aph.gov.au:parliament:house-opposition",
+   "name" :"Opposition"
+},
+{
+   "id": "urn:aph.gov.au:parliament:house-crossbench",
+   "name" :"Crossbench"
+},
+{
+   "id": "urn:aph.gov.au:parliament:senate-government",
+   "name" :"Senate - Government"
+},
+{
+   "id": "urn:aph.gov.au:parliament:senate-opposition",
+   "name" :"Senate - Opposition"
+},
+{
+   "id": "urn:aph.gov.au:parliament:senate-crossbench",
+   "name" :"Senate - Crossbench"
+},	
+{
+   "id": "urn:aph.gov.au:parliament:cabinet",
+   "name" :"Cabinet"
+},
+{
+   "id": "urn:aph.gov.au:parliament:shadow-cabinet",
+   "name" :"shadow-cabinet"
+}

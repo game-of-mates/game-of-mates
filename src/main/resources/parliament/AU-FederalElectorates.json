@@ -1,0 +1,1859 @@
+//https://www.aec.gov.au/profiles/index.htm
+
+// Country, States
+// Link Prefix - https://www.aec.gov.au/ e.g. https://www.aec.gov.au/bean
+
+// Abolished Electorates
+// https://www.aec.gov.au/Electorates/abolished.htm
+
+
+
+--- XSLT
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:foo="http://www.foo.org/" xmlns:bar="http://www.bar.org">
+<xsl:template match="/table">
+
+<xsl:for-each select="tr">
+{
+  "id" : "urn:aec.gov.au:division:<xsl:value-of select="td"/>",
+  "division" : "<xsl:value-of select="td"/>"
+},
+</xsl:for-each>
+
+</xsl:template>
+</xsl:stylesheet>
+
+--- HTML / XML
+	<table class="table-sorter">
+	            <caption>Electoral divisions</caption>
+	 
+	 <thead>
+	                <tr>
+	                  <th>Electoral division</th>
+	                  <th>State</th>
+	                  <th>Area (sq km)</th>
+	                  <th>Current map &amp; description of division</th>
+	                  <th>Most recent redistribution</th>
+	                </tr>
+	              </thead>
+	              <tbody class="list">
+	                <tr>
+	                  <td class="division">Bean</td>
+	                  <td class="filterState">ACT</td>
+	                  <td>1,913</td>
+	                  <td><a href="/bean">Profile of electorate of Bean</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/act/determination.htm">2018</a></td>
+	                </tr>
+	                 <tr>
+	                  <td class="division">Canberra</td>
+	                  <td class="filterState">ACT</td>
+	                  <td>312</td>
+	                  <td><a href="/canberra">Profile of electorate of Canberra</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/act/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Fenner</td>
+	                  <td class="filterState">ACT</td>
+	                  <td>238</td>
+	                  <td><a href="/fenner">Profile of electorate of Fenner</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/act/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Banks</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>53</td>
+	                  <td><a href="/banks">Profile of electorate of Banks</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Barton</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>40</td>
+	                  <td><a href="/Barton">Profile of electorate of Barton</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Bennelong</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>60</td>
+	                  <td><a href="nsw/bennelong.htm">Profile of electorate of Bennelong</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Berowra</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>786</td>
+	                  <td><a href="/berowra">Profile of electorate of Berowra</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Blaxland</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>61</td>
+	                  <td><a href="/blaxland">Profile of electorate of Blaxland</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Bradfield</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>101</td>
+	                  <td><a href="/bradfield">Profile of electorate of Bradfield</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Calare</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>32,666</td>
+	                  <td><a href="/calare">Profile of electorate of Calare</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Chifley</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>126</td>
+	                  <td><a href="/chifley">Profile of electorate of Chifley</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Cook</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>94</td>
+	                  <td><a href="/cook">Profile of electorate of Cook</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Cowper</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>7,296</td>
+	                  <td><a href="/cowper">Profile of electorate of Cowper</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Cunningham</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>519</td>
+	                  <td><a href="/cunningham">Profile of electorate of Cunningham</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Dobell</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>787</td>
+	                  <td><a href="/dobell">Profile of electorate of Dobell</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Eden-Monaro</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>41,617</td>
+	                  <td><a href="/eden-monaro">Profile of electorate of Eden-Monaro</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Farrer</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>126,590</td>
+	                  <td><a href="/farrer">Profile of electorate of Farrer</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Fowler</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>60</td>
+	                  <td><a href="/fowler">Profile of electorate of Fowler</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Gilmore</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>6,342</td>
+	                  <td><a href="/gilmore">Profile of electorate of Gilmore</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Grayndler</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>32</td>
+	                  <td><a href="/grayndler">Profile of electorate of Grayndler</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Greenway</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>81</td>
+	                  <td><a href="/greenway">Profile of electorate of Greenway</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Hughes</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>369</td>
+	                  <td><a href="/hughes">Profile of electorate of Hughes</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Hume</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>17,240</td>
+	                  <td><a href="/hume">Profile of electorate of Hume</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Hunter</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>10,640</td>
+	                  <td><a href="/hunter">Profile of electorate of Hunter</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Kingsford Smith</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>91</td>
+	                  <td><a href="/kingsford-smith">Profile of electorate of Kingsford Smith</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Lindsay</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>339</td>
+	                  <td><a href="/lindsay">Profile of electorate of Lindsay</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Lyne</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>16,099</td>
+	                  <td><a href="/lyne">Profile of electorate of Lyne</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Macarthur</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>363</td>
+	                  <td><a href="/macarthur">Profile of electorate of Macarthur</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Mackellar</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>233</td>
+	                  <td><a href="/mackellar">Profile of electorate of Mackellar</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Macquarie</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>4,374</td>
+	                  <td><a href="/macquarie">Profile of electorate of Macquarie</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">McMahon</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>168</td>
+	                  <td><a href="/mcmahon">Profile of electorate of McMahon</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Mitchell</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>101</td>
+	                  <td><a href="/mitchell">Profile of electorate of Mitchell</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Newcastle</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>171</td>
+	                  <td><a href="/newcastle">Profile of electorate of Newcastle</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">New England</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>66,394</td>
+	                  <td><a href="nsw/new-england.htm">Profile of electorate of New England</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">North Sydney</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>53</td>
+	                  <td><a href="nsw/north-sydney.htm">Profile of electorate of North Sydney</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Page</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>19,342</td>
+	                  <td><a href="/page">Profile of electorate of Page</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Parkes</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>393,413</td>
+	                  <td><a href="/parkes">Profile of electorate of Parkes</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Parramatta</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>57</td>
+	                  <td><a href="/parramatta">Profile of electorate of Parramatta</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Paterson</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>1,123</td>
+	                  <td><a href="/paterson">Profile of electorate of Paterson</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Reid</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>55</td>
+	                  <td><a href="/reid">Profile of electorate of Reid</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Richmond</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>2,148</td>
+	                  <td><a href="/richmond">Profile of electorate of Richmond</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Riverina</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>48,988</td>
+	                  <td><a href="/riverina">Profile of electorate of Riverina</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Robertson</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>980</td>
+	                  <td><a href="/robertson">Profile of electorate of Robertson</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Shortland</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>265</td>
+	                  <td><a href="/shortland">Profile of electorate of Shortland</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Sydney</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>44</td>
+	                  <td><a href="/sydney">Profile of electorate of Sydney</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                
+	                <tr>
+	                  <td class="division">Warringah</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>68</td>
+	                  <td><a href="/warringah">Profile of electorate of Warringah</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Watson</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>47</td>
+	                  <td><a href="/watson">Profile of electorate of Watson</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Wentworth</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>38</td>
+	                  <td><a href="nsw/wentworth.htm">Profile of electorate of Wentworth</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Werriwa</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>172</td>
+	                  <td><a href="/werriwa">Profile of electorate of Werriwa</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Whitlam</td>
+	                  <td class="filterState">NSW</td>
+	                  <td>1,331</td>
+	                  <td><a href="/whitlam">Profile of electorate of Whitlam</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/nsw/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Lingiari</td>
+	                  <td class="filterState">NT</td>
+	                  <td>1,348,158</td>
+	                  <td><a href="/lingiari">Profile of electorate of Lingiari</a></td>
+	                  <td><a href="/Electorates/Redistributions/2015/nt/determination.htm">2017</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Solomon</td>
+	                  <td class="filterState">NT</td>
+	                  <td>191</td>
+	                  <td><a href="/solomon">Profile of electorate of Solomon</a></td>
+	                  <td><a href="/Electorates/Redistributions/2015/nt/determination.htm">2017</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Blair</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>6,472</td>
+	                  <td><a href="/blair">Profile of electorate of Blair</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Bonner</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>374</td>
+	                  <td><a href="/bonner">Profile of electorate of Bonner</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Bowman</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>536</td>
+	                  <td><a href="/bowman">Profile of electorate of Bowman</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Brisbane</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>57</td>
+	                  <td><a href="/brisbane">Profile of electorate of Brisbane</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Capricornia</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>90,903</td>
+	                  <td><a href="/capricornia">Profile of electorate of Capricornia</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Dawson</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>14,630</td>
+	                  <td><a href="/dawson">Profile of electorate of Dawson</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Dickson</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>724</td>
+	                  <td><a href="/dickson">Profile of electorate of Dickson</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Fadden</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>387</td>
+	                  <td><a href="/fadden">Profile of electorate of Fadden</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Fairfax</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>1,004</td>
+	                  <td><a href="/fairfax">Profile of electorate of Fairfax</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Fisher</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>1,198</td>
+	                  <td><a href="/fisher">Profile of electorate of Fisher</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Flynn</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>132,824</td>
+	                  <td><a href="/flynn">Profile of electorate of Flynn</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Forde</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>418</td>
+	                  <td><a href="/forde">Profile of electorate of Forde</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Griffith</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>57</td>
+	                  <td><a href="/griffith">Profile of electorate of Griffith</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Groom</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>5,586</td>
+	                  <td><a href="/groom">Profile of electorate of Groom</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Herbert</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>941</td>
+	                  <td><a href="/herbert">Profile of electorate of Herbert</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Hinkler</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>3,818</td>
+	                  <td><a href="/hinkler">Profile of electorate of Hinkler</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Kennedy</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>567,377</td>
+	                  <td><a href="/kennedy">Profile of electorate of Kennedy</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Leichhardt</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>148,559</td>
+	                  <td><a href="/leichhardt">Profile of electorate of Leichhardt</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Lilley</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>144</td>
+	                  <td><a href="/lilley">Profile of electorate of Lilley</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Longman</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>1,237</td>
+	                  <td><a href="/profiles/qld/longman.htm">Profile of electorate of Longman</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Maranoa</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>729,897</td>
+	                  <td><a href="/maranoa">Profile of electorate of Maranoa</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">McPherson</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>229</td>
+	                  <td><a href="/mcpherson">Profile of electorate of McPherson</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Moncrieff</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>100</td>
+	                  <td><a href="/moncrieff">Profile of electorate of Moncrieff</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Moreton</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>109</td>
+	                  <td><a href="/moreton">Profile of electorate of Moreton</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Oxley</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>159</td>
+	                  <td><a href="/oxley">Profile of electorate of Oxley</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Petrie</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>152</td>
+	                  <td><a href="/petrie">Profile of electorate of Petrie</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Rankin</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>131</td>
+	                  <td><a href="/rankin">Profile of electorate of Rankin</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Ryan</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>370</td>
+	                  <td><a href="/ryan">Profile of electorate of Ryan</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Wide Bay</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>14,227</td>
+	                  <td><a href="/wide-bay">Profile of electorate of Wide Bay</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Wright</td>
+	                  <td class="filterState">Qld</td>
+	                  <td>7,577</td>
+	                  <td><a href="/wright">Profile of electorate of Wright</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/qld/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Adelaide</td>
+	                  <td class="filterState">SA</td>
+	                  <td>86</td>
+	                  <td><a href="/adelaide">Profile of electorate of Adelaide</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/sa/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Barker</td>
+	                  <td class="filterState">SA</td>
+	                  <td>65,206</td>
+	                  <td><a href="/barker">Profile of electorate of Barker</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/sa/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Boothby</td>
+	                  <td class="filterState">SA</td>
+	                  <td>115</td>
+	                  <td><a href="/boothby">Profile of electorate of Boothby</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/sa/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Grey</td>
+	                  <td class="filterState">SA</td>
+	                  <td>908,595</td>
+	                  <td><a href="/grey">Profile of electorate of Grey</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/sa/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Hindmarsh</td>
+	                  <td class="filterState">SA</td>
+	                  <td>122</td>
+	                  <td><a href="/hindmarsh">Profile of electorate of Hindmarsh</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/sa/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Kingston</td>
+	                  <td class="filterState">SA</td>
+	                  <td>165</td>
+	                  <td><a href="/kingston">Profile of electorate of Kingston</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/sa/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Makin</td>
+	                  <td class="filterState">SA</td>
+	                  <td>162</td>
+	                  <td><a href="/makin">Profile of electorate of Makin</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/sa/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Mayo</td>
+	                  <td class="filterState">SA</td>
+	                  <td>9,135</td>
+	                  <td><a href="/profiles/sa/mayo.htm">Profile of electorate of Mayo</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/sa/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Spence</td>
+	                  <td class="filterState">SA</td>
+	                  <td>532</td>
+	                  <td><a href="/spence">Profile of electorate of Spence</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/sa/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Sturt</td>
+	                  <td class="filterState">SA</td>
+	                  <td>97</td>
+	                  <td><a href="/sturt">Profile of electorate of Sturt</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/sa/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Bass</td>
+	                  <td class="filterState">Tas.</td>
+	                  <td>7,975</td>
+	                  <td><a href="/bass">Profile of electorate of Bass</a></td>
+	                  <td><a href="/Electorates/Redistributions/2016/tas/final-report/maps-data.htm">2017</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Braddon</td>
+	                  <td class="filterState">Tas.</td>
+	                  <td>21,369</td>
+	                  <td><a href="/profiles/tas/braddon.htm">Profile of electorate of Braddon</a></td>
+	                  <td><a href="/Electorates/Redistributions/2016/tas/final-report/maps-data.htm">2017</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Clark</td>
+	                  <td class="filterState">Tas.</td>
+	                  <td>292</td>
+	                  <td><a href="/clark">Profile of electorate of Clark</a></td>
+	                  <td><a href="/Electorates/Redistributions/2016/tas/final-report/maps-data.htm">2017</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Franklin</td>
+	                  <td class="filterState">Tas.</td>
+	                  <td>10,009</td>
+	                  <td><a href="/franklin">Profile of electorate of Franklin</a></td>
+	                  <td><a href="/Electorates/Redistributions/2016/tas/final-report/maps-data.htm">2017</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Lyons</td>
+	                  <td class="filterState">Tas.</td>
+	                  <td>35,721</td>
+	                  <td><a href="/lyons">Profile of electorate of Lyons</a></td>
+	                  <td><a href="/Electorates/Redistributions/2016/tas/final-report/maps-data.htm">2017</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Aston</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>113</td>
+	                  <td><a href="/aston">Profile of electorate of Aston</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Ballarat</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>4,322</td>
+	                  <td><a href="/ballarat">Profile of electorate of Ballarat</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+					  </tr>
+	                <tr>
+	                  <td class="division">Bendigo</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>5,496</td>
+	                  <td><a href="/bendigo">Profile of electorate of Bendigo</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Bruce</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>95</td>
+	                  <td><a href="/bruce">Profile of electorate of Bruce</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Calwell</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>265</td>
+	                  <td><a href="/calwell">Profile of electorate of Calwell</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Casey</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>2,466</td>
+	                  <td><a href="/casey">Profile of electorate of Casey</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Chisholm</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>65</td>
+	                  <td><a href="/chisholm">Profile of electorate of Chisholm</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Cooper</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>60</td>
+	                  <td><a href="/cooper">Profile of electorate of Cooper</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                 <tr>
+	                  <td class="division">Corangamite</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>5,441</td>
+	                  <td><a href="/corangamite">Profile of electorate of Corangamite</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Corio</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>773</td>
+	                  <td><a href="/corio">Profile of electorate of Corio</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Deakin</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>79</td>
+	                  <td><a href="/deakin">Profile of electorate of Deakin</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Dunkley</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>152</td>
+	                  <td><a href="/dunkley">Profile of electorate of Dunkley</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Flinders</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>871</td>
+	                  <td><a href="/flinders">Profile of electorate of Flinders</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Fraser</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>106</td>
+	                  <td><a href="/fraser">Profile of electorate of Fraser</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Gellibrand</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>124</td>
+	                  <td><a href="/gellibrand">Profile of electorate of Gellibrand</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Gippsland</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>33,182</td>
+	                  <td><a href="/gippsland">Profile of electorate of Gippsland</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Goldstein</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>50</td>
+	                  <td><a href="/goldstein">Profile of electorate of Goldstein</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Gorton</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>540</td>
+	                  <td><a href="/gorton">Profile of electorate of Gorton</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Higgins</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>41</td>
+	                  <td><a href="/higgins">Profile of electorate of Higgins</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Holt</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>266</td>
+	                  <td><a href="/holt">Profile of electorate of Holt</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Hotham</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>83</td>
+	                  <td><a href="/hotham">Profile of electorate of Hotham</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Indi</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>29,187</td>
+	                  <td><a href="/indi">Profile of electorate of Indi</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Isaacs</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>155</td>
+	                  <td><a href="/isaacs">Profile of electorate of Isaacs</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Jagajaga</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>104</td>
+	                  <td><a href="/jagajaga">Profile of electorate of Jagajaga</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Kooyong</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>55</td>
+	                  <td><a href="/kooyong">Profile of electorate of Kooyong</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Lalor</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>493</td>
+	                  <td><a href="/lalor">Profile of electorate of Lalor</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">La Trobe</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>748</td>
+	                  <td><a href="/la-trobe">Profile of electorate of La Trobe</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Macnamara</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>41</td>
+	                  <td><a href="/macnamara">Profile of electorate of Macnamara</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                 <tr>
+	                  <td class="division">Mallee</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>81,962</td>
+	                  <td><a href="/mallee">Profile of electorate of Mallee</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Maribyrnong</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>64</td>
+	                  <td><a href="/maribyrnong">Profile of electorate of Maribyrnong</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">McEwen</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>2,670</td>
+	                  <td><a href="/mcewen">Profile of electorate of McEwen</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Melbourne</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>40</td>
+	                  <td><a href="/melbourne">Profile of electorate of Melbourne</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Menzies</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>184</td>
+	                  <td><a href="/menzies">Profile of electorate of Menzies</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Monash</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>8,879</td>
+	                  <td><a href="/monash">Profile of electorate of Monash</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                 <tr>
+	                  <td class="division">Nicholls</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>14,768</td>
+	                  <td><a href="/nicholls">Profile of electorate of Nicholls</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Scullin</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>116</td>
+	                  <td><a href="/scullin">Profile of electorate of Scullin</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Wannon</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>33,419</td>
+	                  <td><a href="/wannon">Profile of electorate of Wannon</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Wills</td>
+	                  <td class="filterState">Vic.</td>
+	                  <td>46</td>
+	                  <td><a href="/wills">Profile of electorate of Wills</a></td>
+	                  <td><a href="/Electorates/Redistributions/2017/vic/determination.htm">2018</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Brand</td>
+	                  <td class="filterState">WA</td>
+	                  <td>377</td>
+	                  <td><a href="/brand">Profile of electorate of Brand</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/wa/final-report/">2016</a></td>
+	                </tr>
+	                 <tr>
+	                  <td class="division">Burt</td>
+	                  <td class="filterState">WA</td>
+	                  <td>172</td>
+	                  <td><a href="/burt">Profile of electorate of Burt</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/wa/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Canning</td>
+	                  <td class="filterState">WA</td>
+	                  <td>6,304</td>
+	                  <td><a href="wa/canning.htm">Profile of electorate of Canning</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/wa/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Cowan</td>
+	                  <td class="filterState">WA</td>
+	                  <td>180</td>
+	                  <td><a href="/cowan">Profile of electorate of Cowan</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/wa/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Curtin</td>
+	                  <td class="filterState">WA</td>
+	                  <td>98</td>
+	                  <td><a href="/curtin">Profile of electorate of Curtin</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/wa/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Durack</td>
+	                  <td class="filterState">WA</td>
+	                  <td>1,629,858</td>
+	                  <td><a href="/durack">Profile of electorate Durack</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/wa/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Forrest</td>
+	                  <td class="filterState">WA</td>
+	                  <td>11,072</td>
+	                  <td><a href="/forrest">Profile of electorate of Forrest</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/wa/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Fremantle</td>
+	                  <td class="filterState">WA</td>
+	                  <td>196</td>
+	                  <td><a href="/profiles/wa/fremantle.htm">Profile of electorate of Fremantle</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/wa/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Hasluck</td>
+	                  <td class="filterState">WA</td>
+	                  <td>1,192</td>
+	                  <td><a href="/hasluck">Profile of electorate of Hasluck</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/wa/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Moore</td>
+	                  <td class="filterState">WA</td>
+	                  <td>90</td>
+	                  <td><a href="/moore">Profile of electorate of Moore</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/wa/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">O'Connor</td>
+	                  <td class="filterState">WA</td>
+	                  <td>868,576</td>
+	                  <td><a href="/oconnor">Profile of electorate of O'Connor</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/wa/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Pearce</td>
+	                  <td class="filterState">WA</td>
+	                  <td>13,250</td>
+	                  <td><a href="/pearce">Profile of electorate of Pearce</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/wa/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Perth</td>
+	                  <td class="filterState">WA</td>
+	                  <td>80</td>
+	                  <td><a href="/profiles/wa/perth.htm">Profile of electorate of Perth</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/wa/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Stirling</td>
+	                  <td class="filterState">WA</td>
+	                  <td>74</td>
+	                  <td><a href="/stirling">Profile of electorate of Stirling</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/wa/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Swan</td>
+	                  <td class="filterState">WA</td>
+	                  <td>134</td>
+	                  <td><a href="/swan">Profile of electorate of Swan</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/wa/final-report/">2016</a></td>
+	                </tr>
+	                <tr>
+	                  <td class="division">Tangney</td>
+	                  <td class="filterState">WA</td>
+	                  <td>83</td>
+	                  <td><a href="/tangney">Profile of electorate of Tangney</a></td>
+	                  <td><a href="/Electorates/Redistributions/2014/wa/final-report/">2016</a></td>
+	                </tr>
+	              </tbody>
+	            </table>
+            
+            
+## JSON
+
+
+{
+  "id" : "urn:aec.gov.au:division:Bean",
+  "division" : "Bean"
+},
+{
+  "id" : "urn:aec.gov.au:division:Canberra",
+  "division" : "Canberra"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Fenner",
+  "division" : "Fenner"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Banks",
+  "division" : "Banks"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Barton",
+  "division" : "Barton"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Bennelong",
+  "division" : "Bennelong"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Berowra",
+  "division" : "Berowra"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Blaxland",
+  "division" : "Blaxland"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Bradfield",
+  "division" : "Bradfield"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Calare",
+  "division" : "Calare"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Chifley",
+  "division" : "Chifley"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Cook",
+  "division" : "Cook"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Cowper",
+  "division" : "Cowper"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Cunningham",
+  "division" : "Cunningham"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Dobell",
+  "division" : "Dobell"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Eden-Monaro",
+  "division" : "Eden-Monaro"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Farrer",
+  "division" : "Farrer"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Fowler",
+  "division" : "Fowler"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Gilmore",
+  "division" : "Gilmore"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Grayndler",
+  "division" : "Grayndler"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Greenway",
+  "division" : "Greenway"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Hughes",
+  "division" : "Hughes"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Hume",
+  "division" : "Hume"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Hunter",
+  "division" : "Hunter"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Kingsford Smith",
+  "division" : "Kingsford Smith"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Lindsay",
+  "division" : "Lindsay"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Lyne",
+  "division" : "Lyne"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Macarthur",
+  "division" : "Macarthur"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Mackellar",
+  "division" : "Mackellar"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Macquarie",
+  "division" : "Macquarie"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:McMahon",
+  "division" : "McMahon"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Mitchell",
+  "division" : "Mitchell"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Newcastle",
+  "division" : "Newcastle"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:New England",
+  "division" : "New England"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:North Sydney",
+  "division" : "North Sydney"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Page",
+  "division" : "Page"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Parkes",
+  "division" : "Parkes"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Parramatta",
+  "division" : "Parramatta"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Paterson",
+  "division" : "Paterson"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Reid",
+  "division" : "Reid"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Richmond",
+  "division" : "Richmond"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Riverina",
+  "division" : "Riverina"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Robertson",
+  "division" : "Robertson"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Shortland",
+  "division" : "Shortland"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Sydney",
+  "division" : "Sydney"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Warringah",
+  "division" : "Warringah"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Watson",
+  "division" : "Watson"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Wentworth",
+  "division" : "Wentworth"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Werriwa",
+  "division" : "Werriwa"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Whitlam",
+  "division" : "Whitlam"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Lingiari",
+  "division" : "Lingiari"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Solomon",
+  "division" : "Solomon"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Blair",
+  "division" : "Blair"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Bonner",
+  "division" : "Bonner"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Bowman",
+  "division" : "Bowman"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Brisbane",
+  "division" : "Brisbane"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Capricornia",
+  "division" : "Capricornia"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Dawson",
+  "division" : "Dawson"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Dickson",
+  "division" : "Dickson"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Fadden",
+  "division" : "Fadden"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Fairfax",
+  "division" : "Fairfax"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Fisher",
+  "division" : "Fisher"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Flynn",
+  "division" : "Flynn"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Forde",
+  "division" : "Forde"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Griffith",
+  "division" : "Griffith"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Groom",
+  "division" : "Groom"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Herbert",
+  "division" : "Herbert"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Hinkler",
+  "division" : "Hinkler"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Kennedy",
+  "division" : "Kennedy"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Leichhardt",
+  "division" : "Leichhardt"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Lilley",
+  "division" : "Lilley"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Longman",
+  "division" : "Longman"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Maranoa",
+  "division" : "Maranoa"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:McPherson",
+  "division" : "McPherson"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Moncrieff",
+  "division" : "Moncrieff"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Moreton",
+  "division" : "Moreton"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Oxley",
+  "division" : "Oxley"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Petrie",
+  "division" : "Petrie"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Rankin",
+  "division" : "Rankin"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Ryan",
+  "division" : "Ryan"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Wide Bay",
+  "division" : "Wide Bay"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Wright",
+  "division" : "Wright"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Adelaide",
+  "division" : "Adelaide"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Barker",
+  "division" : "Barker"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Boothby",
+  "division" : "Boothby"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Grey",
+  "division" : "Grey"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Hindmarsh",
+  "division" : "Hindmarsh"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Kingston",
+  "division" : "Kingston"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Makin",
+  "division" : "Makin"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Mayo",
+  "division" : "Mayo"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Spence",
+  "division" : "Spence"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Sturt",
+  "division" : "Sturt"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Bass",
+  "division" : "Bass"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Braddon",
+  "division" : "Braddon"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Clark",
+  "division" : "Clark"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Franklin",
+  "division" : "Franklin"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Lyons",
+  "division" : "Lyons"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Aston",
+  "division" : "Aston"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Ballarat",
+  "division" : "Ballarat"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Bendigo",
+  "division" : "Bendigo"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Bruce",
+  "division" : "Bruce"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Calwell",
+  "division" : "Calwell"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Casey",
+  "division" : "Casey"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Chisholm",
+  "division" : "Chisholm"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Cooper",
+  "division" : "Cooper"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Corangamite",
+  "division" : "Corangamite"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Corio",
+  "division" : "Corio"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Deakin",
+  "division" : "Deakin"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Dunkley",
+  "division" : "Dunkley"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Flinders",
+  "division" : "Flinders"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Fraser",
+  "division" : "Fraser"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Gellibrand",
+  "division" : "Gellibrand"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Gippsland",
+  "division" : "Gippsland"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Goldstein",
+  "division" : "Goldstein"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Gorton",
+  "division" : "Gorton"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Higgins",
+  "division" : "Higgins"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Holt",
+  "division" : "Holt"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Hotham",
+  "division" : "Hotham"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Indi",
+  "division" : "Indi"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Isaacs",
+  "division" : "Isaacs"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Jagajaga",
+  "division" : "Jagajaga"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Kooyong",
+  "division" : "Kooyong"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Lalor",
+  "division" : "Lalor"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:La Trobe",
+  "division" : "La Trobe"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Macnamara",
+  "division" : "Macnamara"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Mallee",
+  "division" : "Mallee"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Maribyrnong",
+  "division" : "Maribyrnong"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:McEwen",
+  "division" : "McEwen"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Melbourne",
+  "division" : "Melbourne"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Menzies",
+  "division" : "Menzies"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Monash",
+  "division" : "Monash"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Nicholls",
+  "division" : "Nicholls"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Scullin",
+  "division" : "Scullin"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Wannon",
+  "division" : "Wannon"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Wills",
+  "division" : "Wills"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Brand",
+  "division" : "Brand"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Burt",
+  "division" : "Burt"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Canning",
+  "division" : "Canning"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Cowan",
+  "division" : "Cowan"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Curtin",
+  "division" : "Curtin"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Durack",
+  "division" : "Durack"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Forrest",
+  "division" : "Forrest"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Fremantle",
+  "division" : "Fremantle"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Hasluck",
+  "division" : "Hasluck"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Moore",
+  "division" : "Moore"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:O'Connor",
+  "division" : "O'Connor"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Pearce",
+  "division" : "Pearce"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Perth",
+  "division" : "Perth"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Stirling",
+  "division" : "Stirling"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Swan",
+  "division" : "Swan"
+},
+
+{
+  "id" : "urn:aec.gov.au:division:Tangney",
+  "division" : "Tangney"
+}
+		
