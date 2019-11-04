@@ -337,6 +337,13 @@ Examples:
 `urn:aph.gov.au:parliament:45` - 45th Parliament
 `urn:aec.gov.au:division:macnamara` - Electoral division of Macnamara
 
+### XMDP to ALPS
+
+XMDP
+Activity streams
+Alps for html
+Profile link relation
+Alps stand alone
 
 
 # References
