@@ -353,8 +353,9 @@ Twitter - @DrCameronMurray
 
 [gameofmates.com](https://gameofmates.com/)
 
-
 [Bellingcat - Open source / Citizen journalism](https://www.bellingcat.com/)
+
+[Tim Berner's lee - Guardian.com - Hunt for Journalism in Data sets](https://www.theguardian.com/media/2010/nov/22/data-analysis-tim-berners-lee)
 
 
 ## Technical References
@@ -366,7 +367,6 @@ JSON or Protobuf... not sure;
 [API's linked data](https://linkeddataorchestration.com/2014/02/24/data-modeling-for-apis-part-4-linked-data-and-sparql/)
 
 [Wikipedia: Semantic web](https://en.wikipedia.org/wiki/Semantic_Web)
-
 
 [JSON-LD](https://www.w3.org/TR/2014/REC-json-ld-20140116/)
 
@@ -382,11 +382,10 @@ JSON or Protobuf... not sure;
 
 [Online XML to JSON](https://www.freeformatter.com/xml-to-json-converter.html)
 
-## Bloomberg Finance API's
- 
-[Bloomberg API Library](https://www.bloomberg.com/professional/support/api-library/)
- 
-[Bloomberg - API Core User Guide](https://data.bloomberglp.com/professional/sites/10/2017/03/BLPAPI-Core-User-Guide.pdf)
+[RDF Schema](https://www.w3.org/TR/rdf-schema/)
+
+
+[W3C - OWL Web Ontology working group](https://www.w3.org/2001/sw/WebOnt/)
 
 [O'Reilly Programming the semantic web](https://learning.oreilly.com/library/view/programming-the-semantic/9780596802141/ch02.html)
 
@@ -397,6 +396,14 @@ JSON or Protobuf... not sure;
 [Apache Jena - RDF Triplestore](https://jena.apache.org/)
 
 [Google - Knowledge graph API](https://developers.google.com/knowledge-graph)
+
+## Bloomberg Finance API's
+ 
+[Bloomberg API Library](https://www.bloomberg.com/professional/support/api-library/)
+ 
+[Bloomberg - API Core User Guide](https://data.bloomberglp.com/professional/sites/10/2017/03/BLPAPI-Core-User-Guide.pdf)
+
+
  
  ```
   [EQUITY]
@@ -426,6 +433,4 @@ JSON or Protobuf... not sure;
 
 [IPA Members in Federal Parliament](https://independentaustralia.net/politics/politics-display/the-liberal-party-and-the-institute-of-public-affairs-who-is-whose,8837)
 
-[Tim Berner's lee - Guardian.com - Hunt for Journalism in Data sets](https://www.theguardian.com/media/2010/nov/22/data-analysis-tim-berners-lee)
 
-[W3C - OWL Web Ontology working group](https://www.w3.org/2001/sw/WebOnt/)
