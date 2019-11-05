@@ -1,4 +1,4 @@
-package au.gameofmates.model;
+package au.gameofmates.model.relationships;
 
 import java.time.Instant;
 import java.util.List;
@@ -6,6 +6,7 @@ import org.apache.tinkerpop.gremlin.object.reflect.Label;
 import org.apache.tinkerpop.gremlin.object.structure.Connection;
 import org.apache.tinkerpop.gremlin.object.structure.Edge;
 import org.apache.tinkerpop.gremlin.structure.Direction;
+import au.gameofmates.model.resources.Person;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

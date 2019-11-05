@@ -1,4 +1,4 @@
-package au.gameofmates.model;
+package au.gameofmates.model.types;
 
 public enum RoleType {
 
@@ -18,5 +18,4 @@ public enum RoleType {
   CITIZEN,
   CELEBRITY,
   PRIEST
-
 }

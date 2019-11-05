@@ -1,0 +1,9 @@
+id,name,shortName,abbreviation,category
+urn:iso:std:iso:3166:-2:AU-NSW,New South Wales,AU-NSW,NSW,state
+urn:iso:std:iso:3166:-2:AU-QLD,Queensland,AU-QLD,QLD,state
+urn:iso:std:iso:3166:-2:AU-SA,South Australia,AU-SA,SA,state
+urn:iso:std:iso:3166:-2:AU-TAS,Tasmania,AU-TAS,TAS,state
+urn:iso:std:iso:3166:-2:AU-VIC,Victoria,AU-VIC,VIC,state
+urn:iso:std:iso:3166:-2:AU-WA,Victoria,AU-WA,WA,state
+urn:iso:std:iso:3166:-2:AU-ACT,Australian Capital Territory,AU-ACT,ACT,territory
+urn:iso:std:iso:3166:-2:AU-NT,Northern Territory,AU-NT,NT,territory

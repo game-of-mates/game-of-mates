@@ -1,4 +1,4 @@
-package au.gameofmates.model;
+package au.gameofmates.model.resources;
 
 import java.util.Date;
 import org.apache.tinkerpop.gremlin.object.model.Alias;
@@ -6,6 +6,7 @@ import org.apache.tinkerpop.gremlin.object.model.OrderingKey;
 import org.apache.tinkerpop.gremlin.object.model.PrimaryKey;
 import org.apache.tinkerpop.gremlin.object.reflect.Label;
 import org.apache.tinkerpop.gremlin.object.structure.Vertex;
+import au.gameofmates.model.relationships.Knows;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;

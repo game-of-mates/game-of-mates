@@ -1,12 +1,14 @@
-Principal Entities
+Principal Entities 'Nodes'
 
 urn, description, source
 urn:iso:std:iso:3166,Part 1, Country Codes (2-letter and 3-letter, and numerical codes), https://www.hl7.org/fhir/iso3166.html
 urn:iso:std:iso:3166:-2,Part 2, Subdivision (State/Province) Codes,https://www.hl7.org/fhir/iso3166.html
+urn:aec.gov.au:electorate,Australian Electoral commission, Electorate
+urn:aph.gov.au:parliament, Australian parliament house, parliament
+urn:aec.gov.au:party, Australian Electoral commission, Party
 
 
-
-Relationships
+Relationships 'Edges'
 
 urn, from type(s), to type(s), source
 
@@ -19,3 +21,20 @@ name
 effectiveFrom
 effectiveTo
 id
+
+# Example from Tinker Pop - Airport, Route examples
+
+https://raw.githubusercontent.com/krlawrence/graph/master/sample-data/air-routes.graphml
+
+<!-- There are four basic node types:                                                -->
+<!-- 1. Airport   - Contains properties like code (eg DFW), city, lat, lon etc.      -->
+<!-- 2. Country   - A convenient way to find all airports in a specific country.     -->
+<!-- 3. Continent - As above but for continents.                                     -->
+<!-- 4. Version   - A single stand alone node used to version the graph.             -->
+<!--                                                                                 -->
+<!-- There are two edge types:                                                       -->
+<!-- 1. Route    - Represents link between two airports with the distance in Great   -->
+<!--               Circle miles as a property.                                       -->
+<!-- 2. Contains - Connects countries and continents with airports.                  -->
+<!--                                                                                 -->
+<!-- This version of the graph contains 3374 airports and 43400 routes.

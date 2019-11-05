@@ -1,7 +1,7 @@
 package au.gameofmates.graph.model;
 
-import au.gameofmates.model.Person;
-import au.gameofmates.model.Knows;
+import au.gameofmates.model.relationships.Knows;
+import au.gameofmates.model.resources.Person;
 import java.time.LocalDate;
 import java.util.Date;
 import org.apache.tinkerpop.gremlin.object.structure.Graph;

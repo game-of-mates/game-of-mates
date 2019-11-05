@@ -1,0 +1,9 @@
+province-id,relation,country-id,effectiveFromDate
+urn:iso:std:iso:3166:-2:AU-NSW,state-of,urn:iso:std:iso:3166:AU,1901-01-01
+urn:iso:std:iso:3166:-2:AU-QLD,state-of,urn:iso:std:iso:3166:AU,1901-01-01
+urn:iso:std:iso:3166:-2:AU-SA,state-of,urn:iso:std:iso:3166:AU,1901-01-01
+urn:iso:std:iso:3166:-2:AU-TAS,state-of,urn:iso:std:iso:3166:AU,1901-01-01
+urn:iso:std:iso:3166:-2:AU-VIC,state-of,urn:iso:std:iso:3166:AU,1901-01-01
+urn:iso:std:iso:3166:-2:AU-WA,state-of,urn:iso:std:iso:3166:AU,1901-01-01
+urn:iso:std:iso:3166:-2:AU-ACT,territory-of,urn:iso:std:iso:3166:AU,1911-01-01
+urn:iso:std:iso:3166:-2:AU-NT,territory-of,urn:iso:std:iso:3166:AU,1911-01-01

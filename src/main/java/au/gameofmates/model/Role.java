@@ -4,6 +4,7 @@ import java.time.Instant;
 import java.util.List;
 import org.apache.tinkerpop.gremlin.object.structure.Connection;
 import org.apache.tinkerpop.gremlin.object.structure.Edge;
+import au.gameofmates.model.types.RoleType;
 
 public class Role extends Edge {
   

@@ -372,6 +372,8 @@ JSON or Protobuf... not sure;
 
 [Apache Tinkerpop / Gremlin - First 5 mins](http://tinkerpop.apache.org/docs/3.4.2/tutorials/getting-started/#_the_first_five_minutes)
 
+[Tinkerpop book - Graph samples CSV + Loader](https://github.com/krlawrence/graph/tree/master/sample-data)
+
 [Flat JSON Triples for RDS Graphs](https://www.w3.org/2009/12/rdf-ws/papers/ws02)
 
 [Apache Gremling OGM Github](https://github.com/karthicks/gremlin-ogm)
