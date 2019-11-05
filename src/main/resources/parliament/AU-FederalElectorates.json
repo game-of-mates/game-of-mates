@@ -8,7 +8,7 @@
 
 
 
---- XSLT
+--- XSLT for JSON
 
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:foo="http://www.foo.org/" xmlns:bar="http://www.bar.org">
@@ -19,6 +19,19 @@
   "id" : "urn:aec.gov.au:division:<xsl:value-of select="td"/>",
   "division" : "<xsl:value-of select="td"/>"
 },
+</xsl:for-each>
+
+</xsl:template>
+</xsl:stylesheet>
+
+--- XSLT for CSV (tbody)
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:foo="http://www.foo.org/" xmlns:bar="http://www.bar.org">
+<xsl:template match="/tbody">
+id,name,province,profileURL,lastDistributionURL,lastDistributionYear
+<xsl:for-each select="tr">
+urn:aec.gov.au:division:<xsl:value-of select="translate(td[1],' ','')"/>,<xsl:value-of select="td[1]"/>,urn:iso:std:iso:3166:-2:AU-<xsl:value-of select="td[2]"/>,https://www.aec.gov.au/profiles/<xsl:value-of select="td[2]"/><xsl:value-of select="td[4]/a/@href"/>.htm,https://www.aec.gov.au<xsl:value-of select="td[5]/a/@href"/>,<xsl:value-of select="td[5]"/>
 </xsl:for-each>
 
 </xsl:template>
