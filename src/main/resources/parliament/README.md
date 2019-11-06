@@ -1,5 +1,8 @@
 # Parliament TYpes, Edges
 
+	
+![parliament-datatypes](../../../../docs/graph-parliaments.png)
+
 ## Vertices
 
 1. Parliaments
