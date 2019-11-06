@@ -2,5 +2,5 @@ id,name,shortName,effectiveFromDate,effectiveToDate
 urn:iso:std:iso:3166:AU,Australia,AU,1901-01-01,
 urn:iso:std:iso:3166:CX,Christmas Island,CX,1958-01-01,
 urn:iso:std:iso:3166:CC,Cocos (Keeling) Islands,CC,1955-01-01,
-urn:iso:std:iso:3166:NF,Norfolk Island,NF,1913-01-01,2015-01-01
+urn:iso:std:iso:3166:NF,Norfolk Island,NF,1913-01-01,2015-01-01,
 urn:iso:std:iso:3166:HM,Heard Island and McDonald Islands,HM,1910-01-01,
