@@ -1,0 +1,48 @@
+id,name,province,profileURL,lastDistributionURL,lastDistributionYear
+urn:aec.gov.au:division:Bean,Bean,urn:iso:std:iso:3166:-2:AU-ACT,https://www.aec.gov.au/profiles/ACT/bean.htm,https://www.aec.gov.au/Electorates/Redistributions/2017/act/determination.htm,2018
+
+AU_ElectoralDivision:
+      type: object
+      description: An Australian federal electoral division
+      properties:
+          id: 
+            type: string 
+            description: "URN identifier of the Electoral division (aec.gov.au)"
+            pattern: 'urn\:aec.gov.au\:division\:[A-Z,a-z]{1,80}'
+            example: 'urn:aec.gov.au:division:Bean'
+          name:
+            type: string
+            description:  "Name of the Electoral Division"
+            example: "Bennelong"
+          province_id:
+           type: string
+           description: The ID of the State/Territory the division is located in
+           example: 'urn:iso:std:iso:3166:-2:AU-ACT'
+           enum:
+            - 'urn:iso:std:iso:3166:-2:AU-ACT'
+            - 'urn:iso:std:iso:3166:-2:AU-SA'
+            - 'urn:iso:std:iso:3166:-2:AU-NSW'
+            - 'urn:iso:std:iso:3166:-2:AU-VIC'
+            - 'urn:iso:std:iso:3166:-2:AU-QLD'
+            - 'urn:iso:std:iso:3166:-2:AU-TAS'
+            - 'urn:iso:std:iso:3166:-2:AU-NT'
+            - 'urn:iso:std:iso:3166:-2:AU-WA'
+          lastDistributionYear:
+           type: string
+           format: "YYYY"
+           description: "The first or last year the boundaries of the divsion were changed by the AEC."
+           example: "2018"
+          effectiveFromDate:
+           type: string
+           description: The date the Division was internationally recognised, established
+           format: "YYYY-MM-FF"
+           example: "1901-01-01"
+          effectiveToDate:
+           type: string
+           description: The date the division was internationally no longer recognised or split (if applicable)
+           format: "YYYY-MM-FF"
+           example: "2019-03-05"    
+          links:
+            type: array
+            items:
+             $ref : '#/definitions/LinkDescriptionObject'

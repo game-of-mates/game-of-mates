@@ -1,0 +1,29 @@
+  AU_Province:
+      type: object
+      description: An ISO-3166-2 Recognised Province of Country AU (Australia)
+      properties:
+          id: 
+            type: string 
+            description: "URN identifier of the ISO-3166-2 Province"
+            pattern: 'urn\:iso\:std\:iso\:3166\:-2\:\[]{1,6}'
+            example: 'urn:iso:std:iso:3166:-2:AU-NSW'
+          name:
+            type: string
+            description:  "Name of the Province"
+            example: "New South Wales"
+          shortName:
+            type: string
+            description: Letter code of the Province
+            pattern: '[A-Z]{2}[-,_]{1}[A-Z,0-9]{1,3}'
+            example: 'AU-NSW'
+          abbreviation:
+            type: string
+            description: Abbreviation used for the province in the Country
+            example: 'NSW'
+          category:
+            type: string
+            description: The type of entity the province is from a government perspective. e.g. State, Territory, Principality.
+            example: "state"
+            enum:
+             - 'state'
+             - 'territory'

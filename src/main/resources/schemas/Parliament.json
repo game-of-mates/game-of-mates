@@ -1,0 +1,23 @@
+Parliament:
+   type: object
+   description: Australian Parliament house instance of a sitting between elections
+   properties:
+     id: 
+      type: string 
+      description: "URN identifier of the parliament"
+      pattern: 'urn\:aph.gov.au\:parliament\:\d{1,3}'
+      example: "urn:aph.gov.au:parliament:40"
+     name:
+       type: string
+       description:  "Name of the parliament"
+       example: "40th Parliament of Australia"
+     sworn-in:
+       type: string
+       description: the date parliament was sworn-in
+       format: "YYYY-MM-FF"
+       example: "2019-01-01"
+     dissolved:
+       type: string
+       description: the date parliament was dissolved
+       format: "YYYY-MM-FF"
+       example: "2019-03-05"
