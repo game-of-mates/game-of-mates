@@ -57,6 +57,17 @@ Typical questions that could possibly be quickly answered by Graph navigation:
 
 "Edges denote relationships between vertices. For instance, a person may know another person, have been involved in an event, and/or was recently at a particular place"
 
+## What is a Temporal Graph?
+
+Temporal or.. Dynamic, Evolving, Time-Varying graphs are graphs that change with time, so can be thought of a special case of labelled graphs that change with time, where the labels capture some measure of time or effective date.
+
+To effectively deal with a timeline of events like in the political world will need to deal with timing.
+
+What we would propose are key date labels as a standard for nearly all edges;
+
+`effectiveFromDate`
+`effectiveToDate`
+
 ## What is a Graph API?
 
 An API is an 'Application Programming Interface' that allows programs, software, people or machines to easily interact over the HTTPS / Web protocol.
@@ -398,6 +409,10 @@ JSON or Protobuf... not sure;
 [Apache Jena - RDF Triplestore](https://jena.apache.org/)
 
 [Google - Knowledge graph API](https://developers.google.com/knowledge-graph)
+
+[Temporal Graphs - an Algorithmic perspective](https://cgi.csc.liv.ac.uk/~michailo/Documents/Papers/Journals/im16.pdf)
+
+[Temporal Graph](https://www.slideshare.net/vinnusarda/temporal-graph-40853347)
 
 ## Bloomberg Finance API's
  
