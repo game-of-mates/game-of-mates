@@ -149,9 +149,11 @@ Example from above:
   predicate: "urn:aec.gov.au/relationsips/memberOf",
   object: "urn:aph.gov.au:parliament:45"
 }
-
-
 ```
+
+#### Hypermedia Relationships
+
+
 
 ### Principles
 
@@ -252,7 +254,13 @@ DEPARTMENT
 
 ## Physical World
 
- * COUNTRY/STATE/ELECTORATE/CITY/SUBURB/STREET
+* [COUNTRY](./src/main/resources/schemas/Country.json)
+    * /[PROVINCE (State/Territory)](./src/main/resources/schemas/Province.json)/
+       *  [Electoral Division](./src/main/resources/schemas/AU-ElectoralDivision.json)
+           * /CITY
+               * /SUBURB
+                   * /STREET
+ * GEOLOC
  * SERVICE
  * PRODUCT
  * AUDIT_REVIEW
@@ -413,6 +421,23 @@ JSON or Protobuf... not sure;
 [Temporal Graphs - an Algorithmic perspective](https://cgi.csc.liv.ac.uk/~michailo/Documents/Papers/Journals/im16.pdf)
 
 [Temporal Graph](https://www.slideshare.net/vinnusarda/temporal-graph-40853347)
+
+[API Specification getting-started-with-json-hyper-schema - JSON Hypermedia](https://apisyouwonthate.com/blog/getting-started-with-json-hyper-schema)
+
+[Swagger Spec](https://docs.swagger.io/spec.html#434-items-object)
+[Swagger Editor](https://editor.swagger.io/)
+
+## WikiData
+
+Wikidata offers a wide range of general data around wikipedia as well as links to other databases. The data is published under the CC0 "Public domain dedication" license. It can be edited by anyone and is maintained by Wikidata's editor community.
+
+https://www.wikidata.org/wiki/Wikidata:Data_access
+
+[Douglas Adams - Q42 JSON](http://www.wikidata.org/entity/Q42.json)
+[Douglas Adams - Q42 RDF](http://www.wikidata.org/entity/Q42.rdf)
+[Douglas Adams - Q42 ttl](http://www.wikidata.org/entity/Q42.ttl)
+ 
+Douglas Adams - `http://www.wikidata.org/entity/Q42.json`
 
 ## Bloomberg Finance API's
  
