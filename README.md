@@ -254,12 +254,14 @@ DEPARTMENT
 
 ## Physical World
 
+```
 * [COUNTRY](./src/main/resources/schemas/Country.json)
     * /[PROVINCE (State/Territory)](./src/main/resources/schemas/Province.json)/
        *  [Electoral Division](./src/main/resources/schemas/AU-ElectoralDivision.json)
            * /CITY
                * /SUBURB
-                   * /STREET
+               * /STREET
+```
  * GEOLOC
  * SERVICE
  * PRODUCT

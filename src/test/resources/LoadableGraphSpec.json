@@ -1,0 +1,10 @@
+{
+  "id": "country",
+  "urn_prefix": "urn:iso:std:iso:3166:",
+  "relative_load_priority": 1,
+  "label": "country",
+  "data_location": "./locations/iso-3166-countries.csv",
+  "data_format": "application/csv",
+  "temporal": true,
+  "schema_ref": "./schemas/Country.json"
+}

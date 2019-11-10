@@ -1,0 +1,41 @@
+EdgeDefinition:
+   type: object
+   description: Definition of an Edge relationship between Nodes of a Graph
+   properties:
+     id:
+      type: string
+      description: An identifier for the Edge to be loaded
+     relative_load_priority:
+       type: integer
+       format: int32
+       description: When loading the graph a relative indicator when this should be ordered in loading. (1 is highest)   
+     subject_identifier:
+       type: string
+       description: The name of the field in the specification that contains the subject reference. (Who / What ... On/Between... OJBECT)
+       example: 'province_id'
+     object_identifer:
+       type: string
+       description: The name of the field in the specification that contains the Object reference. (Subject X , \<is related to\>.. Object Y)
+       example: 'politician_id'
+     label: 
+       type: string
+       description: The primary relationship label to be used in creating the Edge between 2 nodes.
+       example: 'member_of'
+     temporal:
+       type: boolean
+       description: Indicates whether the Edge Relationship is temporal, and should exist for a time. (effectiveFromDate, effectiveToDate fields expected)
+     data_location: 
+       type: string
+       description: Relative file location or URL for the source data of the Entity on an initial load.
+       example: 'https://aec.gov.au/parties_to_politicians.json'
+     data_format:
+       type: string
+       description: The schema the initial data load is provided in
+       enum:
+        - "application/json"
+        - "application/csv"
+        - "application/xml" 
+     schema_ref:
+       type: string
+       description: location of the schema reference (JSON-LD, XSD, CSV Spec)
+       example: './schemas/party.json'

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <groupId>neilpiper.me</groupId>
-  <artifactId>game-of-mates</artifactId>
-  <version>1.0.0_${revision}</version>
+	<groupId>neilpiper.me</groupId>
+	<artifactId>game-of-mates</artifactId>
+	<version>1.0.0_${revision}</version>
 
 	<parent>
 		<groupId>neilpiper.me</groupId>
@@ -14,13 +14,13 @@
 		<version>0.0.1_134.1e56c2f</version>
 	</parent>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-  </properties>
-  
-  	<dependencyManagement>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
+	<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<!-- Import dependency management from Spring Boot -->
@@ -32,46 +32,58 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-  
-  
-  <dependencies>
-  
-  <dependency>
-    <groupId>com.fasterxml.jackson.dataformat</groupId>
-    <artifactId>jackson-dataformat-csv</artifactId>       
-    <version>2.5.3</version>
-</dependency>
 
-  <dependency>
-  <groupId>com.github.karthicks</groupId>
-  <artifactId>gremlin-objects</artifactId>
-  <version>3.3.1-RC1</version>
-</dependency>
 
-<dependency>
- <groupId>org.apache.tinkerpop</groupId>
- <artifactId>tinkergraph-gremlin</artifactId>
- <version>3.3.1</version>
+	<dependencies>
 
-</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
 
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <version>1.16.18</version>
-</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-csv</artifactId>
+			<version>2.5.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.karthicks</groupId>
+			<artifactId>gremlin-objects</artifactId>
+			<version>3.3.1-RC1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.tinkerpop</groupId>
+			<artifactId>tinkergraph-gremlin</artifactId>
+			<version>3.3.1</version>
+
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.18</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.jena</groupId>
+			<artifactId>apache-jena-libs</artifactId>
+			<type>pom</type>
+			<version>3.13.1</version>
+		</dependency>
+
 
  <dependency>
-    <groupId>org.apache.jena</groupId>
-    <artifactId>apache-jena-libs</artifactId>
-    <type>pom</type>
-    <version>3.13.1</version>
-  </dependency>
-
-  </dependencies>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-test</artifactId>
+  <scope>test</scope>
+</dependency>
+	</dependencies>
 
 
- 	<!-- REPOSITORIES & PLUGIN REPOSITORIES -->
+	<!-- REPOSITORIES & PLUGIN REPOSITORIES -->
 	<repositories>
 		<!-- public release repo -->
 		<repository>

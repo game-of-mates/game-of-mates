@@ -1,0 +1,58 @@
+{[
+{
+  "id": "country",
+  "urn_prefix": "urn:iso:std:iso:3166:",
+  "relative_load_priority": 1,
+  "label": "country",
+  "data_location": "./locations/iso-3166-countries.csv",
+  "data_format": "application/csv",
+  "temporal": true,
+  "schema_ref": "./schemas/Country.json"
+},
+{
+  "id": "au_province",
+  "urn_prefix": "urn:iso:std:iso:3166:-2:",
+  "relative_load_priority": 2,
+  "label": "province",
+  "data_location": "./locations/iso-3166-2-provinces.csv",
+  "data_format": "application/csv",
+  "temporal": false,
+  "schema_ref": "./schemas/AU_Province.json"
+},
+{
+  "id": "au_electoral_division",
+  "urn_prefix": "urn:aec.gov.au:division:",
+  "relative_load_priority": 3,
+  "label": "electoral_division",
+  "data_location": "./parliament/AU-electorates.csv",
+  "data_format": "application/csv",
+  "temporal": false,
+  "schema_ref": "./schemas/AU_ElectoralDivision.json"
+}
+
+],
+[
+
+{
+  "id": "urn:aec.gov.au:relationships:countries_to_provinces",
+  "relative_load_priority": 4,
+  "subject_identifier": "country_id",
+  "object_identifer": "province_id",
+  "label": "has_division",
+  "temporal": true,
+  "data_location": "./locations/edges/australia-countries-to-provinces.csv",
+  "data_format": "application/csv"
+  //"schema_ref": "./schemas/relationships/provinces_to_electorates.json"
+},
+{
+  "id": "urn:aec.gov.au:relationships:province_to_electorate",
+  "relative_load_priority": 5,
+  "subject_identifier": "province_id",
+  "object_identifer": "division_id",
+  "label": "has_division",
+  "temporal": true,
+  "data_location": "./locations/parliament/edges/provinces_to_electorates.csv",
+  "data_format": "application/csv"
+  //"schema_ref": "./schemas/relationships/provinces_to_electorates.json"
+}
+]}

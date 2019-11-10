@@ -46,7 +46,7 @@ public class AustraliaParser {
 
     }
 
-    Resource sa = model.getResource("urn:iso:std:iso:3166:-2:AU-SA");
+    //Resource sa = model.getResource("urn:iso:std:iso:3166:-2:AU-SA");
     
 
 

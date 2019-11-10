@@ -1,0 +1,45 @@
+{
+	"id": 1,
+	"label": "person",
+	"outE": {
+		"created": [
+			{
+				"id": 9,
+				"inV": 3,
+				"properties": {
+					"weight": 0.4
+				}
+			}
+		],
+		"knows": [
+			{
+				"id": 7,
+				"inV": 2,
+				"properties": {
+					"weight": 0.5
+				}
+			},
+			{
+				"id": 8,
+				"inV": 4,
+				"properties": {
+					"weight": 1.0
+				}
+			}
+		]
+	},
+	"properties": {
+		"name": [
+			{
+				"id": 0,
+				"value": "marko"
+			}
+		],
+		"age": [
+			{
+				"id": 1,
+				"value": 29
+			}
+		]
+	}
+}
