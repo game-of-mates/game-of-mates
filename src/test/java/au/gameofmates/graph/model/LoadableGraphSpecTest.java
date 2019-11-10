@@ -2,17 +2,20 @@ package au.gameofmates.graph.model;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.nio.charset.CharsetEncoder;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Consumer;
+import org.apache.tinkerpop.gremlin.process.traversal.Traverser;
 import org.apache.tinkerpop.gremlin.structure.Graph;
+import org.apache.tinkerpop.gremlin.structure.Vertex;
 import org.apache.tinkerpop.gremlin.tinkergraph.structure.TinkerGraph;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.util.FileCopyUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.opencsv.CSVReader;
 import au.gameofmates.model.LoadableGraphSpec;
 
 
@@ -36,6 +39,37 @@ public class LoadableGraphSpecTest {
      
     LoadableGraphSpec spec = objectMapper.readValue(json, LoadableGraphSpec.class);  
 
-    spec.getId();
+    // Try Load the set of Vertexs into Gremplin
+    
+    // Read in as CSV
+    if (spec.getData_format().equals("text/csv"))
+    {
+      Resource res1 = resourceLoader.getResource("classpath:" + spec.getData_location());
+      
+      CSVReader csvReader = new CSVReader(new InputStreamReader(res1.getInputStream()));
+      String [] keysLine;
+      keysLine = csvReader.readNext();
+      int keysLength = keysLine.length;
+      
+      String[] valueLine;
+      List<Object> objList = new ArrayList<Object>();
+      while ((valueLine = csvReader.readNext()) != null) {
+        
+        for (int i=0; i < keysLength; i++)
+        {
+          objList.add(keysLine[i]);
+          objList.add(valueLine[i]);
+        }
+        objList.add("label");
+        objList.add(spec.getLabel());
+        Vertex v = newGraph.addVertex(objList.toArray());
+        
+      }
+      csvReader.close();
+    }
+      
+    //newGraph.traversal().V().map(c -> c.get().value("name") + " is the Country name").forEachRemaining(System.out::println);
+    
+    
   }
 }
