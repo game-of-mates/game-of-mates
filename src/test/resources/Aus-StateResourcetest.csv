@@ -1,0 +1,3 @@
+province-id,relation,country-id,effectiveFromDate
+urn:iso:std:iso:3166:-2:AU-NSW,state-of,urn:iso:std:iso:3166:AU,1901-01-01
+urn:iso:std:iso:3166:-2:AU-QLD,state-of,urn:iso:std:iso:3166:AU,1901-01-01
