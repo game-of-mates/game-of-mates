@@ -17,5 +17,15 @@
   "data_format": "text/csv",
   "temporal": true,
   "schema_ref": "./schemas/AU_Province.json"
+},
+{
+  "id": "au_electoral_division",
+  "urn_prefix": "urn:aec.gov.au:division:",
+  "relative_load_priority": 3,
+  "label": "electoral_division",
+  "data_location": "/parliament/AU-electorates.csv",
+  "data_format": "text/csv",
+  "temporal": false,
+  "schema_ref": "./schemas/AU_ElectoralDivision.json"
 }
 ]
