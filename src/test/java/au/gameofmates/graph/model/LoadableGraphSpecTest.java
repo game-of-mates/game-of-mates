@@ -3,9 +3,8 @@ package au.gameofmates.graph.model;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import java.util.function.Consumer;
-import org.apache.tinkerpop.gremlin.process.traversal.Traverser;
 import org.apache.tinkerpop.gremlin.structure.Graph;
 import org.apache.tinkerpop.gremlin.structure.Vertex;
 import org.apache.tinkerpop.gremlin.tinkergraph.structure.TinkerGraph;
@@ -36,38 +35,44 @@ public class LoadableGraphSpecTest {
     Resource resource = resourceLoader.getResource("classpath:LoadableGraphSpec.json");
     
     String json = FileCopyUtils.copyToString(new InputStreamReader(resource.getInputStream() ));
-     
-    LoadableGraphSpec spec = objectMapper.readValue(json, LoadableGraphSpec.class);  
-
-    // Try Load the set of Vertexs into Gremplin
+   
+    List<LoadableGraphSpec> ppl2 = Arrays.asList(objectMapper.readValue(json, LoadableGraphSpec[].class));
     
+    // Try Load the set of Vertexs into Gremplin
+    for (LoadableGraphSpec spec: ppl2) {
     // Read in as CSV
-    if (spec.getData_format().equals("text/csv"))
-    {
-      Resource res1 = resourceLoader.getResource("classpath:" + spec.getData_location());
       
-      CSVReader csvReader = new CSVReader(new InputStreamReader(res1.getInputStream()));
-      String [] keysLine;
-      keysLine = csvReader.readNext();
-      int keysLength = keysLine.length;
-      
-      String[] valueLine;
-      List<Object> objList = new ArrayList<Object>();
-      while ((valueLine = csvReader.readNext()) != null) {
+      if (spec.getData_format().equals("text/csv"))
+      {
+        Resource res1 = resourceLoader.getResource("classpath:" + spec.getData_location());
         
-        for (int i=0; i < keysLength; i++)
-        {
-          objList.add(keysLine[i]);
-          objList.add(valueLine[i]);
+        CSVReader csvReader = new CSVReader(new InputStreamReader(res1.getInputStream()));
+        String [] keysLine;
+        keysLine = csvReader.readNext();
+        int keysLength = keysLine.length;
+        
+        String[] valueLine;
+        
+        while ((valueLine = csvReader.readNext()) != null) {
+          List<Object> objList = new ArrayList<Object>();
+          for (int i=0; i < keysLength; i++)
+          {
+            objList.add(keysLine[i]);
+            objList.add(valueLine[i]);
+          }
+          objList.add("label");
+          objList.add(spec.getLabel());
+          Vertex v = newGraph.addVertex(objList.toArray());
+          v.id();
+          
         }
-        objList.add("label");
-        objList.add(spec.getLabel());
-        Vertex v = newGraph.addVertex(objList.toArray());
-        
+        csvReader.close();
       }
-      csvReader.close();
+   
     }
-      
+    
+    newGraph.traversal().V().fold().toStream().forEach(t -> t.forEach(y -> System.out.println(y.properties("name").next().value())));
+    
     //newGraph.traversal().V().map(c -> c.get().value("name") + " is the Country name").forEachRemaining(System.out::println);
     
     

@@ -1,4 +1,4 @@
-{
+[{
   "id": "country",
   "urn_prefix": "urn:iso:std:iso:3166:",
   "relative_load_priority": 1,
@@ -7,4 +7,15 @@
   "data_format": "text/csv",
   "temporal": true,
   "schema_ref": "./schemas/Country.json"
+},
+{
+  "id": "provinces",
+  "urn_prefix": "urn:iso:std:iso:3166:-2:",
+  "relative_load_priority": 2,
+  "label": "province",
+  "data_location": "/locations/iso-3166-2-provinces.csv",
+  "data_format": "text/csv",
+  "temporal": true,
+  "schema_ref": "./schemas/AU_Province.json"
 }
+]
