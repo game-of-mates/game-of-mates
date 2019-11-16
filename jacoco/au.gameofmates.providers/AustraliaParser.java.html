@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AustraliaParser.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">game-of-mates</a> &gt; <a href="index.source.html" class="el_package">au.gameofmates.providers</a> &gt; <span class="el_source">AustraliaParser.java</span></div><h1>AustraliaParser.java</h1><pre class="source lang-java linenums">package au.gameofmates.providers;
+
+import com.fasterxml.jackson.databind.MappingIterator;
+import com.fasterxml.jackson.dataformat.csv.CsvMapper;
+import com.fasterxml.jackson.dataformat.csv.CsvParser;
+import com.fasterxml.jackson.dataformat.csv.CsvSchema;
+import java.io.File;
+import java.util.Collections;
+import java.util.List;
+import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.ResIterator;
+import org.apache.jena.rdf.model.Resource;
+import org.springframework.core.io.ClassPathResource;
+
+<span class="nc" id="L16">public class AustraliaParser {</span>
+
+
+  public static void main(String[] args) {
+<span class="nc" id="L20">    Model model = ModelFactory.createDefaultModel();</span>
+
+<span class="nc" id="L22">    AustraliaParser parser = new AustraliaParser();</span>
+<span class="nc" id="L23">    List&lt;String[]&gt; listOfRows =</span>
+<span class="nc" id="L24">        parser.loadManyToManyRelationship(&quot;/locations/iso-3166-australia-raw.csv&quot;);</span>
+
+    // Iterate through the csv
+<span class="nc bnc" id="L27" title="All 2 branches missed.">    for (String[] strArry : listOfRows) {</span>
+      // Row == strArray , 0 = subject, 1 = predicate, 2 = Object
+      // if '2' startsWith urn - need a relationship not a property
+
+      // Does Resource exist?
+<span class="nc bnc" id="L32" title="All 2 branches missed.">      if (model.getResource(strArry[0]) == null) {</span>
+<span class="nc" id="L33">        model.createResource(strArry[0]).addProperty(model.createProperty(strArry[1]), strArry[2]);</span>
+      } else {
+<span class="nc" id="L35">        Resource r1 = model.getResource(strArry[0]);</span>
+<span class="nc bnc" id="L36" title="All 2 branches missed.">        if (!strArry[2].startsWith(&quot;urn:&quot;)) {</span>
+          
+<span class="nc" id="L38">          r1.addProperty(model.createProperty(strArry[1]), model.getResource(strArry[2]));</span>
+
+        } else {
+<span class="nc" id="L41">          r1.addProperty(model.createProperty(strArry[1]), strArry[2]);</span>
+        }
+      }
+
+
+
+<span class="nc" id="L47">    }</span>
+
+    //Resource sa = model.getResource(&quot;urn:iso:std:iso:3166:-2:AU-SA&quot;);
+    
+
+
+
+<span class="nc" id="L54">    ResIterator iter = model.listSubjectsWithProperty(model.getProperty(&quot;name&quot;),&quot;&quot;);</span>
+
+<span class="nc bnc" id="L56" title="All 2 branches missed.">    while (iter.hasNext()) {</span>
+
+      // Statement stmt = iter.nextStatement(); // get next statement
+<span class="nc" id="L59">      Resource subject = iter.next(); // stmt.getSubject(); // get the subject</span>
+      // Property predicate = stmt.getPredicate(); // get the predicate
+      // RDFNode object = stmt.getObject(); // get the object
+
+<span class="nc" id="L63">      System.out.print(subject.toString());</span>
+      // System.out.print(&quot; &quot; + predicate.toString() + &quot; &quot;);
+      // if (object instanceof Resource) {
+      // System.out.print(object.toString());
+      // } else {
+      // object is a literal
+      // System.out.print(&quot; \&quot;&quot; + object.toString() + &quot;\&quot;&quot;);
+      // }
+
+<span class="nc" id="L72">      System.out.println(&quot; .&quot;);</span>
+<span class="nc" id="L73">    }</span>
+
+
+<span class="nc" id="L76">  }</span>
+
+  public &lt;T&gt; List&lt;T&gt; loadObjectList(Class&lt;T&gt; type, String fileName) {
+    try {
+<span class="nc" id="L80">      CsvSchema bootstrapSchema = CsvSchema.emptySchema().withHeader();</span>
+<span class="nc" id="L81">      CsvMapper mapper = new CsvMapper();</span>
+<span class="nc" id="L82">      File file = new ClassPathResource(fileName).getFile();</span>
+<span class="nc" id="L83">      MappingIterator&lt;T&gt; readValues = mapper.reader(type).with(bootstrapSchema).readValues(file);</span>
+<span class="nc" id="L84">      return readValues.readAll();</span>
+<span class="nc" id="L85">    } catch (Exception e) {</span>
+      // logger.error(&quot;Error occurred while loading object list from file &quot; + fileName, e);
+<span class="nc" id="L87">      return Collections.emptyList();</span>
+    }
+
+  }
+
+
+  public List&lt;String[]&gt; loadManyToManyRelationship(String fileName) {
+    try {
+<span class="nc" id="L95">      CsvMapper mapper = new CsvMapper();</span>
+<span class="nc" id="L96">      CsvSchema bootstrapSchema = CsvSchema.emptySchema().withSkipFirstDataRow(true);</span>
+<span class="nc" id="L97">      mapper.enable(CsvParser.Feature.WRAP_AS_ARRAY);</span>
+<span class="nc" id="L98">      File file = new ClassPathResource(fileName).getFile();</span>
+<span class="nc" id="L99">      MappingIterator&lt;String[]&gt; readValues =</span>
+<span class="nc" id="L100">          mapper.reader(String[].class).with(bootstrapSchema).readValues(file);</span>
+<span class="nc" id="L101">      return readValues.readAll();</span>
+<span class="nc" id="L102">    } catch (Exception e) {</span>
+<span class="nc" id="L103">      return Collections.emptyList();</span>
+    }
+  }
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.0.201801022044</span></div></body></html>

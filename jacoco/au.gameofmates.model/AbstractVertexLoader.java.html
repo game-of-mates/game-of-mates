@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AbstractVertexLoader.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">game-of-mates</a> &gt; <a href="index.source.html" class="el_package">au.gameofmates.model</a> &gt; <span class="el_source">AbstractVertexLoader.java</span></div><h1>AbstractVertexLoader.java</h1><pre class="source lang-java linenums">package au.gameofmates.model;
+
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.core.io.DefaultResourceLoader;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.ResourceLoader;
+import com.github.jsonldjava.shaded.com.google.common.collect.Lists;
+import com.opencsv.CSVReader;
+import lombok.Data;
+
+<span class="pc bnc" id="L16" title="All 78 branches missed.">@Data</span>
+public abstract class AbstractVertexLoader implements VertexLoader {
+
+<span class="pc" id="L19">  Logger logger = LoggerFactory.getLogger(AbstractVertexLoader.class);</span>
+  
+<span class="nc" id="L21">  String id;</span>
+  // String urn_prefix;
+<span class="nc" id="L23">  Number relative_load_priority;</span>
+<span class="fc" id="L24">  String label;</span>
+<span class="fc" id="L25">  String data_location;</span>
+<span class="fc" id="L26">  String data_format;</span>
+<span class="nc" id="L27">  Boolean temporal;</span>
+<span class="nc" id="L28">  String schema_ref;</span>
+
+<span class="nc" id="L30">  List&lt;String&gt; keys = new ArrayList&lt;String&gt;();</span>
+  
+  
+  @Override
+  public List&lt;String&gt; keys() {
+    
+<span class="nc" id="L36">    return keys;</span>
+  }
+  
+  
+  public List&lt;List&lt;Object&gt;&gt; keyValueList()
+  {
+<span class="pc bpc" id="L42" title="1 of 2 branches missed.">    if (data_format.equals(&quot;text/csv&quot;))</span>
+    {
+<span class="fc" id="L44">      ResourceLoader resourceLoader = new DefaultResourceLoader();</span>
+<span class="fc" id="L45">      Resource resource = resourceLoader.getResource( data_location );</span>
+      
+<span class="pc bpc" id="L47" title="1 of 2 branches missed.">      if (! resource.exists()) {</span>
+<span class="nc" id="L48">        logger.error(&quot;Resource 'data_location:' &quot; + data_location + &quot; not found&quot; );</span>
+<span class="nc" id="L49">        throw new RuntimeException(&quot;Resource &quot; + data_location + &quot; not found&quot; );</span>
+      }
+      
+<span class="fc" id="L52">      List&lt;List&lt;Object&gt;&gt; arrayOfLines = new ArrayList&lt;List&lt;Object&gt;&gt;();</span>
+      
+      try {
+<span class="fc" id="L55">        CSVReader csvReader = new CSVReader(new InputStreamReader(resource.getInputStream()));</span>
+        
+        // firstline - keys
+<span class="fc" id="L58">        keys = Lists.newArrayList(csvReader.readNext());</span>
+        
+<span class="fc" id="L60">        int keysLength = keys.size();</span>
+        
+        String[] valueLine;
+        
+<span class="fc bfc" id="L64" title="All 2 branches covered.">        while ((valueLine = csvReader.readNext()) != null) {</span>
+<span class="fc" id="L65">          List&lt;Object&gt; objList = new ArrayList&lt;Object&gt;();</span>
+<span class="fc bfc" id="L66" title="All 2 branches covered.">          for (int i=0; i &lt; keysLength; i++)</span>
+          {
+<span class="fc" id="L68">            objList.add(keys.get(i));</span>
+<span class="fc" id="L69">            objList.add(valueLine[i]);</span>
+          }
+<span class="fc" id="L71">          objList.add(&quot;label&quot;);</span>
+<span class="fc" id="L72">          objList.add(this.label);</span>
+          
+<span class="fc" id="L74">          arrayOfLines.add(objList);</span>
+<span class="fc" id="L75">        }</span>
+        
+<span class="fc" id="L77">        csvReader.close();</span>
+<span class="fc" id="L78">        return arrayOfLines;</span>
+        
+<span class="nc" id="L80">      } catch (IOException ioe) {</span>
+<span class="nc" id="L81">        logger.error(&quot;CSV Read error reading &quot; + data_location , ioe );</span>
+<span class="nc" id="L82">        throw new RuntimeException(ioe );</span>
+      }
+      
+    }
+<span class="nc" id="L86">    return null;</span>
+  }
+  
+  
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.0.201801022044</span></div></body></html>
