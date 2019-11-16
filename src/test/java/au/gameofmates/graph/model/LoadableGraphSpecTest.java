@@ -77,4 +77,36 @@ public class LoadableGraphSpecTest {
     
     
   }
+  
+  
+  @Test
+  public void testLoadSpecWithMethods() throws IOException
+  {
+    ObjectMapper objectMapper = new ObjectMapper();
+
+    final Graph newGraph = TinkerGraph.open();
+    // user.dir is root dir of project
+    
+    ResourceLoader resourceLoader = new DefaultResourceLoader();
+    Resource resource = resourceLoader.getResource("classpath:LoadableGraphSpec.json");
+    
+    String json = FileCopyUtils.copyToString(new InputStreamReader(resource.getInputStream() ));
+   
+    List<LoadableGraphSpec> ppl2 = Arrays.asList(objectMapper.readValue(json, LoadableGraphSpec[].class));
+    
+    // Try Load the set of Vertexs into Gremplin
+    for (LoadableGraphSpec spec: ppl2) {
+      
+      List<List<Object>> arrayOfLines = spec.keyValueList();
+      
+      for (List<Object> vertexAttrs : arrayOfLines)
+      {
+        Vertex v = newGraph.addVertex( vertexAttrs.toArray() );
+      }
+      
+      Vertex v = newGraph.vertices().next();
+      String s = (String)v.property("name").value();
+    }
+    }
+
 }
