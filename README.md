@@ -188,9 +188,72 @@ The main content should be to capture real world people, things and relationship
 
 Because of the nature of integration, a careful consideration needs to be made in the stability and reliability of linked data URI's and resources as too many links that change frequently could lead to brittle information management.
 
-## Resources
+## Current Resources (Vertexes / Nodes)
 
-#### PERSON
+The definitions of each can be seen in the JSON specification [LoadableGraphSpec.json](./src/main/resources/LoadableGraphSpec.json)
+
+### Countries 
+
+ISO-3166 Countries, linked to Australia.
+Commonwealth of Australia and territories.
+
+```
+id prefix: urn:iso:std:iso:3166:
+label: country
+```
+
+
+### Provinces (Australia only)
+
+ISO-3166-2 AU Provinces
+
+All Australian states and territories
+
+```
+id prefix: urn:iso:std:iso:3166:-2:
+label(s): province
+```
+
+### Australian Electoral Divisions
+
+Federal electoral divisions
+
+```
+urn:aec.gov.au:division:
+label: electoral_division
+```
+
+
+### Australian Parliaments
+
+Historical Australian Parliaments.
+ID's, names, dates of sitting.
+
+```
+id prefix: urn:aph.gov.au:parliament:
+label: au_parliament
+```
+
+
+
+
+### Lobbying Organisations
+
+Lobbying organisations registered with Australian AG's department.
+Uses the ABN as an identifier.
+
+```
+id prefix: urn:lobbyists.ag.gov.au:
+label: au_gov_lobbyists
+```
+
+## Proposed Resources
+
+
+
+### PERSON
+
+Identify political figures - starting with Politicians, key roles from parliament.
 
  Capture the minimum needed to identify a key actor that is already in the public domain (e.g. Wikipedia), on principle 
  
@@ -211,13 +274,22 @@ Because of the nature of integration, a careful consideration needs to be made i
 
  
 	
-ORGANISATION
+### ORGANISATION
+ --- abn
  -- inception
  -- type
  -- constitution
  -- registeredUnder (Act)
  -- category
  -- Governance
+
+Prioritise Lobbying links, High value ASX, High value Proprietary, Media, Investment banks, Multinationals
+
+
+### Government Department
+
+https://www.directory.gov.au/reports/australian-government-organisations-register
+
 
 
 
