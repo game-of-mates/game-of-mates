@@ -1,0 +1,554 @@
+swagger: "2.0"
+info:
+  description: "This is a sample API to "
+  version: "1.0.0"
+  title: "Game of Mates Graph API"
+  contact:
+    email: "apiteam@swagger.io"
+host: "neilpiper.me"
+basePath: "/gameofmates/v1/graph"
+schemes:
+  - https
+paths:
+ /countries:
+   get:
+    summary: Get Game of mates Countries
+    parameters:
+     - in: query
+       type: string
+       name: name
+     - in: query
+       type: string
+       name: iso_code
+    responses:
+       200:
+         description: List of ISO Countries matching search criteria
+         schema:
+          type: array
+          items:
+            $ref: '#/definitions/Country'
+       400:
+        description: Insufficient search criteria
+       500:
+        description: Search / Service failure (Unrecoverable)
+ /countries/{id}:
+     get:
+      summary: Get Country by urn ID
+      parameters:
+       - in: path
+         name: id
+         required: true
+         description: ISO-3166 Country URN identifier (e.g. AU)
+         type: string
+      responses:
+       200:
+        description: Country
+        schema: 
+          $ref: '#/definitions/Country' 
+ /node_definitions:
+     post:
+      summary: Create a new Node definition for Graph load
+      consumes: 
+       - application/json
+      parameters:
+       - in: body
+         name: NodeDefinitionRequest
+         description: Request to create a Node definition
+         schema:
+          $ref: '#/definitions/NodeDefinition'
+      responses:
+        200:
+          description: OK
+          
+ /node_definitions/{id}:
+     get:
+       summary: Retrieve a node defintion
+       parameters:
+        - in: path
+          name: id
+          required: true
+          description: Node definition identifier
+          type: string
+       responses:
+        200:
+         description: Graph node definition
+         schema:
+           $ref: '#/definitions/NodeDefinition'
+ /edge_definitions:
+     post:
+      summary: Create a new Edge definition for Graph load
+      consumes: 
+       - application/json
+      parameters:
+       - in: body
+         name: NodeDefinitionRequest
+         description: Request to create a Node definition
+         schema:
+          $ref: '#/definitions/EdgeDefinition'
+      responses:
+        200:
+          description: OK
+ /policies/{id}:
+     get:
+      summary: Get Policy by ID
+      parameters:
+       - in: path
+         name: id
+         required: true
+         description: Policy identifier
+         type: string
+      responses:
+       200:
+        description: Policy
+        schema: 
+          $ref: '#/definitions/Policy'
+          
+ /policies/{id}/claimassesments:
+    post:
+     summary: Create a claim assesment reqeust on a Policy
+     consumes:
+      - application/json
+     produces:
+      - application/json
+     parameters:
+        - in: path
+          name: id
+          required: true
+          type: string
+          description: Policy ID
+        - in: body
+          name: ClaimAssesmentRequest
+          description: The Capture Entry parameters
+          schema:
+            $ref: '#/definitions/ClaimAssesmentRequest'
+     responses:
+      200:
+        description: Claim questions for Context
+        schema:
+          type: array
+          items:
+            $ref: '#/definitions/Question'
+    put:
+     summary: Answer Claim form for a Claim Decision
+     description: Answer claim assesement questions for a Claim decision
+     consumes:
+      - application/json
+     produces:
+      - application/json
+     parameters:
+        - in: path
+          name: id
+          required: true
+          type: string
+          description: Policy ID
+        - in: body
+          name: answerlist
+          description: A list of answers to Questions
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Answer'
+     responses:
+       200:
+         description: Claim Decision
+         schema:
+          type: string
+          enum:
+           - "rejected"
+           - "referred"
+           - "appproved"
+ /policies/{id}/claims:
+    post:
+     summary: Create a new claim against a policy after an approved Claim Request assesment has passed business rules.
+     consumes:
+      - application/json
+     produces:
+      - application/json
+     parameters:
+      - in: path
+        name: id
+        required: true
+        type: string
+        description: Policy ID
+     responses:
+       200:
+        description: Claim created OK - Claim ID
+        schema:
+         type: integer
+
+ /claims/{cid}:
+   delete:
+    summary: Cancel a Claim against the policy. Can be used when the fault / damage is not valid against the Policies cover clauses.
+    parameters:
+      - in: path
+        name: cid
+        required: true
+        type: string
+        description: Claim ID
+    responses:
+       200:
+        description: Claim cancelled
+ /claims/{cid}/fulfilment:
+    post:
+      summary: Create a Fulfilment request for an approved Claim
+      produces:
+       - application/json
+      parameters:
+        - in: path
+          name: cid
+          type: string
+          required: true
+          description: Claim ID
+      responses:
+         201:
+          description: Fulfilment request provided
+          schema:
+            $ref: '#/definitions/Fulfilment'
+ /repairtask:
+    post:
+     summary: Create a new Repair Job.
+     consumes:
+      - application/json
+     parameters:
+      - in: body
+        name: body
+        description: Repair Task Detail 
+        schema:
+          $ref: '#/definitions/RepairTaskRequest'
+     responses:
+      201:
+        description: Repair job request created
+           
+    
+#securityDefinitions:
+#  petstore_auth:
+#    type: "oauth2"
+#    authorizationUrl: "http://neilpiper.me/oauth/dialog"
+#    flow: "implicit"
+#    scopes:
+#      write:pets: "modify pets in your account"
+#      read:pets: "read your pets"
+#  api_key:
+#    type: "apiKey"
+#    name: "api_key"
+#    in: "header"
+definitions:
+  Parliament:
+       type: object
+       description: Australian Parliament house instance of a sitting between elections
+       properties:
+         id: 
+          type: string 
+          description: "URN identifier of the parliament"
+          pattern: 'urn\:aph.gov.au\:parliament\:\d{1,3}'
+          example: "urn:aph.gov.au:parliament:40"
+         name:
+           type: string
+           description:  "Name of the parliament"
+           example: "40th Parliament of Australia"
+         sworn-in:
+           type: string
+           description: the date parliament was sworn-in
+           format: "YYYY-MM-FF"
+           example: "2019-01-01"
+         dissolved:
+           type: string
+           description: the date parliament was dissolved
+           format: "YYYY-MM-FF"
+           example: "2019-03-05"
+  
+  Country:
+    type: object
+    description: An ISO-3166 Recognised Country
+    properties:
+        id: 
+          type: string 
+          description: "URN identifier of the ISO-3166 Country"
+          pattern: 'urn\:iso\:std\:iso\:3166\:\W{1,3}'
+          example: 'urn:iso:std:iso:3166:AU'
+        name:
+          type: string
+          description:  "Name of the Country"
+          example: "Australia"
+        shortName:
+          type: string
+          description: Letter code of the Country
+          pattern: '[A-Z]{1,3}'
+          example: 'AU'
+        effectiveFromDate:
+          type: string
+          description: The date the country was internationally recognised, established
+          format: "YYYY-MM-FF"
+          example: "2019-01-01"
+        effectiveToDate:
+          type: string
+          description: The date the country was internationally no longer recognised or split (if applicable)
+          format: "YYYY-MM-FF"
+          example: "2019-03-05"  
+    
+  AU_Province:
+      type: object
+      description: An ISO-3166-2 Recognised Province of Country AU (Australia)
+      properties:
+          id: 
+            type: string 
+            description: "URN identifier of the ISO-3166-2 Province"
+            pattern: 'urn\:iso\:std\:iso\:3166\:-2\:\[A-Z,-,_]{1,6}'
+            example: 'urn:iso:std:iso:3166:-2:AU-NSW'
+          name:
+            type: string
+            description:  "Name of the Province"
+            example: "New South Wales"
+          shortName:
+            type: string
+            description: Letter code of the Province
+            pattern: '[A-Z]{2}[-,_]{1}[A-Z,0-9]{1,3}'
+            example: 'AU-NSW'
+          abbreviation:
+            type: string
+            description: Abbreviation used for the province in the Country
+            example: 'NSW'
+          category:
+            type: string
+            description: The type of entity the province is from a government perspective. e.g. State, Territory, Principality.
+            example: "state"
+            enum:
+             - 'state'
+             - 'territory'
+    
+  AU_ElectoralDivision:
+      type: object
+      description: An Australian federal electoral division
+      properties:
+          id: 
+            type: string 
+            description: "URN identifier of the Electoral division (aec.gov.au)"
+            pattern: 'urn\:aec.gov.au\:division\:[A-Z,a-z]{1,80}'
+            example: 'urn:aec.gov.au:division:Bean'
+          name:
+            type: string
+            description:  "Name of the Electoral Division"
+            example: "Bennelong"
+          province_id:
+           type: string
+           description: The ID of the State/Territory the division is located in
+           example: 'urn:iso:std:iso:3166:-2:AU-ACT'
+           enum:
+            - 'urn:iso:std:iso:3166:-2:AU-ACT'
+            - 'urn:iso:std:iso:3166:-2:AU-SA'
+            - 'urn:iso:std:iso:3166:-2:AU-NSW'
+            - 'urn:iso:std:iso:3166:-2:AU-VIC'
+            - 'urn:iso:std:iso:3166:-2:AU-QLD'
+            - 'urn:iso:std:iso:3166:-2:AU-TAS'
+            - 'urn:iso:std:iso:3166:-2:AU-NT'
+            - 'urn:iso:std:iso:3166:-2:AU-WA'
+          lastDistributionYear:
+           type: string
+           format: "YYYY"
+           description: "The first or last year the boundaries of the divsion were changed by the AEC."
+           example: "2018"
+          effectiveFromDate:
+           type: string
+           description: The date the Division was internationally recognised, established
+           format: "YYYY-MM-FF"
+           example: "1901-01-01"
+          effectiveToDate:
+           type: string
+           description: The date the division was internationally no longer recognised or split (if applicable)
+           format: "YYYY-MM-FF"
+           example: "2019-03-05"    
+          links:
+            type: array
+            description: HATEOAS Hypermedia links e.g URL to profile https://www.aec.gov.au/profiles/ACT/bean.htm
+            items:
+             $ref : '#/definitions/LinkDescriptionObject'
+             
+
+  LinkDescriptionObject:
+   type: object
+   description: A Hypermedia link description object
+   properties:
+     rel: 
+       type: string
+       description: The relationship type
+       example: 'self'
+     href:
+      type: string
+      description: The HREF URI used to access the linked resource
+      example:  'posts/{id}'
+     templateRequired:
+       description: templateRequired is an array of strings, where each string is a mandatory URI template variable
+       type: array
+       items:
+        type: string
+       example: "[\"id\"]"
+
+  NodeDefinition:
+   type: object
+   description: Definition of a node to load into our GameOfMates Graph
+   properties:
+     id:
+      type: string
+      description: An identifier for the Node to be loaded
+      example: political_party
+     urn_prefix:
+       type: string
+       description: The urn prefix used for the Node Type Identifier
+       example:  'urn:aec.gov.au:parties'
+     relative_load_priority:
+       type: integer
+       format: int32
+       description: When loading the graph a relative indicator when this should be ordered in loading. (1 is highest)
+     label:
+       type: string
+       description: The primary Graph label that should be used, like a type 'name'
+       example: 'party'
+     data_location: 
+       type: string
+       description: Relative file location or URL for the source data of the Entity on an initial load.
+       example: 'https://aec.gov.au/parties.json'
+     data_format:
+       type: string
+       description: The schema the initial data load is provided in
+       enum:
+        - "application/json"
+        - "application/csv"
+        - "application/xml"
+     temporal:
+       type: boolean
+       description: Indicates whether the Node resource is temporal, and should exist for a time. (effectiveFromDate, effectiveToDate fields expected)
+     schema_ref:
+       type: string
+       description: location of the schema reference (JSON-LD, XSD, CSV Spec)
+       example: './schemas/party.json'
+  EdgeDefinition:
+   type: object
+   description: Definition of an Edge relationship between Nodes of a Graph
+   properties:
+     id:
+      type: string
+      description: An identifier for the Edge to be loaded
+     relative_load_priority:
+       type: integer
+       format: int32
+       description: When loading the graph a relative indicator when this should be ordered in loading. (1 is highest)   
+     subject_identifier:
+       type: string
+       description: The name of the field in the specification that contains the subject reference. (Who / What ... On/Between... OJBECT)
+       example: 'province_id'
+     object_identifer:
+       type: string
+       description: The name of the field in the specification that contains the Object reference. (Subject X , \<is related to\>.. Object Y)
+       example: 'politician_id'
+     label: 
+       type: string
+       description: The primary relationship label to be used in creating the Edge between 2 nodes.
+       example: 'member_of'
+     temporal:
+       type: boolean
+       description: Indicates whether the Edge Relationship is temporal, and should exist for a time. (effectiveFromDate, effectiveToDate fields expected)
+     data_location: 
+       type: string
+       description: Relative file location or URL for the source data of the Entity on an initial load.
+       example: 'https://aec.gov.au/parties.json'
+     data_format:
+       type: string
+       description: The schema the initial data load is provided in
+       enum:
+        - "application/json"
+        - "application/csv"
+        - "application/xml" 
+     schema_ref:
+       type: string
+       description: location of the schema reference (JSON-LD, XSD, CSV Spec)
+       example: './schemas/party.json'
+  Policy:
+   type: object
+   description: A Policy Object representation
+   properties:
+    policy_id:
+      type: string
+    policy_type:
+      type: string
+  ClaimAssesmentRequest:
+    type: object
+    description: Request for a Claim Assesment - attributes
+    properties:
+      channel:
+        type: string
+  Question:
+    type: "object"
+    description: A Form based question
+    ## https://help.surveygizmo.com/help/question-type-guide
+    properties:
+      id:
+       type: "string"
+      label:
+        type: "string"
+  Answer:
+    type: "object"
+    description: Answer to a question
+    properties:
+      key:
+       type: "string"
+      value:
+       type: "string"
+      question_id:
+       type: "string"
+  Channel:
+    type: "string"
+    description: The channel type
+    enum:
+        - "storemode"
+        - "telesales"
+        - "online"
+        - "pos"
+        - "insurance"
+  Fulfilment:
+    type: object
+    properties:
+      fulfilment_id:
+       type: string
+  RepairTaskRequest:
+    type: object
+    properties:
+      claim_id: 
+       type: "string"
+       description: ID of Claim if under a Protection services product
+      fulfilment_id:
+       type: string
+       description: fulfilment identifier (if provided)
+      invoice_id:
+       type: string
+       description: ID of invoice if a self-funded repair
+      appliance_id:
+       type: string
+       description: ID of appliance
+      repair_type:
+       type: string
+       description: Type of repair
+       enum:
+        - 'man-warranty'
+        - 'ext-warranty'
+        - 'general-protection'
+        - 'purchase'
+      clause_id:
+       type: string
+       description: If repaired under a condition
+      repair_notes:
+       type: string
+       description: Free text to describe the repair, damage to be fixed.
+  ApiResponse:
+    type: "object"
+    description: Structured type for API Error responses
+    properties:
+      code:
+        type: "integer"
+        format: "int32"
+      type:
+        type: "string"
+      message:
+        type: "string"
+externalDocs:
+  description: "Project ROC / Single Insurance"
+  url: "https://ews-tactical.atlassian.net/wiki/spaces/RSI/pages/1445888740/Blueprint%2B-%2BInsurance%2BArchitecture"

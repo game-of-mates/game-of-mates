@@ -10,8 +10,9 @@
 
 	<parent>
 		<groupId>neilpiper.me</groupId>
-		<artifactId>parent.pom</artifactId>
-		<version>0.0.1_134.1e56c2f</version>
+		<artifactId>rest.microservice.base</artifactId>
+		<version>0.1.0_37.5c09819</version>
+		<!-- <artifactId>parent.pom</artifactId> <version>0.0.1_134.1e56c2f</version> -->
 	</parent>
 
 	<properties>
@@ -20,26 +21,15 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<!-- Import dependency management from Spring Boot -->
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-dependencies</artifactId>
-				<version>2.2.0.RELEASE</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
+	<!-- <dependencyManagement> <dependencies> <dependency> Import dependency 
+		management from Spring Boot <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-dependencies</artifactId> 
+		<version>2.2.0.RELEASE</version> <type>pom</type> <scope>import</scope> </dependency> 
+		</dependencies> </dependencyManagement> -->
 
 
 	<dependencies>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
+		<!-- <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter</artifactId> 
+			</dependency> -->
 		<dependency>
 			<groupId>com.opencsv</groupId>
 			<artifactId>opencsv</artifactId>
@@ -51,6 +41,7 @@
 			<artifactId>jackson-dataformat-csv</artifactId>
 			<version>2.5.3</version>
 		</dependency>
+
 
 		<dependency>
 			<groupId>com.github.karthicks</groupId>
@@ -65,12 +56,24 @@
 
 		</dependency>
 
+
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>1.16.18</version>
 		</dependency>
+<dependency>
+    <groupId>org.codehaus.groovy</groupId>
+    <artifactId>groovy</artifactId>
+    <version>2.5.8</version>
+</dependency>
 
+      	<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.apache.jena</groupId>
 			<artifactId>apache-jena-libs</artifactId>
@@ -78,13 +81,37 @@
 			<version>3.13.1</version>
 		</dependency>
 
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
+		<!-- <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-test</artifactId> 
+			<scope>test</scope> </dependency> -->
 	</dependencies>
+
+	<build>
+	<!-- 
+		<plugins>
+			<plugin>
+				<groupId>io.swagger</groupId>
+				<artifactId>swagger-codegen-maven-plugin</artifactId>
+				<version>2.4.9</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<inputSpec>${project.basedir}/src/main/resources/api/api.yaml</inputSpec>
+							<language>java</language>
+							<library>resttemplate</library>
+							<configOptions>
+								<sourceFolder>src/generated/java</sourceFolder>
+							</configOptions>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			
+		</plugins>
+		 -->
+	</build>
 
 
 	<!-- REPOSITORIES & PLUGIN REPOSITORIES -->

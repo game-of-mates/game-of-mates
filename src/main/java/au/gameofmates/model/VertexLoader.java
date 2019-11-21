@@ -2,6 +2,12 @@ package au.gameofmates.model;
 
 import java.util.List;
 
+/**
+ * Interface for Loading a Vertex.
+ * 
+ * @author neilpiper
+ *
+ */
 public interface VertexLoader {
 
 

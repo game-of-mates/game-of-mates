@@ -15,7 +15,11 @@ import org.springframework.core.io.ClassPathResource;
 
 public class AustraliaParser {
 
-
+  /**
+   * Main method.
+   * 
+   * @param args startup args.
+   */
   public static void main(String[] args) {
     Model model = ModelFactory.createDefaultModel();
 
@@ -34,7 +38,7 @@ public class AustraliaParser {
       } else {
         Resource r1 = model.getResource(strArry[0]);
         if (!strArry[2].startsWith("urn:")) {
-          
+
           r1.addProperty(model.createProperty(strArry[1]), model.getResource(strArry[2]));
 
         } else {
@@ -46,12 +50,11 @@ public class AustraliaParser {
 
     }
 
-    //Resource sa = model.getResource("urn:iso:std:iso:3166:-2:AU-SA");
-    
+    // Resource sa = model.getResource("urn:iso:std:iso:3166:-2:AU-SA");
 
 
 
-    ResIterator iter = model.listSubjectsWithProperty(model.getProperty("name"),"");
+    ResIterator iter = model.listSubjectsWithProperty(model.getProperty("name"), "");
 
     while (iter.hasNext()) {
 
@@ -75,6 +78,13 @@ public class AustraliaParser {
 
   }
 
+  /**
+   * Load an Object list.
+   * 
+   * @param type of type.
+   * @param fileName file location.
+   * @return
+   */
   public <T> List<T> loadObjectList(Class<T> type, String fileName) {
     try {
       CsvSchema bootstrapSchema = CsvSchema.emptySchema().withHeader();
@@ -89,7 +99,12 @@ public class AustraliaParser {
 
   }
 
-
+  /**
+   * Load the many to many relationships.
+   * 
+   * @param fileName file location.
+   * @return List of strings.
+   */
   public List<String[]> loadManyToManyRelationship(String fileName) {
     try {
       CsvMapper mapper = new CsvMapper();
