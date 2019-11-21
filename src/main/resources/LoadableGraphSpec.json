@@ -1,0 +1,43 @@
+[{
+  "id": "country",
+  "urn_prefix": "urn:iso:std:iso:3166:",
+  "relative_load_priority": 1,
+  "label": "country",
+  "data_location": "/locations/iso-3166-countries.csv",
+  "data_format": "text/csv",
+  "temporal": true,
+  "schema_ref": "./schemas/Country.json"
+},
+{
+  "id": "provinces",
+  "urn_prefix": "urn:iso:std:iso:3166:-2:",
+  "relative_load_priority": 2,
+  "label": "province",
+  "data_location": "/locations/iso-3166-2-provinces.csv",
+  "data_format": "text/csv",
+  "temporal": true,
+  "schema_ref": "./schemas/AU_Province.json"
+},
+{
+  "id": "au_electoral_division",
+  "urn_prefix": "urn:aec.gov.au:division:",
+  "relative_load_priority": 3,
+  "label": "electoral_division",
+  "data_location": "/parliament/AU-electorates.csv",
+  "data_format": "text/csv",
+  "temporal": false,
+  "schema_ref": "./schemas/AU_ElectoralDivision.json"
+},
+{
+  "id": "au_parliament",
+  "urn_prefix": "urn:aph.gov.au:parliament:",
+  "relative_load_priority": 4,
+  "label": "au_parliament",
+  "data_location": "/parliament/au-parliaments.csv",
+  "data_format": "text/csv",
+  "temporal": true,
+  "schema_ref": "./schemas/Parliament.json"
+
+
+}
+]

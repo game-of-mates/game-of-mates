@@ -107,6 +107,7 @@ public class LoadableGraphSpecTest {
       Vertex v = newGraph.vertices().next();
       String s = (String)v.property("name").value();
     }
+    
     }
 
 }

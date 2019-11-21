@@ -1,4 +1,4 @@
-id,name,elected,sworn-in,dissolved
+id,name,elected,effectiveFromDate,effectiveToDate
 urn:aph.gov.au:parliament:40,40th Parliament of Australia,2001-11-10,2002-02-12,2004-08-31
 urn:aph.gov.au:parliament:41,41st Parliament of Australia,2004-10-09,2004-11-16,2007-10-17
 urn:aph.gov.au:parliament:42,42nd Parliament of Australia,2007-11-24,2008-02-12,2010-07-19

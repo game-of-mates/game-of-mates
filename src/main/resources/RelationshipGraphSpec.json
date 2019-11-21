@@ -1,0 +1,10 @@
+[{
+  "id": "urn:aec.gov.au:relationships:countries_to_provinces",
+  "relative_load_priority": 4,
+  "subject_identifier": "country_id",
+  "object_identifier": "province_id",
+  "label": "has_province",
+  "temporal": true,
+  "data_location": "/locations/edges/australia-countries-to-provinces.csv",
+  "data_format": "text/csv"
+}]
