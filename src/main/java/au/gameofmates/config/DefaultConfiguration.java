@@ -95,9 +95,16 @@ public class DefaultConfiguration {
       
       for (List<Object> vertexAttrs : arrayOfLines)
       {
+        try
+        {
         Vertex v = newGraph.addVertex( vertexAttrs.toArray() );
         logger.debug( "Added " + v.label() + " id: " + v.value("id"));
-        
+        }
+        catch (java.lang.IllegalArgumentException iae)
+        {
+          logger.error("Failed inserting Vertex record for " + vertexAttrs);
+          throw iae;
+        }
       }
       
 

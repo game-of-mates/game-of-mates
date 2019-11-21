@@ -36,3 +36,7 @@ NodeDefinition:
        type: string
        description: location of the schema reference (JSON-LD, XSD, CSV Spec)
        example: './schemas/party.json'
+     source:
+       type: string
+       description: Where the type list, or data was sourced from, ideally a URL reference
+       example: 'https://en.wikipedia.org/wiki/ISO_3166-1'

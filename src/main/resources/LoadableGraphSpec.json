@@ -6,7 +6,8 @@
   "data_location": "/locations/iso-3166-countries.csv",
   "data_format": "text/csv",
   "temporal": true,
-  "schema_ref": "./schemas/Country.json"
+  "schema_ref": "./schemas/Country.json",
+  "source" : "https://en.wikipedia.org/wiki/ISO_3166-1"
 },
 {
   "id": "provinces",
@@ -16,7 +17,8 @@
   "data_location": "/locations/iso-3166-2-provinces.csv",
   "data_format": "text/csv",
   "temporal": true,
-  "schema_ref": "./schemas/AU_Province.json"
+  "schema_ref": "./schemas/AU_Province.json",
+  "source" : "https://en.wikipedia.org/wiki/ISO_3166-2:AU"
 },
 {
   "id": "au_electoral_division",
@@ -26,7 +28,8 @@
   "data_location": "/parliament/AU-electorates.csv",
   "data_format": "text/csv",
   "temporal": false,
-  "schema_ref": "./schemas/AU_ElectoralDivision.json"
+  "schema_ref": "./schemas/AU_ElectoralDivision.json",
+  "source" :"https://www.aec.gov.au/profiles/index.htm"
 },
 {
   "id": "au_parliament",
@@ -36,8 +39,20 @@
   "data_location": "/parliament/au-parliaments.csv",
   "data_format": "text/csv",
   "temporal": true,
-  "schema_ref": "./schemas/Parliament.json"
-
+  "schema_ref": "./schemas/Parliament.json",
+  "source": "https://en.wikipedia.org/wiki/Chronology_of_Australian_federal_parliaments"
+},
+{
+  "id": "au_lobbying_orgs",
+  "urn_prefix": "urn:lobbyists.ag.gov.au:",
+  "relative_load_priority": 5,
+  "label": "au_gov_lobbyists",
+  "data_location": "/parliament/lobbying-organisations-ag_gov_au.csv",
+  "data_format": "text/csv",
+  "temporal": true,
+  "schema_ref": "./schemas/Parliament.json",
+  "source" : "https://lobbyists.ag.gov.au/home"
 
 }
+
 ]
