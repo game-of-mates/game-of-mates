@@ -275,6 +275,9 @@ Identify political figures - starting with Politicians, key roles from parliamen
  
 	
 ### ORGANISATION
+
+Suggest use ABN's as primary ID:
+
  --- abn
  -- inception
  -- type
@@ -284,6 +287,13 @@ Identify political figures - starting with Politicians, key roles from parliamen
  -- Governance
 
 Prioritise Lobbying links, High value ASX, High value Proprietary, Media, Investment banks, Multinationals
+
+
+https://asic.gov.au/online-services/#registerforonline
+
+https://abr.business.gov.au/ABN/View?abn=70614363647
+
+https://www.asx.com.au/asx/share-price-research/company/AOF/details
 
 
 ### Government Department
@@ -323,6 +333,7 @@ CITIZEN
 CELEBRITY
 PRIEST
 DEPARTMENT
+GOVT Roles ( https://www.directory.gov.au/commonwealth-parliament )
 
 ## Physical World
 

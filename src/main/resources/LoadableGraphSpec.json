@@ -52,7 +52,17 @@
   "temporal": true,
   "schema_ref": "./schemas/Parliament.json",
   "source" : "https://lobbyists.ag.gov.au/home"
-
+},
+{
+  "id": "au_lobbying_client_orgs",
+  "urn_prefix": "urn:abr.business.gov.au:",
+  "relative_load_priority": 6,
+  "label": "au_orgs_using_lobbyists",
+  "data_location": "/parliament/lobbying_client_orgs-ag_gov_au.csv",
+  "data_format": "text/csv",
+  "temporal": false,
+  "schema_ref": "./schemas/Organisation.json",
+  "source" : "https://lobbyists.ag.gov.au/home"
 }
 
 ]

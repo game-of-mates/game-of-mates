@@ -7,4 +7,15 @@
   "temporal": true,
   "data_location": "/locations/edges/australia-countries-to-provinces.csv",
   "data_format": "text/csv"
-}]
+},
+{
+  "id": "urn:aec.gov.au:relationships:lobbyists_to_clients",
+  "relative_load_priority": 5,
+  "subject_identifier": "lobbyist_id",
+  "object_identifier": "client_id",
+  "label": "is_lobbyist_for",
+  "temporal": true,
+  "data_location": "/parliament/edges/lobbyist_to_clientorg.csv",
+  "data_format": "text/csv"
+}
+]
