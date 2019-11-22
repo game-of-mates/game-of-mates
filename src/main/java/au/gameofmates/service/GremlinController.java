@@ -24,7 +24,6 @@ public class GremlinController {
   @RequestMapping(value = "/graphextract", method = RequestMethod.GET, produces = "application/xml")
   public void graphextract(HttpServletResponse response) throws IOException {
     
-    ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
     
     try {
       GraphMLWriter.build().create().writeGraph(response.getOutputStream(), graph);

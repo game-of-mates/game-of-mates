@@ -5,6 +5,9 @@
 // MP-Change-Events ( Party Change, ByElection, Retirement,..Dates, Succeeded by)
 // Tony Abbott
 
+// where to get Senator / Member list
+// https://www.aph.gov.au/Senators_and_Members/Guidelines_for_Contacting_Senators_and_Members/Address_labels_and_CSV_files
+
 // Key dates, range of 45th Parliament
 {
    "id" : "urn:aph.gov.au:parliament:45",

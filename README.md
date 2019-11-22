@@ -270,7 +270,12 @@ Identify political figures - starting with Politicians, key roles from parliamen
 ##### life event(s)	
 ##### awards	
 ##### socialMedia
- 
+
+How to identify a Person? 
+https://www.openownership.org/news/identity-and-identifiers-what-weve-learned/
+
+ISO Standard (ISO 27729:2012) - ISNI
+https://viaf.org/viaf/92625366/
 
  
 	

@@ -10,13 +10,15 @@
 3. Senate Seats (Numbered per state, territory e.g. AU-QLD-1)
 4. Parliamentarians (People)
 5. Parties
+6. Lobbying Organisation
+7. Lobbying Clients
 
 AEC JSON Parties
 https://www.aec.gov.au/Parties_and_Representatives/Party_Registration/Registered_parties/files/register-2019-11-04.json
 
 ## Edges
 
-1. Electorates to Locations.provinces
+1. Electorates to Locations.provinces (/)
 2. Countries to Electorates (External territories of Australia)
 3. Parliamentarians to Electorates (by Parliament ID)
 4. Parliamentarians to Parties (Effective date)
