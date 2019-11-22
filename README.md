@@ -565,4 +565,41 @@ Douglas Adams - `http://www.wikidata.org/entity/Q42.json`
 
 [IPA Members in Federal Parliament](https://independentaustralia.net/politics/politics-display/the-liberal-party-and-the-institute-of-public-affairs-who-is-whose,8837)
 
+# Getting started
+
+## Pre-Requisites
+
+* JDK 8
+* Maven 3.2+
+
+Nice to have
+* Tinkerpop
+* A Spring boot IDE like IntelliJ or STS Eclipse
+
+## Build
+
+```
+mvn clean install
+```
+
+The application class is [au.gameofmates.GameOfMatesApplicaiton.java](./src/main/java/au/gameofmates/GameOfMatesApplication.java)
+
+## Run
+
+Run the app class in an IDE or the built jar from the command line
+
+```
+java -jar target/game-of-mates-1.0.0_0-SNAPSHOT.jar
+```
+
+## Adding Data sets
+
+To add a data set for Vertex loading add an entry to
+
+[LoadableGraphSpec.json](src/main/resources/LoadableGraphSpec.json)
+
+To add a Relationship / Edge source file add an entry to 
+
+[RelationshipGraphSpec.json](src/main/resources/RelationshipGraphSpec.json)
+
 
