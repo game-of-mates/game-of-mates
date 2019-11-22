@@ -602,4 +602,15 @@ To add a Relationship / Edge source file add an entry to
 
 [RelationshipGraphSpec.json](src/main/resources/RelationshipGraphSpec.json)
 
+## Downloading the Graph
+
+Once running, There is a REST endpoint to download the Graph in XML so it can be loaded in a Tinkerpop environment for testing.
+
+```
+http://localhost:8080/graphextract
+```
+
+How to use it:
+http://tinkerpop.apache.org/docs/3.0.0-incubating/#_gremlin_i_o
+
 
