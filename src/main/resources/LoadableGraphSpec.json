@@ -47,7 +47,7 @@
   "urn_prefix": "urn:lobbyists.ag.gov.au:",
   "relative_load_priority": 5,
   "label": "au_gov_lobbyists",
-  "data_location": "/parliament/lobbying-organisations-ag_gov_au.csv",
+  "data_location": "/parliament/lobbying-organisations-ag_gov_au2.csv",
   "data_format": "text/csv",
   "temporal": true,
   "schema_ref": "./schemas/Parliament.json",
