@@ -614,3 +614,7 @@ How to use it:
 http://tinkerpop.apache.org/docs/3.0.0-incubating/#_gremlin_i_o
 
 
+# Target Architecture
+
+![graph](./docs/gameGraph.svg)
+

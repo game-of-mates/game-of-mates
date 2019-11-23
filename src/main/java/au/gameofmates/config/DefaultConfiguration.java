@@ -38,6 +38,9 @@ public class DefaultConfiguration {
   @Value("${au.gameofmates.edgespec}")
   private String edgeLoadSpec;
   
+  @Value("${au.gameofmates.senators.url}")
+  private final String au_gameofmates_senators_url;
+  
   @Bean
   public List<LoadableGraphSpec> vertexesToLoad()
   {
