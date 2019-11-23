@@ -35,6 +35,7 @@ public class RemoteAphMPsService {
 
   public String getMPNodesEdges() {
 
+    logger.info("Entry");
 
     List<MemberOfParliamentCSV> members =
         aphMpsTemplate.execute(au_gameofmates_mps_url, HttpMethod.GET, null, clientHttpResponse -> {
@@ -82,20 +83,29 @@ public class RemoteAphMPsService {
     @CsvBindByName(column = "Gender")
     private String gender;
 
-    @CsvBindByName(column = "Electorate")
-    private String electorate;
+//    @CsvBindByName(column = "Electorate")
+//    private String electorate;
+//
+//    @CsvBindByName(column = "State")
+//    private String state;
+//
+//    @CsvBindByName(column = "Political Party")
+//    private String politicalParty;
+//
+//    @CsvBindByName(column = "Parliamentary Title")
+//    private String parliamentaryTitle;
+//
+//    @CsvBindByName(column = "Ministerial Title")
+//    private String ministerialTitle;
 
-    @CsvBindByName(column = "State")
-    private String state;
+    /**
+     * Override of toString method.
+     * 
+     */
+    public String toString() {
+      return new StringBuffer().append(honorific).append(" " + firstname).append(" " + surname)
+          .append(" " + othername).append(" " + gender).toString();
 
-    @CsvBindByName(column = "Political Party")
-    private String politicalParty;
-
-    @CsvBindByName(column = "Parliamentary Title")
-    private String parliamentaryTitle;
-
-    @CsvBindByName(column = "Ministerial Title")
-    private String ministerialTitle;
-
+    }
   }
 }

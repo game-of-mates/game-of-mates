@@ -36,7 +36,7 @@ public class RemoteAphSenatorsService {
 
   public String getSenatorNodesEdges() {
 
-
+    logger.info("Entry");
 
     List<SenatorsCSV> senators = aphSenatorsTemplate.execute(au_gameofmates_senators_url,
         HttpMethod.GET, null, clientHttpResponse -> {
@@ -84,14 +84,14 @@ public class RemoteAphSenatorsService {
 
     // private String salutation;
 
-    @CsvBindByName(column = "Surname")
-    private String surname;
-
-    @CsvBindByName(column = "First Name")
-    private String firstname;
-
-    @CsvBindByName(column = "Gender")
-    private String gender;
+//    @CsvBindByName(column = "Surname")
+//    private String surname;
+//
+//    @CsvBindByName(column = "First Name")
+//    private String firstname;
+//
+//    @CsvBindByName(column = "Gender")
+//    private String gender;
 
 
     // private String othername;
@@ -102,8 +102,8 @@ public class RemoteAphSenatorsService {
     @CsvBindByName(column = "State")
     private String state;
 
-    @CsvBindByName(column = "Political Party")
-    private String politicalparty;
+//    @CsvBindByName(column = "Political Party")
+//    private String politicalparty;
 
 
     public String getStateID() {
