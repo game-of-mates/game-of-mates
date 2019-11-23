@@ -12,8 +12,11 @@ import org.springframework.web.client.RestTemplate;
 import com.opencsv.bean.CsvBindByName;
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
+import lombok.Getter;
+import lombok.Setter;
 
-/** Remote service to collect a list of current Senators from APH.gov.au.
+/**
+ * Remote service to collect a list of current Senators from APH.gov.au.
  * 
  * @author neilpiper
  *
@@ -80,18 +83,22 @@ public class RemoteAphSenatorsService {
     // Titles
 
     @CsvBindByName(column = "Title")
+    @Getter
+    @Setter
     private String title;
 
     // private String salutation;
 
-//    @CsvBindByName(column = "Surname")
-//    private String surname;
-//
-//    @CsvBindByName(column = "First Name")
-//    private String firstname;
-//
-//    @CsvBindByName(column = "Gender")
-//    private String gender;
+    @Getter
+    @Setter
+    @CsvBindByName(column = "Surname")
+    private String surname;
+    //
+    // @CsvBindByName(column = "First Name")
+    // private String firstname;
+    //
+    // @CsvBindByName(column = "Gender")
+    // private String gender;
 
 
     // private String othername;
@@ -102,8 +109,8 @@ public class RemoteAphSenatorsService {
     @CsvBindByName(column = "State")
     private String state;
 
-//    @CsvBindByName(column = "Political Party")
-//    private String politicalparty;
+    // @CsvBindByName(column = "Political Party")
+    // private String politicalparty;
 
 
     public String getStateID() {
