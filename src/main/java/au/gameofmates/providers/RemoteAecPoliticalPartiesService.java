@@ -20,7 +20,7 @@ public class RemoteAecPoliticalPartiesService {
 
   private static final Logger logger =
       LoggerFactory.getLogger(RemoteAecPoliticalPartiesService.class);
-
+  
   private final RestTemplate aecPartiesTemplate;
 
   @Value("${au.gameofmates.parties.url}")

@@ -26,7 +26,7 @@ public class CountryGraphTest {
     g = tg.traversal();
 
     FileReader fileReader = new FileReader(
-        "/Users/neilpiper/SANDBOX/neilpiper.projects/game-of-mates/src/main/resources/locations/iso-3166-countries.csv");
+        "./src/main/resources/locations/iso-3166-countries.csv");
 
     BufferedReader bufferedReader = new BufferedReader(fileReader);
     String line;
@@ -49,7 +49,7 @@ public class CountryGraphTest {
 
     // Provinces (Vertexes)
     fileReader = new FileReader(
-        "/Users/neilpiper/SANDBOX/neilpiper.projects/game-of-mates/src/main/resources/locations/iso-3166-2-provinces.csv");
+        "./src/main/resources/locations/iso-3166-2-provinces.csv");
     bufferedReader = new BufferedReader(fileReader);
     bufferedReader.readLine();
     while ((line = bufferedReader.readLine()) != null) {
@@ -62,7 +62,7 @@ public class CountryGraphTest {
     bufferedReader.close();
     // Provinces to Countries
     fileReader = new FileReader(
-        "/Users/neilpiper/SANDBOX/neilpiper.projects/game-of-mates/src/main/resources/locations/edges/australia-countries-to-provinces.csv");
+        "./src/main/resources/locations/edges/australia-countries-to-provinces.csv");
     bufferedReader = new BufferedReader(fileReader);
     bufferedReader.readLine();
     while ((line = bufferedReader.readLine()) != null) {
@@ -80,7 +80,7 @@ public class CountryGraphTest {
 
     // Divisions to Provinces
     fileReader = new FileReader(
-        "/Users/neilpiper/SANDBOX/neilpiper.projects/game-of-mates/src/main/resources/parliament/AU-electorates.csv");
+        "./src/main/resources/parliament/AU-electorates.csv");
     bufferedReader = new BufferedReader(fileReader);
     bufferedReader.readLine();
     while ((line = bufferedReader.readLine()) != null) {
