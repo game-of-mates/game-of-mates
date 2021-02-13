@@ -1,0 +1,24 @@
+  AU_SenateSeat:
+      type: object
+      description: A numbered seat for a province for the Commenwealth of Australia, e.g. 'NSW1'
+      properties:
+          id: 
+            type: string 
+            description: "URN identifier of the Senate Seat"
+            pattern: 'urn\:aph.gov.au\:senateseat\:[A-Z,a-z,-]{1,10}[0-9]{1,2}'
+            example: 'urn:aph.gov.au:senateseat:NSW1'
+          province:
+            type: string 
+            description: "URN identifier of the ISO-3166-2 Province"
+            pattern: 'urn\:iso\:std\:iso\:3166\:-2\:\[]{1,6}'
+            example: 'urn:iso:std:iso:3166:-2:AU-NSW'
+          effectiveFromDate:
+           type: string
+           description: The date the Senate Seat was recognised, established
+           format: "YYYY-MM-FF"
+           example: "1901-01-01"
+          effectiveToDate:
+           type: string
+           description: The date the Senate Seat was no longer recognised, established (if applicable)
+           format: "YYYY-MM-FF"
+           example: "2019-03-05" 

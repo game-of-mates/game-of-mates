@@ -63,6 +63,28 @@
   "temporal": false,
   "schema_ref": "./schemas/Organisation.json",
   "source" : "https://lobbyists.ag.gov.au/home"
+},
+{
+  "id": "au_senate_seats",
+  "urn_prefix": "urn:aph.gov.au:senateseat",
+  "relative_load_priority": 7,
+  "label": "au_senate_seats",
+  "data_location": "/parliament/AU-SenateSeats.csv",
+  "data_format": "text/csv",
+  "temporal": true,
+  "schema_ref": "./schemas/AU_SenateSeat.json",
+  "source" : "https://en.wikipedia.org/wiki/Australian_Senate#Size_and_nexus"
+},
+{
+  "id": "au_postcodes",
+  "urn_prefix": "urn:australiapost.com.au:postcode",
+  "relative_load_priority": 8,
+  "label": "au_postcode_suburbs",
+  "data_location": "/locations/australian_postcodes.csv",
+  "data_format": "text/csv",
+  "temporal": false,
+  "schema_ref": "./schemas/AU_SenateSeat.json",
+  "source" : "https://www.matthewproctor.com/australian_postcodes"
 }
 
 ]
