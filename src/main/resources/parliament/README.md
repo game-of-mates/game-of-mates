@@ -13,7 +13,9 @@
 6. Lobbying Organisation (/)
 7. Lobbying Clients (/)
 8. AEC Transparency Register - Party Returns, Funding https://www.aec.gov.au/Parties_and_Representatives/financial_disclosure/transparency-register/
-
+9. Ministerial Roles
+10. Parliamentary Roles (/)
+11. Religious Organisations
 
 
 ## Edges
@@ -26,8 +28,9 @@
 6. Cabinet to Parliamentarians (by Parliament ID, Date)
 7. Parliamentarian to Parliament Role ( by Parliament ID, date, roleName) e.g. Speaker, Prime Minister, Opposition Leader,..
 8. Parliamentarian to Party (Date)
-9. Postcodes to States
-10. Postcodes to Electorates
+9. Postcodes to Electorates
+10. Members of Parliament to Ministerial Roles
+11. Members of Parliament to Parliamentary Roles
 
 
 # Data Guidance
@@ -84,6 +87,24 @@ AEC JSON Parties
 
 https://www.aec.gov.au/Parties_and_Representatives/Party_Registration/Registered_parties/files/register-2021-02-12.json
 
+## Members of Parliament
+
+Sourced from APH lists
+
+Senators & members by date of birth
+
+https://www.aph.gov.au/About_Parliament/Parliamentary_Departments/Parliamentary_Library/Parliamentary_Handbook/mpsbyage
+
+
+
+### Senators
+ 
+ By service expiry dates
+ https://www.aph.gov.au/Senators_and_Members/Senators/Senators_by_service_expiry_date
+ 
+ List of Senators
+ https://www.aph.gov.au/Senators_and_Members/Parliamentarian_Search_Results?q=&sen=1&par=-1&gen=0&ps=96&st=1
+ 
 
 ### HOR 46th Parliament (2001 - 2020)
 
@@ -127,3 +148,18 @@ Australian Democrats
 
 ## Branches
 State Branches
+
+## Ministry Lists
+
+https://www.pmc.gov.au/resource-centre/government/ministry-list
+
+Shadow Ministry
+https://www.aph.gov.au/-/media/03_Senators_and_Members/32_Members/Lists/ShadMin.pdf?la=en&hash=1760DE17F1F518353051A27AEFCBCBBA32E6736D
+
+
+## Powers of Parliament
+S52 - 39 powers + 3 Exclusive powers
+
+
+https://www.aph.gov.au/About_Parliament/Senate/Powers_practice_n_procedures/Constitution/chapter1/Part_V_-_Powers_of_the_Parliament
+
