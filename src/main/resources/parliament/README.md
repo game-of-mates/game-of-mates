@@ -1,4 +1,4 @@
-# Parliament TYpes, Edges
+# Parliament Types, Edges
 
 	
 ![parliament-datatypes](../../../../docs/graph-parliaments.png)
@@ -12,10 +12,9 @@
 5. Parties
 6. Lobbying Organisation (/)
 7. Lobbying Clients (/)
-8. Postcodes (/)
+8. AEC Transparency Register - Party Returns, Funding https://www.aec.gov.au/Parties_and_Representatives/financial_disclosure/transparency-register/
 
-AEC JSON Parties
-https://www.aec.gov.au/Parties_and_Representatives/Party_Registration/Registered_parties/files/register-2019-11-04.json
+
 
 ## Edges
 
@@ -75,9 +74,56 @@ Source:
 https://www.matthewproctor.com/australian_postcodes
 https://www.matthewproctor.com/Content/postcodes/australian_postcodes.csv
 
-# Political Parties
+## Political Parties
 
 aec.gov.au
 
 Based on all Parties that have won seats between 2001, 2020 elections as first priority.
 
+AEC JSON Parties
+
+https://www.aec.gov.au/Parties_and_Representatives/Party_Registration/Registered_parties/files/register-2021-02-12.json
+
+
+### HOR 46th Parliament (2001 - 2020)
+
+1 Australian Greens
+68 Australian Labor Party
+1 Centre Alliance
+3 Independent
+1 Katter's Australian Party
+23 Liberal National Party of Queensland
+44 Liberal Party of Australia
+10 The Nationals
+
+### Senate 46th Parliament
+
+9 Australian Greens
+26 Australian Labor Party
+1 Centre Alliance
+1 Country Liberal Party
+1 Independent
+1 Jacqui Lambie Network
+31 Liberal Party of Australia
+2 Pauline Hanson's One Nation
+4 The Nationals
+
+### Minor parties 2001-2020
+
+Hinch's Justice
+Australian Conservatives
+Liberal Democrat
+United Australia Party
+Conservative National - Fraser Anning
+Nick Xenophon Team
+Palmer United Party
+Family First Party
+Australian Motoring Enthusiast Party
+Democratic Labour Party
+Australian Sports Party
+Xenophon Group
+Australian Democrats
+
+
+## Branches
+State Branches

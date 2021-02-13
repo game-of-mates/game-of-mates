@@ -1,37 +1,11 @@
-
-## HOR 46th Parliament (2001 - 2020)
-
-1 Australian Greens
-68 Australian Labor Party
-1 Centre Alliance
-3 Independent
-1 Katter's Australian Party
-23 Liberal National Party of Queensland
-44 Liberal Party of Australia
-10 The Nationals
-
-## Senate 46th Parliament
-
-9 Australian Greens
-26 Australian Labor Party
-1 Centre Alliance
-1 Country Liberal Party
-1 Independent
-1 Jacqui Lambie Network
-31 Liberal Party of Australia
-2 Pauline Hanson's One Nation
-4 The Nationals
-
-Hinch's Justice
-Australian Conservatives
-Liberal Democrat
-United Australia Party
-Conservative National - Fraser Anning
-Nick Xenophon Team
-Palmer United Party
-Family First Party
-Australian Motoring Enthusiast Party
-Democratic Labour Party
-Australian Sports Party
-Xenophon Group
-Australian Democrats
+id,name,amendmentDate,shortName,postalAddress,officerName,effectiveFromDate,effectiveToDate
+urn:aec.gov.au:party:australian_greens,Australian Greens,2019-02-19,The Greens,2/97 Northbourne Avenue TURNER ACT 2612,Giz Watson,1985-01-24,
+urn:aec.gov.au:party:labor,Australian Labor Party (ALP),2019-11-17,A.L.P,PO Box 6222\ KINGSTON ACT 2604,Paul Erickson,1984-05-31,
+urn:aec.gov.au:party:centre_alliance,Centre Alliance,2019-06-4,C.A,PO Box 3192 UNLEY SA 5061,Rex Patrick,2013-07-01,
+urn:aec.gov.au:party:katter_aust_party,Katter's Australian Party,2017-11-15,KAP,PO Box 1022 TOWNSVILLE QLD 4810,Thomas Harris,2011-09-27,
+urn:aec.gov.au:party:lnp_qld,Liberal National Party of Queensland,2013-07-07,LNP,PO Box 940 SPRING HILL QLD 4004,Michael O'Dwyer,2009-02-18,
+urn:aec.gov.au:party:liberal,Liberal Party of Australia,2010-11-23,LIB,PO Box 6004 KINGSTON ACT 2604,Andrew Hirst,1984-06-22,
+urn:aec.gov.au:party:national,National Party of Australia,2010-11-23,NAT,PO Box 6190 KINGSTON ACT 2604,Benjamin Hindmarsh,1984-05-31,
+urn:aec.gov.au:party:countryliberal,Country Liberals (NT),2018-11-08,CLP,PO Box 4194 DARWIN NT 0801,Jason Riley,1984-07-18,
+urn:aec.gov.au:party:lambie,Jacqui Lambie Network,2018-08-30,JLN,PO Box 264 Burnie TAS 7320,Jacquiline Lambie,2015-05-14,
+urn:aec.gov.au:party:ph_onenation,Pauline Hanson's One Nation,2019-10-21,PHON,PO Box 136 PINKENBA QLD 4008,Pauline Hanson,2004-06-02,

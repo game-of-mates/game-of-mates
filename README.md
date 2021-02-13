@@ -566,6 +566,8 @@ Douglas Adams - `http://www.wikidata.org/entity/Q42.json`
 
 [IPA Members in Federal Parliament](https://independentaustralia.net/politics/politics-display/the-liberal-party-and-the-institute-of-public-affairs-who-is-whose,8837)
 
+[Sports Grants scandal LNP 2019 Election](https://www.thevogfiles.com/spreadsheet-sleuth.html)
+
 # Getting started
 
 ## Pre-Requisites
