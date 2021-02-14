@@ -1,7 +1,6 @@
 id,abn,name,link,note
 urn:abr.business.gov.au:35915117478,35915117478,BRIMBANK CITY COUNCIL,https://www.brimbank.vic.gov.au,
-urn:abr.business.gov.au:57153480436,57153480436,MENTAL HEALTH FIRST AID AUSTRALIA,"https://mhfa.com.au
-",
+urn:abr.business.gov.au:57153480436,57153480436,MENTAL HEALTH FIRST AID AUSTRALIA,"https://mhfa.com.au",
 urn:abr.business.gov.au:51146548003,51146548003,TYRESMART AUSTRALIA PTY LTD,http://tyresmart.com.au/,
 urn:abr.business.gov.au:61279597238,61279597238,Victoria State Emergency Service Authority,https://www.ses.vic.gov.au/,
 urn:abr.business.gov.au:95922065177,95922065177,VICTORIAN TRANSPORT ASSOCIATION INC.,http://vta.com.au/,
@@ -25,9 +24,7 @@ urn:abr.business.gov.au:59622234799,59622234799,Alliance for Journalists' Freedo
 urn:abr.business.gov.au:46162732649,46162732649,Amaero Engineering Pty Ltd,,
 urn:abr.business.gov.au:30616935623,30616935623,AMAZON COMMERCIAL SERVICES PTY LTD,https://www.amazon.com/,
 urn:abr.business.gov.au:31051057428,31051057428,Amgen Australia,,
-urn:abr.business.gov.au:84162244368,84162244368,AMOVEO (Modular Manufacturer of Affordable Housing),"Modular Manufacturer of Affordable Housing
-
-https://www.amoveo.com.au",
+urn:abr.business.gov.au:84162244368,84162244368,AMOVEO (Modular Manufacturer of Affordable Housing),"Modular Manufacturer of Affordable Housinghttps://www.amoveo.com.au",
 urn:abr.business.gov.au:59001777591,59001777591,AMP Capital Investors Limited,,
 urn:abr.business.gov.au:29123129162,29123129162,Apply Direct Pty Ltd,https://www.applydirect.com.au/,
 urn:abr.business.gov.au:96443678906,96443678906,Arcare Aged Care,Arcare Aged Care,
@@ -126,15 +123,7 @@ urn:abr.business.gov.au:18374210672,18374210672,City of Greater Geelong,,
 urn:abr.business.gov.au:65533218403,65533218403,City of South Perth,,
 urn:abr.business.gov.au:32430819755,32430819755,Colac Otway Shire Council,,
 urn:abr.business.gov.au:85624324652,85624324652,Colinroobie Hills Water Users Pty Ltd,,
-urn:abr.business.gov.au:50935329686,50935329686,Colony 47 Inc,"Colony 47 is an independent, proudly Tasmanian charity.
-
-From our pioneering beginnings in 1973 until today, Colony 47 has been at the forefront of identifying and addressing the complex needs of socially isolated and vulnerable Tasmanians. We know from experience and research that the roots of disadvantage run deep in our community. We help individuals and families develop solutions and find support to build better lives.
-
-Colony 47 delivers integrated services to help individuals and families stay housed, access education, develop skills, find employment and build meaningful family relationships. We have expertise in providing effective support to people such as homeless young women, long term unemployed, humanitarian entrants, or people with persistent and severe mental illness.
-
-Colony 47 provides support to over 20,000 Tasmanian children, young people and families every year.
-
-Website is here: https://www.colony47.com.au/",
+urn:abr.business.gov.au:50935329686,50935329686,Colony 47 Inc,"Colony 47 is an independent, proudly Tasmanian charity.From our pioneering beginnings in 1973 until today, Colony 47 has been at the forefront of identifying and addressing the complex needs of socially isolated and vulnerable Tasmanians. We know from experience and research that the roots of disadvantage run deep in our community. We help individuals and families develop solutions and find support to build better lives. Colony 47 delivers integrated services to help individuals and families stay housed, access education, develop skills, find employment and build meaningful family relationships. We have expertise in providing effective support to people such as homeless young women, long term unemployed, humanitarian entrants, or people with persistent and severe mental illness. Colony 47 provides support to over 20,000 Tasmanian children, young people and families every year. Website is here: https://www.colony47.com.au/",
 urn:abr.business.gov.au:94606540327,94606540327,Commercial & General Administration Pty Ltd,www.commercialgeneral.com.au,
 urn:abr.business.gov.au:11130417088,11130417088,Commercial & General Construction Pty Ltd,www.commercialgeneral.com.au,
 urn:abr.business.gov.au:84611331858,84611331858,Commercial & General Management Services Pty Ltd,www.commercialgeneral.com.au,
@@ -204,9 +193,7 @@ urn:abr.business.gov.au:90312919698,90312919698,Friendly Societies of Australia 
 urn:abr.business.gov.au:57139624150,57139624150,FRONTSTREAM PTY LTD,https://frontstream.com.au/,
 urn:abr.business.gov.au:87000005318,87000005318,G. H. Varley Pty Ltd,,
 urn:abr.business.gov.au:87000005318,87000005318,G.H. VARLEY PTY LTD,,
-urn:abr.business.gov.au:49115301838,49115301838,GDI Holdings Pty Ltd,"Peter Cho
-Director and CEO
-0409508123",
+urn:abr.business.gov.au:49115301838,49115301838,GDI Holdings Pty Ltd,"Peter Cho Director and CEO 0409508123",
 urn:abr.business.gov.au:18152098854,18152098854,Genex Power Ltd,,
 urn:abr.business.gov.au:18152098854,18152098854,Genex Power Ltd,,
 urn:abr.business.gov.au:52425663385,52425663385,Geraldton Fishermens Cooperative,,
@@ -238,8 +225,7 @@ urn:abr.business.gov.au:90070017784,90070017784,Hume Coal Pty Limited,,
 urn:abr.business.gov.au:39614439664,39614439664,Huntington Ingalls Industries Australia Pty Ltd,https://australia.huntingtoningalls.com/,
 urn:abr.business.gov.au:27126649947,27126649947,Hutchison Ports Australia Pty Ltd,,
 urn:abr.business.gov.au:17621679356,17621679356,HYDROSTOR AUSTRALIA PTY LTD,,
-urn:abr.business.gov.au:46146267790,46146267790,Hydrosun Holdings Pty Ltd ,"www.hydrosun.com.au
-Australian Inventor of FLOATING SOLAR seeking Government support to commercialise the technology in regional Australia and the Pacific ",
+urn:abr.business.gov.au:46146267790,46146267790,Hydrosun Holdings Pty Ltd ,"www.hydrosun.com.au Australian Inventor of FLOATING SOLAR seeking Government support to commercialise the technology in regional Australia and the Pacific ",
 urn:abr.business.gov.au:83169380054,83169380054,HYPETAP PTY LTD,https://www.hypetap.com/,
 urn:abr.business.gov.au:79101258182,79101258182,IES Stormwater Pty Ltd,,
 urn:abr.business.gov.au:95613985943,95613985943,iFlight Technology Company Ltd,,
@@ -477,4 +463,4 @@ urn:abr.business.gov.au:93606583706,93606583706,Year 13 Pty Ltd,,
 urn:abr.business.gov.au:26601019434,26601019434,YOUR DC INVESTMENTS PTY LTD,,
 urn:abr.business.gov.au:53621676640,53621676640,Zero Mass Water (Australia) Pty Limited,https://www.zeromasswater.com/ap/,
 urn:abr.business.gov.au:68604763966,68604763966,ZIPBY Pty Limited,http://www.zipby.com.au,Touchless Parking and Customer Data Tech Innovation Platform
-urn:abr.business.gov.au:58164440993,58164440993,ZIPMONEY PAYMENTS PTY LTD,,
+urn:abr.business.gov.au:58164440993,58164440993,ZIPMONEY PAYMENTS PTY LTD,

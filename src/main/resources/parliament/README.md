@@ -35,6 +35,14 @@
 
 # Data Guidance
 
+## Standards
+
+International open government data specifications (Popolo)
+
+http://www.popoloproject.com/
+
+
+
 ## Senate Seats
 
 `urn:aph.gov.au:senateseat:{PROVINCE}_[0,9]{2}`
@@ -94,6 +102,17 @@ Sourced from APH lists
 Senators & members by date of birth
 
 https://www.aph.gov.au/About_Parliament/Parliamentary_Departments/Parliamentary_Library/Parliamentary_Handbook/mpsbyage
+
+http://data.openaustralia.org.au/members/
+
+https://parser.theyworkforyou.com/members.html
+
+https://glam-workbench.github.io/hansard/
+
+Hansard Transcripts:
+https://www.aph.gov.au/Parliamentary_Business/Hansard
+https://glam-workbench.github.io/hansard/
+https://parlinfo.aph.gov.au/parlInfo/search/summary/summary.w3p;adv=yes;orderBy=_fragment_number,doc_date-rev;query=Dataset:hansardr,hansardr80;resCount=Default
 
 
 
