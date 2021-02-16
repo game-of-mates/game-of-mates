@@ -106,6 +106,12 @@ public class DefaultConfiguration {
           logger.error("Failed inserting Vertex record for " + vertexAttrs);
           throw iae;
         }
+        catch (ArrayIndexOutOfBoundsException aoe)
+        {
+          logger.error("Array / Parsing alignment error " + vertexAttrs);
+          throw aoe;
+        }
+       
       }
 
 

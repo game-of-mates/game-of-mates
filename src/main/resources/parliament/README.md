@@ -101,6 +101,12 @@ Sourced from APH lists
 
 Senators & members by date of birth
 
+APH Has a speaker ID that can also look up Hansard:
+
+Significant links to APH Infor:
+https://www.aph.gov.au/Senators_and_Members/Parliamentarian?MPID=R36#t3-content-panel
+
+
 https://www.aph.gov.au/About_Parliament/Parliamentary_Departments/Parliamentary_Library/Parliamentary_Handbook/mpsbyage
 
 http://data.openaustralia.org.au/members/

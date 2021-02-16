@@ -1,17 +1,18 @@
 package au.gameofmates.model;
 
-import com.github.jsonldjava.shaded.com.google.common.collect.Lists;
-import com.opencsv.CSVReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
-import lombok.Data;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
+import com.github.jsonldjava.shaded.com.google.common.collect.Lists;
+import com.opencsv.CSVReader;
+import jline.internal.Log;
+import lombok.Data;
 
 
 
@@ -59,8 +60,10 @@ public abstract class AbstractVertexLoader implements VertexLoader {
 
         int keysLength = keys.size();
 
-        String[] valueLine;
+        String[] valueLine = null;
 
+        try
+        {
         while ((valueLine = csvReader.readNext()) != null) {
           List<Object> objList = new ArrayList<Object>();
           for (int i = 0; i < keysLength; i++) {
@@ -72,6 +75,13 @@ public abstract class AbstractVertexLoader implements VertexLoader {
 
           arrayOfLines.add(objList);
         }
+        }
+        catch (java.lang.ArrayIndexOutOfBoundsException e)
+        {
+          logger.error("Parsing error " + valueLine + " key length: " + keysLength );
+          throw new RuntimeException(e);
+        }
+        
 
         csvReader.close();
         return arrayOfLines;

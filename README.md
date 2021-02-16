@@ -617,6 +617,33 @@ How to use it:
 http://tinkerpop.apache.org/docs/3.0.0-incubating/#_gremlin_i_o
 
 
+## Importing the graph to a console
+
+It must be a one line XML, once it is loaded you can try the Gremlin recipies to navigate it:
+
+https://tinkerpop.apache.org/docs/current/reference/#gremlin-console
+
+
+
+```
+>cd tinkerpop/gremlin-console
+>bin/gremlin.sh
+
+         \,,,/
+         (o o)
+-----oOOo-(3)-oOOo-----
+plugin loaded: tinkerpop.server
+plugin loaded: tinkerpop.utilities
+plugin loaded: tinkerpop.tinkergraph
+gremlin> g.V().drop()
+gremlin> g.V()
+gremlin> g.io('/Users/xxxxx/DOWNLOADS/graphextract.xml').read().iterate()
+
+gremlin> g.V().elementMap()
+
+```
+
+
 # Target Architecture
 
 ![graph](./docs/gameGraph.png)
