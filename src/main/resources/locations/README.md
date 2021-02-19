@@ -17,3 +17,15 @@
 
 ```
 
+### ABS Stats
+
+https://www.theregister.com/2014/07/09/whats_that_the_abs_has_an_api_and_nobody_told_you
+
+
+https://api.gov.au/service/715cdfd0-4742-402e-8729-086a7fd42a51
+
+https://api.data.abs.gov.au/dataflow
+
+http://stat.data.abs.gov.au/Index.aspx?DataSetCode=ABS_C16_G43_SA
+
+

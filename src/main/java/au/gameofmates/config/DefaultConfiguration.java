@@ -25,9 +25,15 @@ import org.springframework.util.FileCopyUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import au.gameofmates.model.LoadableGraphSpec;
 import au.gameofmates.model.RelationshipGraphSpec;
+import springfox.documentation.builders.PathSelectors;
+import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spring.web.plugins.Docket;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @Configuration
 @EnableConfigurationProperties
+@EnableSwagger2
 public class DefaultConfiguration {
 
   Logger logger = LoggerFactory.getLogger(DefaultConfiguration.class);
@@ -38,7 +44,31 @@ public class DefaultConfiguration {
   @Value("${au.gameofmates.edgespec}")
   private String edgeLoadSpec;
 
+  
+  private List<LoadableGraphSpec> vertexDefinitionList;
+  
+  private Graph newGraph;
+  
+  public Graph getGraph()
+  {
+    return newGraph;
+  }
+  
+  public List<LoadableGraphSpec> getVertexDefinitions()
+  {
+    return vertexDefinitionList;
+  }
 
+  
+  @Bean
+  public Docket api() { 
+      return new Docket(DocumentationType.SWAGGER_2)  
+        .select()                                  
+        .apis(RequestHandlerSelectors.any())              
+        .paths(PathSelectors.any())                          
+        .build();                                           
+  }
+  
   @Bean
   public List<LoadableGraphSpec> vertexesToLoad() {
     ObjectMapper objectMapper = new ObjectMapper();
@@ -52,6 +82,7 @@ public class DefaultConfiguration {
           Arrays.asList(objectMapper.readValue(json, LoadableGraphSpec[].class));
 
       logger.info("Load record of " + ppl2.size() + " elements.");
+      vertexDefinitionList = ppl2;
       return ppl2;
     } catch (IOException e) {
       logger.error(
@@ -91,7 +122,7 @@ public class DefaultConfiguration {
       List<RelationshipGraphSpec> edges) {
     logger.info("Classes " + vertexLoadSpec + " : " + edgeLoadSpec);
 
-    Graph newGraph = TinkerGraph.open();
+    newGraph = TinkerGraph.open();
 
     // Try Load the set of Vertexs into Gremplin
     for (LoadableGraphSpec spec : specsToLoad) {

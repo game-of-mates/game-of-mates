@@ -112,10 +112,14 @@
             <configuration>
                 <inputSpec>${project.basedir}/src/main/resources/api/api.yaml</inputSpec>
                 <language>spring</language>
+                                <supportingFilesToGenerate>ApiUtil.java</supportingFilesToGenerate>
                 <configOptions>
                     <sourceFolder>swagger</sourceFolder>
                     <java8>true</java8>
-                    <interfaceOnly>true</interfaceOnly>
+                    <modelPackage>au.gameofmates.openapi.model</modelPackage>
+                    <apiPackage>au.gameofmates.openapi.api</apiPackage>
+                    <interfaceOnly>false</interfaceOnly>
+                    <delegatePattern>true</delegatePattern>
                 </configOptions>
             </configuration>
         </execution>

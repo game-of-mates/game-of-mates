@@ -518,6 +518,9 @@ JSON or Protobuf... not sure;
 [Swagger Spec](https://docs.swagger.io/spec.html#434-items-object)
 [Swagger Editor](https://editor.swagger.io/)
 
+[Swagger - Spring Boot example](https://reflectoring.io/spring-boot-openapi/)
+
+
 ## WikiData
 
 Wikidata offers a wide range of general data around wikipedia as well as links to other databases. The data is published under the CC0 "Public domain dedication" license. It can be edited by anyone and is maintained by Wikidata's editor community.

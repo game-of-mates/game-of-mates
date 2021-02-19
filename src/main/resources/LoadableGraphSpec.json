@@ -97,6 +97,17 @@
   "schema_ref": "./schemas/AU_SenateSeat.json",
   "source" : "https://www.aec.gov.au/parties_and_representatives/party_registration/Registered_parties/Parties_and_Representatives/Party_Registration/Registered_parties/files/register-2019-11-22.json"
 
+},
+{
+  "id": "au_members_parliament",
+  "urn_prefix": "urn:aec.gov.au:members_parliament",
+  "relative_load_priority": 10,
+  "label": "au_members_parliament",
+  "data_location": "/parliament/members_parliament.csv",
+  "data_format": "text/csv",
+  "temporal": false,
+  "schema_ref": "./schemas/AU_SenateSeat.json",
+  "source" : "https://www.aph.gov.au/Senators_and_Members/Parliamentarian_Search_Results?q=&mem=1&par=-1&gen=0&ps=0"
 }
 
 ]
