@@ -1,7 +1,7 @@
 ApiResponse:
-  type: "object"
-    description: Structured type for API Error responses
-    properties:
+  type: object
+  description: Structured type for API Error responses
+  properties:
       code:
         type: "integer"
         format: "int32"

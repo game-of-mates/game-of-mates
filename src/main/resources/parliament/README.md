@@ -9,7 +9,7 @@
 2. Electorates (by Province) - urn:aec.gov.au:division:{name} (/)
 3. Senate Seats (Numbered per state, territory e.g. AU-QLD-1) (/)
 4. Parliamentarians (People)
-5. Parties
+5. Parties (30%)
 6. Lobbying Organisation (/)
 7. Lobbying Clients (/)
 8. AEC Transparency Register - Party Returns, Funding https://www.aec.gov.au/Parties_and_Representatives/financial_disclosure/transparency-register/

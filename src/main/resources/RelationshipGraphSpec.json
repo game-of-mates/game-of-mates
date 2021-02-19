@@ -17,5 +17,25 @@
   "temporal": true,
   "data_location": "/parliament/edges/lobbyist_to_clientorg.csv",
   "data_format": "text/csv"
+},
+{
+  "id": "urn:aec.gov.au:relationships:mp_to_party",
+  "relative_load_priority": 6,
+  "subject_identifier": "mp_id",
+  "object_identifier": "partyId",
+  "label": "is_memberof_party",
+  "temporal": true,
+  "data_location": "/parliament/edges/mp_to_party.csv",
+  "data_format": "text/csv"
+},
+{
+  "id": "urn:aec.gov.au:relationships:mp_to_electorate",
+  "relative_load_priority": 7,
+  "subject_identifier": "mp_id",
+  "object_identifier": "division_id",
+  "label": "elected_to_division",
+  "temporal": true,
+  "data_location": "/parliament/edges/mp_to_electorate.csv",
+  "data_format": "text/csv"
 }
 ]

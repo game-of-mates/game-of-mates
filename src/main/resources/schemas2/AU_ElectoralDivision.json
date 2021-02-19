@@ -1,7 +1,7 @@
 AU_ElectoralDivision:
-      type: "object"
-        description: "An Australian federal electoral division"
-        properties:
+   type: "object"
+   description: "An Australian federal electoral division"
+   properties:
           id: 
             type: string 
             description: "URN identifier of the Electoral division (aec.gov.au)"

@@ -1,0 +1,18 @@
+LinkDescriptionObject:
+   type: object
+   description: A Hypermedia link description object
+   properties:
+     rel: 
+       type: string
+       description: The relationship type
+       example: 'self'
+     href:
+      type: string
+      description: The HREF URI used to access the linked resource
+      example:  'posts/{pID}'
+     templateRequired:
+       description: templateRequired is an array of strings, where each string is a mandatory URI template variable
+       type: array
+       items:
+        type: string
+       example: "[\"id\"]"
