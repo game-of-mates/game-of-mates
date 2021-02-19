@@ -1,0 +1,293 @@
+swagger: "2.0"
+info:
+  description: "This is a sample API to model an Insurance company"
+  version: "1.0.0"
+  title: "Insurance Company API"
+  contact:
+    email: "apiteam@swagger.io"
+host: "neilpiper.me"
+basePath: "/myinsurance/v1"
+schemes:
+  - https
+paths:
+ 
+ /policies/{id}:
+     get:
+      summary: Get Policy by ID
+      parameters:
+       - in: path
+         name: id
+         required: true
+         description: Policy identifier
+         type: string
+      responses:
+       200:
+        description: Policy
+        schema: 
+          $ref: '#/definitions/Policy'
+          
+ /policies/{id}/claimassesments:
+    post:
+     summary: Create a claim assesment reqeust on a Policy
+     consumes:
+      - application/json
+     produces:
+      - application/json
+     parameters:
+        - in: path
+          name: id
+          required: true
+          type: string
+          description: Policy ID
+        - in: body
+          name: ClaimAssesmentRequest
+          description: The Capture Entry parameters
+          schema:
+            $ref: '#/definitions/ClaimAssesmentRequest'
+     responses:
+      200:
+        description: Claim questions for Context
+        schema:
+          type: array
+          items:
+            $ref: '#/definitions/Question'
+    put:
+     summary: Answer Claim form for a Claim Decision
+     description: Answer claim assesement questions for a Claim decision
+     consumes:
+      - application/json
+     produces:
+      - application/json
+     parameters:
+        - in: path
+          name: id
+          required: true
+          type: string
+          description: Policy ID
+        - in: body
+          name: answerlist
+          description: A list of answers to Questions
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Answer'
+     responses:
+       200:
+         description: Claim Decision
+         schema:
+          type: string
+          enum:
+           - "rejected"
+           - "referred"
+           - "appproved"
+ /policies/{id}/claims:
+    post:
+     summary: Create a new claim against a policy after an approved Claim Request assesment has passed business rules.
+     consumes:
+      - application/json
+     produces:
+      - application/json
+     parameters:
+      - in: path
+        name: id
+        required: true
+        type: string
+        description: Policy ID
+     responses:
+       200:
+        description: Claim created OK - Claim ID
+        schema:
+         type: integer
+
+ /claims/{cid}:
+   delete:
+    summary: Cancel a Claim against the policy. Can be used when the fault / damage is not valid against the Policies cover clauses.
+    parameters:
+      - in: path
+        name: cid
+        required: true
+        type: string
+        description: Claim ID
+    responses:
+       200:
+        description: Claim cancelled
+ /claims/{cid}/fulfilment:
+    post:
+      summary: Create a Fulfilment request for an approved Claim
+      produces:
+       - application/json
+      parameters:
+        - in: path
+          name: cid
+          type: string
+          required: true
+          description: Claim ID
+      responses:
+         201:
+          description: Fulfilment request provided
+          schema:
+            $ref: '#/definitions/Fulfilment'
+ /repairtask:
+    post:
+     summary: Create a new Repair Job.
+     consumes:
+      - application/json
+     parameters:
+      - in: body
+        name: body
+        description: Repair Task Detail 
+        schema:
+          $ref: '#/definitions/RepairTaskRequest'
+     responses:
+      201:
+        description: Repair job request created
+           
+    
+#securityDefinitions:
+#  petstore_auth:
+#    type: "oauth2"
+#    authorizationUrl: "http://neilpiper.me/oauth/dialog"
+#    flow: "implicit"
+#    scopes:
+#      write:pets: "modify pets in your account"
+#      read:pets: "read your pets"
+#  api_key:
+#    type: "apiKey"
+#    name: "api_key"
+#    in: "header"
+definitions:
+  Parliament:
+       type: object
+       description: Australian Parliament house instance of a sitting between elections
+       properties:
+         id: 
+          type: string 
+          description: "URN identifier of the parliament"
+          pattern: 'urn\:aph.gov.au\:parliament\:\d{1,3}'
+          example: "urn:aph.gov.au:parliament:40"
+         name:
+           type: string
+           description:  "Name of the parliament"
+           example: "40th Parliament of Australia"
+         sworn-in:
+           type: string
+           description: the date parliament was sworn-in
+           format: "YYYY-MM-FF"
+           example: "2019-01-01"
+         dissolved:
+           type: string
+           description: the date parliament was dissolved
+           format: "YYYY-MM-FF"
+           example: "2019-03-05"
+  
+  
+  LinkDescriptionObject:
+   type: object
+   description: A Hypermedia link description object
+   properties:
+     rel: 
+       type: string
+       description: The relationship type
+       example: 'self'
+     href:
+      type: string
+      description: The HREF URI used to access the linked resource
+      example:  'posts/{id}'
+     templateRequired:
+       description: templateRequired is an array of strings, where each string is a mandatory URI template variable
+       type: array
+       items:
+        type: string
+       example: "[\"id\"]"
+
+  
+  Policy:
+   type: object
+   description: A Policy Object representation
+   properties:
+    policy_id:
+      type: string
+    policy_type:
+      type: string
+  ClaimAssesmentRequest:
+    type: object
+    description: Request for a Claim Assesment - attributes
+    properties:
+      channel:
+        type: string
+  Question:
+    type: "object"
+    description: A Form based question
+    ## https://help.surveygizmo.com/help/question-type-guide
+    properties:
+      id:
+       type: "string"
+      label:
+        type: "string"
+  Answer:
+    type: "object"
+    description: Answer to a question
+    properties:
+      key:
+       type: "string"
+      value:
+       type: "string"
+      question_id:
+       type: "string"
+  Channel:
+    type: "string"
+    description: The channel type
+    enum:
+        - "storemode"
+        - "telesales"
+        - "online"
+        - "pos"
+        - "insurance"
+  Fulfilment:
+    type: object
+    properties:
+      fulfilment_id:
+       type: string
+  RepairTaskRequest:
+    type: object
+    properties:
+      claim_id: 
+       type: "string"
+       description: ID of Claim if under a Protection services product
+      fulfilment_id:
+       type: string
+       description: fulfilment identifier (if provided)
+      invoice_id:
+       type: string
+       description: ID of invoice if a self-funded repair
+      appliance_id:
+       type: string
+       description: ID of appliance
+      repair_type:
+       type: string
+       description: Type of repair
+       enum:
+        - 'man-warranty'
+        - 'ext-warranty'
+        - 'general-protection'
+        - 'purchase'
+      clause_id:
+       type: string
+       description: If repaired under a condition
+      repair_notes:
+       type: string
+       description: Free text to describe the repair, damage to be fixed.
+  ApiResponse:
+    type: "object"
+    description: Structured type for API Error responses
+    properties:
+      code:
+        type: "integer"
+        format: "int32"
+      type:
+        type: "string"
+      message:
+        type: "string"
+externalDocs:
+  description: "Insurance"
+  url: "https://neilpiper.me/insurancefirm"

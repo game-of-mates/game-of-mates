@@ -29,3 +29,11 @@ https://api.data.abs.gov.au/dataflow
 http://stat.data.abs.gov.au/Index.aspx?DataSetCode=ABS_C16_G43_SA
 
 
+## Visualisation
+
+Australia D3.JS Map
+https://bl.ocks.org/GerardoFurtado/raw/02aa65e5522104cb692e/
+https://bl.ocks.org/GerardoFurtado/02aa65e5522104cb692e
+
+https://www.toptal.com/javascript/a-map-to-perfection-using-d3-js-to-make-beautiful-web-maps
+https://github.com/d3/d3/releases/v3.0.0
