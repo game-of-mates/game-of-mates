@@ -7,13 +7,12 @@
 
 	<groupId>neilpiper.me</groupId>
 	<artifactId>game-of-mates</artifactId>
-	<version>1.0.0_${revision}</version>
+	<version>1.1.0</version>
 
 	<parent>
 		<groupId>neilpiper.me</groupId>
 		<artifactId>rest.microservice.base</artifactId>
-		<version>0.1.0_37.5c09819</version>
-		<!-- <artifactId>parent.pom</artifactId> <version>0.0.1_134.1e56c2f</version> -->
+		<version>[1.2,1.5)</version>
 	</parent>
 
 	<properties>
@@ -22,31 +21,34 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
-	<!-- <dependencyManagement> <dependencies> <dependency> Import dependency 
-		management from Spring Boot <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-dependencies</artifactId> 
-		<version>2.2.0.RELEASE</version> <type>pom</type> <scope>import</scope> </dependency> 
-		</dependencies> </dependencyManagement> -->
-
-
 	<dependencies>
-		<!-- <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter</artifactId> 
-			</dependency> -->
+
+
+    <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-hateoas</artifactId>
+      <exclusions>
+        <exclusion>  <!-- declare the exclusion here -->
+          <groupId>org.springframework.hateoas</groupId>
+          <artifactId>spring-hateoas</artifactId>
+        </exclusion>
+      </exclusions> 
+    </dependency>
+
 		<dependency>
 			<groupId>com.opencsv</groupId>
 			<artifactId>opencsv</artifactId>
 			<version>4.1</version>
 		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-hateoas</artifactId>
-		</dependency>
+
+
 
 		<dependency>
 			<groupId>com.fasterxml.jackson.dataformat</groupId>
 			<artifactId>jackson-dataformat-csv</artifactId>
 			<version>2.5.3</version>
 		</dependency>
+		
 
 
 		<dependency>
@@ -103,36 +105,55 @@
 	</dependencies>
 
 	<build>
-		 <plugins> 
-		 
-		 <plugin>
-    <groupId>io.swagger</groupId>
-    <artifactId>swagger-codegen-maven-plugin</artifactId>
-    <version>2.3.1</version>
-    <executions>
-        <execution>
-            <goals>
-                <goal>generate</goal>
-            </goals>
-            <configuration>
-                <inputSpec>${project.basedir}/src/main/resources/api/api.yaml</inputSpec>
-                <language>spring</language>
-                                <supportingFilesToGenerate>ApiUtil.java</supportingFilesToGenerate>
-                <configOptions>
-                    <sourceFolder>swagger</sourceFolder>
-                    <java8>true</java8>
-                    <modelPackage>au.gameofmates.openapi.model</modelPackage>
-                    <apiPackage>au.gameofmates.openapi.api</apiPackage>
-                    <interfaceOnly>false</interfaceOnly>
-                    <delegatePattern>true</delegatePattern>
-                </configOptions>
-            </configuration>
-        </execution>
-    </executions>
-</plugin>
-		 </plugins> 
- 
- 
+		<plugins>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>3.0.0</version>
+				<executions>
+					<execution>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>target/generated-sources/swagger/swagger</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>io.swagger.codegen.v3</groupId>
+				<artifactId>swagger-codegen-maven-plugin</artifactId>
+				<version>3.0.24</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<inputSpec>${project.basedir}/src/main/resources/api/api-3_0.yaml</inputSpec>
+							<language>spring</language>
+							<supportingFilesToGenerate>ApiUtil.java</supportingFilesToGenerate>
+							<configOptions>
+								<sourceFolder>swagger</sourceFolder>
+								<java8>true</java8>
+								<modelPackage>au.gameofmates.openapi.model</modelPackage>
+								<apiPackage>au.gameofmates.openapi.api</apiPackage>
+								<interfaceOnly>false</interfaceOnly>
+								<delegatePattern>true</delegatePattern>
+							</configOptions>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+
+
 
 	</build>
 

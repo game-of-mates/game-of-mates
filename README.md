@@ -520,6 +520,9 @@ JSON or Protobuf... not sure;
 
 [Swagger - Spring Boot example](https://reflectoring.io/spring-boot-openapi/)
 
+[OpenAPI 3.0 Overview](https://www.openapis.org/news/blogs/2016/10/tdc-request-parameters-explaining-30-spec-part-3)
+[OpenAPI 3.0 Spec](https://swagger.io/docs/specification/describing-responses/)
+
 
 ## WikiData
 

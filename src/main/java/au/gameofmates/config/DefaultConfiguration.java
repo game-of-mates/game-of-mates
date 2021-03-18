@@ -25,15 +25,13 @@ import org.springframework.util.FileCopyUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import au.gameofmates.model.LoadableGraphSpec;
 import au.gameofmates.model.RelationshipGraphSpec;
-import springfox.documentation.builders.PathSelectors;
-import springfox.documentation.builders.RequestHandlerSelectors;
-import springfox.documentation.spi.DocumentationType;
-import springfox.documentation.spring.web.plugins.Docket;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
+import io.swagger.v3.oas.models.Components;
+import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.info.Info;
+import io.swagger.v3.oas.models.info.License;
 
 @Configuration
 @EnableConfigurationProperties
-@EnableSwagger2
 public class DefaultConfiguration {
 
   Logger logger = LoggerFactory.getLogger(DefaultConfiguration.class);
@@ -44,31 +42,32 @@ public class DefaultConfiguration {
   @Value("${au.gameofmates.edgespec}")
   private String edgeLoadSpec;
 
-  
+
   private List<LoadableGraphSpec> vertexDefinitionList;
-  
+
   private Graph newGraph;
-  
-  public Graph getGraph()
-  {
+
+  public Graph getGraph() {
     return newGraph;
   }
-  
-  public List<LoadableGraphSpec> getVertexDefinitions()
-  {
+
+  public List<LoadableGraphSpec> getVertexDefinitions() {
     return vertexDefinitionList;
   }
 
-  
+
+  /**
+   * Returns an OpenAPI definition of the API service.
+   *
+   * @param appVersion Springdoc version (3.0 default)
+   * @return OpenAPI Bean
+   */
   @Bean
-  public Docket api() { 
-      return new Docket(DocumentationType.SWAGGER_2)  
-        .select()                                  
-        .apis(RequestHandlerSelectors.any())              
-        .paths(PathSelectors.any())                          
-        .build();                                           
+  public OpenAPI customOpenApi(@Value("${springdoc.version}") String appVersion) {
+    return new OpenAPI().components(new Components()).info(new Info().title("Game Of Mates API")
+        .version(appVersion).license(new License().name("Apache 2.0").url("http://springdoc.org")));
   }
-  
+
   @Bean
   public List<LoadableGraphSpec> vertexesToLoad() {
     ObjectMapper objectMapper = new ObjectMapper();
@@ -136,13 +135,11 @@ public class DefaultConfiguration {
         } catch (IllegalArgumentException iae) {
           logger.error("Failed inserting Vertex record for " + vertexAttrs);
           throw iae;
-        }
-        catch (ArrayIndexOutOfBoundsException aoe)
-        {
+        } catch (ArrayIndexOutOfBoundsException aoe) {
           logger.error("Array / Parsing alignment error " + vertexAttrs);
           throw aoe;
         }
-       
+
       }
 
 

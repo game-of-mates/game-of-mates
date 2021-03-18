@@ -75,9 +75,10 @@ public abstract class AbstractVertexLoader implements VertexLoader {
           arrayOfLines.add(objList);
         }
         }
-        catch (java.lang.ArrayIndexOutOfBoundsException e)
+        catch (ArrayIndexOutOfBoundsException e)
         {
           logger.error("Parsing error " + valueLine + " key length: " + keysLength );
+          if (csvReader != null) {csvReader.close();}
           throw new RuntimeException(e);
         }
         

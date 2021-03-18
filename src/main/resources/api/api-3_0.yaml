@@ -29,7 +29,6 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Country'
-                example: '[{ "name" : "Australia", "code" : "AU"  },{ "name" : "Christmas Island", "code" : "CX"  }]'
          
         '400':
           description: Insufficient search criteria
@@ -240,7 +239,7 @@ components:
               type: array
               description: HATEOAS Hypermedia links e.g URL to profile https://www.aec.gov.au/profiles/ACT/bean.htm
               items:
-               $ref : '#/definitions/LinkDescriptionObject'
+               $ref : '#/components/schemas/LinkDescriptionObject'
                
   
     LinkDescriptionObject:
